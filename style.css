@@ -11,3 +11,9 @@ h6,
 p {
     color: rgb(224, 224, 224);
 }
+
+h5:hover {
+    text-decoration: underline;
+    color: rgb(0, 119, 255);
+    cursor: pointer;
+}
