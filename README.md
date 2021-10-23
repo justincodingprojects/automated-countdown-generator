@@ -5,4 +5,4 @@ This is the repository for an ongoing project for an automated countdown generat
 
 Drag this link into the bookmark:
 
-```d```
+```javascript:alert("bruh");```
