@@ -5,4 +5,4 @@ This is the repository for an ongoing project for an automated countdown generat
 
 Drag this link into the bookmark:
 
-```javascript:if(document.getElementById("acgscript")){var s=document.createElement("script");s.id="acgscript",s.src="https://justincodingprojects.github.io/automatedcountdowngenerator/assets/js/script.js",document.body.appendChild(s),initiateScript()}else initiateScript();```
+```javascript:if(document.getElementById("acgscript") !== undefined){var s=document.createElement("script");s.id="acgscript",s.src="https://justincodingprojects.github.io/automatedcountdowngenerator/assets/js/script.js",document.body.appendChild(s),initiateScript()}else initiateScript();```
