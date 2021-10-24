@@ -3,6 +3,6 @@ This is the repository for an ongoing project for an automated countdown generat
 
 # How to use
 
-Drag this link into the bookmark:
+Drag this link into the bookmark (Sorry that it's big, it's just the way the script updation scheme works):
 
 ```javascript:var s;void 0!==document.getElementById("acgscript")?((s=document.createElement("script")).id="acgscript",s.src="https://justincodingprojects.github.io/automatedcountdowngenerator/assets/js/script.js",document.body.appendChild(s),intiateScript()):(document.body.removeChild(document.getElementById("acgscript")),(s=document.createElement("script")).id="acgscript",s.src="https://justincodingprojects.github.io/automatedcountdowngenerator/assets/js/script.js",document.body.appendChild(s),intiateScript());```
