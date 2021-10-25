@@ -123,7 +123,7 @@
                 hasWorked = true
             }
         }
-        if (hasWorked == true && dayofweek !== "Sunday" && dayofweek !== "Saturday") {
+        if (hasWorked == true && dayofweek != "Sunday" && dayofweek != "Saturday") {
             var newURL = templateURL
             alert("URL generated!")
             if (confirm(`Is this correct?:
