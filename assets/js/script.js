@@ -123,15 +123,16 @@
                 hasWorked = true
             }
         }
-        if (hasWorked == true && dayofweek != "Sunday" && dayofweek != "Saturday") {
+        if (hasWorked == true && dayofweek !== "Sunday" && dayofweek !== "Saturday") {
             var newURL = templateURL
             alert("URL generated!")
             if (confirm(`Is this correct?:
 ${newURL}`)) {
                 window.open(newURL)
             }
+        } else if(dayofweek == "Sunday" || dayofweek == "Saturday") {
+            alert("The countdown URL can't be generated because you tried to generate this on a weekend.")
         } else {
-            alert(`The countdown URL can't be generated because the school session has already ended and/or it hasn't started yet. It could also be because of these reasons:
-    1. You tried to generate this on a weekend.`)
+            alert("The countdown URL can't be generated because the school session has already ended and/or it hasn't started yet.")
         }
     }
