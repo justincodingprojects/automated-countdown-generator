@@ -3,6 +3,9 @@ This is the repository for an ongoing project for an automated countdown generat
 
 # How to use
 
-Drag this link into the bookmark:
+Copy this link and paste this into the bookmark:
 
 ```javascript:fetch('https://justincodingprojects.github.io/automated-countdown-generator/assets/js/stable/script-stable.js').then(r=>r.text()).then(t=>(new Function(t))())```
+
+--
+Sincerely,
