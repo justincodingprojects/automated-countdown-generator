@@ -1,1 +1,1 @@
-fetch('https://justincodingprojects.github.io/automatedcountdowngenerator/assets/js/stable/script-stable.js').then(r => r.text()).then(t => (new Function(t))())
+alert("Error: Problem Fetching file from url: https://justincodingprojects.github.io/automatedcountdowngenerator/assets/js/script.js")
