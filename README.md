@@ -9,4 +9,4 @@ Drag this link into the bookmark:
 
 ```javascript:fetch('https://justincodingprojects.github.io/automatedcountdowngenerator/assets/js/stable/script-stable.js').then(r=>r.text()).then(t=>(new Function(t))())```
 
-*this is just an effort for me to have three different levels of stableness (stable, beta, and dev). You don't have to change the bookmark immediately, because the old script it has redirects to the stable one, but it will be removed on October 29th.
+*this is just an effort for me to have three different levels of stableness (stable, beta, and dev). You don't have to change the bookmark immediately, because the old script will just redirect to the stable (new) one, but it will be removed on October 29th.
