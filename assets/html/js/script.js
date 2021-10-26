@@ -1,4 +1,4 @@
-var number = parseInt(document.getElementById("urmom").innerHTML)
+var number = 0
 
 setInterval(function() {
   number = ++number
