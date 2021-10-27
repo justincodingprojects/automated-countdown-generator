@@ -3,7 +3,7 @@
   <link rel="stylesheet" href="./css/style.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
   <script>
-    var egg = new Egg();
+    /*var egg = new Egg();
 egg
   .addCode("q", function() {
   if(document.body.style.backgroundColor == "white" || document.body.style.backgroundColor == "") {
@@ -13,19 +13,16 @@ egg
     document.body.style.backgroundColor = "white";
     document.getElementById("demo").style.color = "black";
 }
-  }).listen();
-    
-    var egg = new Egg();
-egg
-  .addCode("p", function() {
-  if(document.body.style.backgroundColor == "white" || document.body.style.backgroundColor == "") {
+  }).listen();*/
+    setInterval(function() {
+      if(document.body.style.backgroundColor == "white" || document.body.style.backgroundColor == "") {
     document.body.style.backgroundColor = "black";
     document.getElementById("demo").style.color = "white";
 } else {
     document.body.style.backgroundColor = "white";
     document.getElementById("demo").style.color = "black";
 }
-  }).listen();
+    }, 100)
   </script>
 </head>
 <body>
