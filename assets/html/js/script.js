@@ -1,5 +1,5 @@
 // Set the date we're counting down to
-var countDownDate = new Date("Oct 27, 2021 09:48:01.5").getTime();
+var countDownDate = new Date("Oct 27, 2021 09:51").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -40,6 +40,5 @@ var x = setInterval(function() {
 }, 1000);
 
 var egg = new Egg("r,e,v,e,r,s,e", function() {
-  document.body.style.backgroundColor = "black"
-  document.getElementById("demo").color = "white"
+  alert("bruh")
 }).listen();
