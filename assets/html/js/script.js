@@ -38,3 +38,8 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+var egg = new Egg("r,e,v,e,r,s,e", function() {
+  document.body.style.backgroundColor = rgb(0,0,0)
+  document.getElementById("demo").color = rgb(255,255,255)
+}).listen();
