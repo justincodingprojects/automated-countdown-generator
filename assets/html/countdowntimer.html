@@ -3,11 +3,19 @@
   <link rel="stylesheet" href="./css/style.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
   <script>
+    var blackandwhite = false;
     var egg = new Egg();
 egg
   .addCode("r,e,v,e,r,s,e", function() {
+  if(blackandwhite == false) 
     document.body.style.backgroundColor = "black";
     document.getElementById("demo").style.color = "white";
+  blackandwhite = true;
+} else {
+    document.body.style.backgroundColor = "black";
+    document.getElementById("demo").style.color = "white";
+    blackandwhite = false;
+}
   }).listen();
   </script>
 </head>
