@@ -41,10 +41,6 @@ var x = setInterval(function() {
 
 var egg = new Egg();
 egg
-  .addCode("up,up,down,down,left,right,left,right,b,a", function() {
+  .addCode("r,e,v,e,r,s,e", function() {
     alert("bruh")
-  })
-  .addHook(function(){
-    console.log("Hook called for: " + this.activeEgg.keys);
-    console.log(this.activeEgg.metadata);
   }).listen();
