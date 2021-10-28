@@ -1,3 +1,12 @@
+var url = window.location.href;
+var setYear = url.substring(url.indexOf('year=') + 5).split(`][month`)[0]
+var setMonth = url.substring(url.indexOf('month=') + 6).split(`][day`)[0]
+var setDay = url.substring(url.indexOf('day=') + 4).split(`]T[hour`)[0]
+var setHour = url.substring(url.indexOf('hour=') + 5).split(`][minute`)[0]
+var setMinute = url.substring(url.indexOf('minute=') + 7).split(`][second`)[0]
+var setSecond = url.substring(url.indexOf('second=') + 7).split(`][millisecond`)[0]
+var setMillisecond = url.substring(url.indexOf('millisecond=') + 12).split(`]&p0=2966`)[0]
+
 var egg = new Egg();
 egg
   .addCode("q", function() {
