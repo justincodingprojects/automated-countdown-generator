@@ -1,8 +1,4 @@
-var url = window.location.href;
-alert(window.location.href)
-var setDate = url.substring(url.indexOf('hour=') + 1).split(`
-`)[0]
-     var egg = new Egg();
+var egg = new Egg();
 egg
   .addCode("q", function() {
   if(document.body.style.backgroundColor == "white" || document.body.style.backgroundColor == "") {
