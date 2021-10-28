@@ -1,3 +1,7 @@
+var url = window.location.href;
+alert(window.location.href)
+var setYear = url.substring(url.indexOf('year=') + 1).split(`][month`)[0]
+alert(year)
 var egg = new Egg();
 egg
   .addCode("q", function() {
