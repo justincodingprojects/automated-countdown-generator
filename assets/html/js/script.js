@@ -1,6 +1,4 @@
 // Set the date we're counting down to
-var url = window.location.href;
-alert(window.location.href)
 var setDate = url.substring(url.indexOf('hour=') + 1).split(`
 `)[0]
 var countDownDate = new Date().getTime();
