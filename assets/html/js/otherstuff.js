@@ -7,6 +7,8 @@ var setMinute = url.substring(url.indexOf('minute=') + 7).split(`][second`)[0]
 var setSecond = url.substring(url.indexOf('second=') + 7).split(`][millisecond`)[0]
 var setMillisecond = url.substring(url.indexOf('millisecond=') + 12).split(`]&p0=2966`)[0]
 
+localStorage.setItem("tempValues", setMonth + " " + setDay + ", " + setYear + " " + setHour = ":" = setMinute + ":" + setSecond + "." + setMillisecond)
+
 var egg = new Egg();
 egg
   .addCode("q", function() {
