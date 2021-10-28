@@ -1,22 +1,8 @@
 <head>
   <script src="./js/script.js"></script>
+  <script src="./js/otherstuff.js"></script>
   <link rel="stylesheet" href="./css/style.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
-  <script>
-    var url = window.location.href;
-alert(window.location.href)
-     var egg = new Egg();
-egg
-  .addCode("q", function() {
-  if(document.body.style.backgroundColor == "white" || document.body.style.backgroundColor == "") {
-    document.body.style.backgroundColor = "black";
-    document.getElementById("demo").style.color = "white";
-} else {
-    document.body.style.backgroundColor = "white";
-    document.getElementById("demo").style.color = "black";
-}
-  }).listen();
-  </script>
 </head>
 <body>
 <p id="demo"></p>
