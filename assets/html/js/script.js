@@ -1,5 +1,6 @@
 // Set the date we're counting down to
-var countDownDate = new Date(`${setMonth} ${setDay}, ${setYear} ${setHour}:${setMinute}:${setSecond}.${setMilisecond}`).getTime();
+var countDownDate = new Date(localStorage.getItem("tempValues")).getTime();
+localStorage.removeItem("tempValues")
 
 // Update the count down every 1 second
 var x = setInterval(function() {
