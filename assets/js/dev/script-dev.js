@@ -28,7 +28,7 @@ function generateURL(year, month, day, hour, minute, dayofweek, templateURL) {
             templateURL = templateURL.replace("[hour]", "07")
             templateURL = templateURL.replace("[minute]", "55")
             templateURL = templateURL.replace("[second]", "")
-            templateURL = templateURL.replace("[message]", text1)
+            templateURL = templateURL.replace("[message]", "Start of 1/2 Block")
             hasWorked = true
         } else {
             templateURL = templateURL.replace("[hour]", "08")
