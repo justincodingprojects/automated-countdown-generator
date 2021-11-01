@@ -3,6 +3,7 @@
   <link rel="stylesheet" href="./css/style.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
   <script>
+    document.getElementById("title").innerHTML = decodeURIComponent(window.location.href.substring(window.location.href.indexOf('message=') + 11).split(`]&font=`)[0])
   var egg = new Egg();
 egg
   .addCode("q", function() {
@@ -16,8 +17,6 @@ egg
     document.getElementById("title").style.color = "black";
 }
   }).listen();
-    // Sets title by using url
-document.getElementById("title").innerHTML = window.location.href.substring(window.location.href.indexOf('message=') + 8).split(`]&font=`)[0]
   </script>
 </head>
 <body>
