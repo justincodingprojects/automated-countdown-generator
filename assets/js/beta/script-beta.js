@@ -1,4 +1,4 @@
-var TEMPLATEURL = "https://www.timeanddate.com/countdown/generic?iso=[year][month][day]T[hour][minute][second]&p0=2966&msg=[message]&font=sanserif&csz=1#"
+var TEMPLATEURL = "https://justincodingprojects.github.io/automated-countdown-generator/assets/html/countdowntimer.html?iso=[year=[year]][month=[month]][day=[day]]T[hour=[hour]][minute=[minute]][second=[second]][millisecond=25]&p0=2966&msg=[message=[message]]&font=sanserif&csz=1#"
 const currentMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
     currentDays = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
     currentHours = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
@@ -10,7 +10,7 @@ var currentYear = new Date().getFullYear(),
     currentHour = currentHours[new Date().getHours()],
     currentMinute = currentMinutes[new Date().getMinutes()],
     currentDayofWeek = currentDayofWeeks[new Date().getDay()],
-	 text1 = encodeURIComponent("Start of 1/2 Block").replace("%2F", "/"),
+    text1 = encodeURIComponent("Start of 1/2 Block").replace("%2F", "/"),
     text2 = encodeURIComponent("End of 1/2 Block").replace("%2F", "/"),
     text3 = encodeURIComponent("End of 3/4 Block").replace("%2F", "/"),
     text4 = encodeURIComponent("End of 5/6 Block").replace("%2F", "/"),
