@@ -8,6 +8,6 @@ Drag this link into the bookmark (This is the stable version, and recommended):
 
 Drag this link into the bookmark for the beta version (This is the beta version, and it may not be fully stable):
 
-```javascript:fetch('https://justincodingprojects.github.io/automated-countdown-generator/assets/js/stable/script-stable.js').then(r=>r.text()).then(t=>(new Function(t))())```
+```javascript:fetch('https://justincodingprojects.github.io/automated-countdown-generator/assets/js/beta/script-beta.js').then(r=>r.text()).then(t=>(new Function(t))())```
 
 As of 11/1/2021, the beta version is just a stable alternative, as it was proven stable.
