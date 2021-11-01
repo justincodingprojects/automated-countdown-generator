@@ -15,7 +15,7 @@ var x = setInterval(function() {
     
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
-  document.getElementById("title").innerHTML = decodeURIComponent(window.location.href.substring(window.location.href.indexOf('message=') + 11).split(`]&font=`)[0])
+  document.getElementById("title").innerHTML = decodeURIComponent(window.location.href.substring(window.location.href.indexOf('message=') + 7).split(`]&font=`)[0])
     
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
