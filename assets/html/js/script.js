@@ -1,12 +1,4 @@
 // Set the date we're counting down to
-/* window.location.href.substring(window.location.href.indexOf('year=') + 5).split(`][month`)[0];
-window.location.href.substring(window.location.href.indexOf('month=') + 6).split(`][day`)[0];
-window.location.href.substring(window.location.href.indexOf('day=') + 4).split(`]T[hour`)[0];
-window.location.href.substring(window.location.href.indexOf('hour=') + 5).split(`][minute`)[0];
-window.location.href.substring(window.location.href.indexOf('minute=') + 7).split(`][second`)[0];
-window.location.href.substring(window.location.href.indexOf('second=') + 7).split(`][millisecond`)[0];
-window.location.href.substring(window.location.href.indexOf('millisecond=') + 12).split(`]&p0=2966`)[0];
-*/
 var countDownDate = new Date(window.location.href.substring(window.location.href.indexOf('month=') + 6).split(`][day`)[0] + 
 " " + window.location.href.substring(window.location.href.indexOf('day=') + 4).split(`]T[hour`)[0] + 
 " " + window.location.href.substring(window.location.href.indexOf('year=') + 5).split(`][month`)[0] + 
@@ -22,6 +14,8 @@ localStorage.setItem("SUPREMEBRUH", window.location.href.substring(window.locati
 ":" + window.location.href.substring(window.location.href.indexOf('minute=') + 7).split(`][second`)[0] + 
 ":" + window.location.href.substring(window.location.href.indexOf('second=') + 7).split(`][millisecond`)[0] + 
 "." + window.location.href.substring(window.location.href.indexOf('millisecond=') + 12).split(`]&p0=2966`)[0])
+// Sets title by using url
+document.getElementById("title").innerHTML = window.location.href.substring(window.location.href.indexOf('message=') + 8).split(`]&font=`)[0]
 
 // Update the count down every 1 second
 var x = setInterval(function() {
