@@ -1,4 +1,4 @@
-var TEMPLATEURL = "https://justincodingprojects.github.io/automated-countdown-generator/assets/html/countdowntimer.html?iso=[year=[year]][month=[month]][day=[day]]T[hour=[hour]][minute=[minute]][second=[second]][millisecond=25]&p0=2966&msg=[message=[message]]&font=sanserif&csz=1#"
+var TEMPLATEURL = "https://justincodingprojects.github.io/automated-countdown-generator/assets/html/countdowntimer.html?iso=[year=[year]][month=[month]][day=[day]]T[hour=[hour]][minute=[minute]][second=[second]][millisecond=75]&p0=2966&msg=[message=[message]]&font=sanserif&csz=1#"
 const currentMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
     currentDays = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
     currentHours = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
