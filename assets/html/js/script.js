@@ -44,4 +44,4 @@ var x = setInterval(function() {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "Period Ended";
   }
-}, 250);
+}, 50);
