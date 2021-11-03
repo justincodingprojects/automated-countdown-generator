@@ -16,6 +16,12 @@ var x = setInterval(function() {
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
   document.getElementById("title").innerHTML = decodeURIComponent(window.location.href.substring(window.location.href.indexOf('message=') + 8).split(`]&font=`)[0])
+  if(decodeURIComponent(window.location.href.substring(window.location.href.indexOf('message=') + 8).split(`]&font=`)[0]) == "") {
+    document.title = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s " + " - Automated Countdown Generator | Justin Coding Projects"
+  } else {
+    document.title = decodeURIComponent(window.location.href.substring(window.location.href.indexOf('message=') + 8).split(`]&font=`)[0]) + " - Automated Countdown Generator | Justin Coding Projects"
+  }
     
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
