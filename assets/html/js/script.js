@@ -49,7 +49,7 @@ var x = setInterval(function() {
   // If the count down is over, write some text 
   if(bool == false) {
     if(document.getElementById("demo").innerHTML == "00d 00h 00m 10s ") {
-      var audio = new Audio("./audio/AMONGUSSOUND.mp3")
+      var audio = new Audio("https://justincodingprojects.github.io/automated-countdown-generator/assets/html/audio/AMONGUSSOUND.mp3")
       document.body.appendChild(audio)
       bool == true;
     }
