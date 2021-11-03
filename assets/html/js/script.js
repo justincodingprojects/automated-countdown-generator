@@ -48,7 +48,10 @@ var x = setInterval(function() {
     }
   // If the count down is over, write some text 
   if(bool == false) {
-    
+    if(document.getElementById("demo").innerHTML == "00d 00h 00m 10s ") {
+      var audio = new Audio("./audio/AMONGUSSOUND.mp3")
+      document.body.appendChild(audio)
+    }
   }
   if (distance < 0) {
     clearInterval(x);
