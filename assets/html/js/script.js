@@ -51,6 +51,7 @@ var x = setInterval(function() {
     if(document.getElementById("demo").innerHTML == "00d 00h 00m 10s ") {
       var audio = new Audio("./audio/AMONGUSSOUND.mp3")
       document.body.appendChild(audio)
+      bool == true;
     }
   }
   if (distance < 0) {
