@@ -46,6 +46,10 @@ var x = setInterval(function() {
     document.title = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s" + "- Auto. Countdown Generator | Justin Coding Projects"
     }
+  if(document.getElementById("demo") == "0d 0h 18m 00s"){
+   var audio = new Audio(URL.createObjectURL(var input1 = document.querySelector('.BRUH').files[0]))
+   document.body.appendChild(audio)
+  }
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
