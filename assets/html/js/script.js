@@ -46,7 +46,7 @@ var x = setInterval(function() {
     document.title = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s" + "- Auto. Countdown Generator | Justin Coding Projects"
     }
-  if(document.getElementById("demo") == "0d 0h 17m 00s "){
+  if(document.getElementById("demo") == "0d 0h 16m 00s "){
    var audio = new Audio(URL.createObjectURL(document.querySelector('.BRUH').files[0]))
    document.body.appendChild(audio)
   }
