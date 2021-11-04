@@ -3,18 +3,14 @@
   <script>
     var URLdata;
 
-var input1 = document.querySelector('#BRUH')
+var input1 = document.querySelector('.BRUH')
 
 input1.addEventListener('change', changeFile);
-
-function readFile(event) {
-  URLdata = event
-}
 
 function changeFile() {
   var file = input1.files[0];
   var fileURL = URL.createObjectURL(file);
-  readFile(fileURL)
+  URLdata = fileURL
 }
   </script>
   <link rel="stylesheet" href="./css/style.css">
@@ -22,5 +18,5 @@ function changeFile() {
 <body>
 <p id="title"></p>
 <p id="demo"></p>
-<input id="BRUH" type="file"></input>
+<input class="BRUH" type="file"></input>
 </body>
