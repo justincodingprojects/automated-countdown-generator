@@ -6,7 +6,6 @@ var countDownDate = new Date(window.location.href.substring(window.location.href
 ":" + window.location.href.substring(window.location.href.indexOf('minute=') + 7).split(`][second`)[0] + 
 ":" + window.location.href.substring(window.location.href.indexOf('second=') + 7).split(`][millisecond`)[0] + 
 "." + window.location.href.substring(window.location.href.indexOf('millisecond=') + 12).split(`]&p0=2966`)[0]).getTime();
-var bool = false;
 
 // Update the count down every 1 second
 var x = setInterval(function() {
@@ -47,13 +46,6 @@ var x = setInterval(function() {
   + minutes + "m " + seconds + "s" + "- Auto. Countdown Generator | Justin Coding Projects"
     }
   // If the count down is over, write some text 
-  if(bool == false) {
-    if(document.getElementById("demo").innerHTML == "00d 00h 27m 30s ") {
-      var audio = new Audio("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/assets/html/audio/AMONGUSSOUND.mp3")
-      document.body.appendChild(audio)
-      bool == true;
-    }
-  }
   if (distance < 0) {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "Period Ended";
