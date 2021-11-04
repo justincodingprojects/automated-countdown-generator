@@ -132,8 +132,6 @@ function generateURL(year, month, day, hour, minute, dayofweek, templateURL) {
     }
     if (hasWorked == true && dayofweek !== "Sunday" && dayofweek !== "Saturday") {
         var newURL = templateURL
-	alert("Before, this will redirect you to a website that I do not have control of.")
-	alert("Now, this will redirect to a website that I do have control of, but expect to not do much here, as it's still a work-in-progress.")
         alert("URL generated!")
         if (confirm(newURL)) {
             window.open(newURL)
