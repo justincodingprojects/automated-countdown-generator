@@ -18,7 +18,7 @@ var x = setInterval(function() {
   var distance = countDownDate - now;
   document.getElementById("title").innerHTML = decodeURIComponent(window.location.href.substring(window.location.href.indexOf('message=') + 8).split(`]&font=`)[0])
   if(decodeURIComponent(window.location.href.substring(window.location.href.indexOf('message=') + 8).split(`]&font=`)[0]) != "") {
-    document.title = decodeURIComponent(window.location.href.substring(window.location.href.indexOf('message=') + 8).split(`]&font=`)[0]) + " - Automated Countdown Generator | Justin Coding Projects"
+    document.title = decodeURIComponent(window.location.href.substring(window.location.href.indexOf('message=') + 8).split(`]&font=`)[0]) + " - Auto. Countdown Generator | Justin Coding Projects"
   }
     
   // Time calculations for days, hours, minutes and seconds
@@ -41,10 +41,10 @@ var x = setInterval(function() {
     minutes = "0" + minutes.toString()
   }
     document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
+  + minutes + "m " + seconds + "s";
     if(decodeURIComponent(window.location.href.substring(window.location.href.indexOf('message=') + 8).split(`]&font=`)[0]) == "") {
     document.title = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s " + "- Automated Countdown Generator | Justin Coding Projects"
+  + minutes + "m " + seconds + "s" + "- Auto. Countdown Generator | Justin Coding Projects"
     }
   // If the count down is over, write some text 
   if(bool == false) {
