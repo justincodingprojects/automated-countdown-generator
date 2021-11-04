@@ -1,3 +1,5 @@
+var URLdata;
+
 var input1 = document.querySelector('#BRUH')
 
 input1.addEventListener('change', changeFile);
