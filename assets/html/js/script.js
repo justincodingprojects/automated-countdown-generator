@@ -47,7 +47,7 @@ var x = setInterval(function() {
   + minutes + "m " + seconds + "s" + "- Auto. Countdown Generator | Justin Coding Projects"
     }
   if(document.getElementById("demo") == "0d 0h 17m 00s "){
-   var audio = new Audio(URL.createObjectURL(var input1 = document.querySelector('.BRUH').files[0]))
+   var audio = new Audio(URL.createObjectURL(document.querySelector('.BRUH').files[0]))
    document.body.appendChild(audio)
   }
   // If the count down is over, write some text 
