@@ -1,19 +1,3 @@
-var URLdata;
-
-var input1 = document.querySelector('#BRUH')
-
-input1.addEventListener('change', changeFile);
-
-function readFile(event) {
-  URLdata = event
-}
-
-function changeFile() {
-  var file = input1.files[0];
-  var fileURL = URL.createObjectURL(file);
-  readFile(fileURL)
-}
-
 if(window.location.href.indexOf("?iso") != -1) {
 // Set the date we're counting down to
 var countDownDate = new Date(window.location.href.substring(window.location.href.indexOf('month=') + 6).split(`][day`)[0] + 
