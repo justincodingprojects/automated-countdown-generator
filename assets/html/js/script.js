@@ -53,5 +53,5 @@ var x = setInterval(function() {
   }
 }, 50);
 } else {
- alert("Incorrect parameters.")
+ alert("URL cannot be parsed. Did you try to access the URL without parameters?")
 }
