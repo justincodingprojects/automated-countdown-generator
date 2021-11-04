@@ -1,3 +1,4 @@
+if(window.location.href.indexOf("?iso") != -1) {
 // Set the date we're counting down to
 var countDownDate = new Date(window.location.href.substring(window.location.href.indexOf('month=') + 6).split(`][day`)[0] + 
 " " + window.location.href.substring(window.location.href.indexOf('day=') + 4).split(`]T[hour`)[0] + 
@@ -51,3 +52,6 @@ var x = setInterval(function() {
     document.getElementById("demo").innerHTML = "Period Ended";
   }
 }, 50);
+} else {
+ alert("Incorrect parameters.")
+}
