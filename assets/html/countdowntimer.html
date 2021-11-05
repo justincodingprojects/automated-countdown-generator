@@ -1,6 +1,12 @@
 <head>
   <script src="./js/script.js"></script>
   <link rel="stylesheet" href="./css/style.css">
+  <script>
+    if ( window.location !== window.parent.location ) {
+  document.getElementById("title").style.width = "300%"
+      document.getElementById("demo").style.width = "300%"
+}
+  </script>
 </head>
 <body>
 <p id="title"></p>
