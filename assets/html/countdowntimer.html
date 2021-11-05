@@ -3,11 +3,7 @@
   <link rel="stylesheet" href="./css/style.css">
   <script>
     function inIframe () {
-    try {
-        return window.self !== window.top;
-    } catch (e) {
         return true;
-    }
 }
     if (inIframe() == true) {
       alert("You are trying to play this in a iframe")
