@@ -2,30 +2,6 @@
 body {
   background-color: black;
 }
-#demo {
-  text-align: center;
-  font-size: 375%;
-  margin-top: 0px;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  position: absolute;
-    top: 58%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -58%);
-}
-#title {
-  text-align: center;
-  font-size: 375%;
-  margin-top: 0px;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  position: absolute;
-    top: 45%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -45%);
-}
 .topnav {
   background-color: #34b518;
   overflow: hidden;
