@@ -1,4 +1,4 @@
-if(window.location.href.indexOf("month=") != -1) {
+if(window.location.href.indexOf("&day=") != -1) {
 // Set the date we're counting down to
 var countDownDate = new Date(window.location.href.substring(window.location.href.indexOf('month=') + 6).split(`&day=`)[0] + 
 " " + window.location.href.substring(window.location.href.indexOf('day=') + 4).split(`&year=`)[0] + 
