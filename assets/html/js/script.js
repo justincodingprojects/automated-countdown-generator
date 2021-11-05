@@ -1,12 +1,12 @@
 if(window.location.href.indexOf("?iso") != -1) {
 // Set the date we're counting down to
-var countDownDate = new Date(window.location.href.substring(window.location.href.indexOf('month=') + 6).split(`][day`)[0] + 
-" " + window.location.href.substring(window.location.href.indexOf('day=') + 4).split(`]T[hour`)[0] + 
-" " + window.location.href.substring(window.location.href.indexOf('year=') + 5).split(`][month`)[0] + 
-" " + window.location.href.substring(window.location.href.indexOf('hour=') + 5).split(`][minute`)[0] + 
-":" + window.location.href.substring(window.location.href.indexOf('minute=') + 7).split(`][second`)[0] + 
-":" + window.location.href.substring(window.location.href.indexOf('second=') + 7).split(`][millisecond`)[0] + 
-"." + window.location.href.substring(window.location.href.indexOf('millisecond=') + 12).split(`]&p0=2966`)[0]).getTime();
+var countDownDate = new Date(window.location.href.substring(window.location.href.indexOf('month=') + 6).split(`&day=`)[0] + 
+" " + window.location.href.substring(window.location.href.indexOf('day=') + 4).split(`&year=`)[0] + 
+" " + window.location.href.substring(window.location.href.indexOf('year=') + 5).split(`&hour=`)[0] + 
+" " + window.location.href.substring(window.location.href.indexOf('hour=') + 5).split(`&minute=`)[0] + 
+":" + window.location.href.substring(window.location.href.indexOf('minute=') + 7).split(`&second=`)[0] + 
+":" + window.location.href.substring(window.location.href.indexOf('second=') + 7).split(`&millisecond=`)[0] + 
+"." + window.location.href.substring(window.location.href.indexOf('millisecond=') + 12).split(`&message=`)[0]).getTime();
 // Update the count down every 1 second
 var x = setInterval(function() {
 
@@ -15,9 +15,9 @@ var x = setInterval(function() {
     
   // Find the distance between now and the count down date
   var distance = countDownDate - now;
-  document.getElementById("title").innerHTML = decodeURIComponent(window.location.href.substring(window.location.href.indexOf('message=') + 8).split(`]&font=`)[0])
-  if(decodeURIComponent(window.location.href.substring(window.location.href.indexOf('message=') + 8).split(`]&font=`)[0]) != "") {
-    document.title = decodeURIComponent(window.location.href.substring(window.location.href.indexOf('message=') + 8).split(`]&font=`)[0]) + " - Auto. Countdown Generator | Justin Coding Projects"
+  document.getElementById("title").innerHTML = decodeURIComponent(window.location.href.substring(window.location.href.indexOf('message=') + 8))
+  if(decodeURIComponent(window.location.href.substring(window.location.href.indexOf('message=') + 8)) != "") {
+    document.title = decodeURIComponent(window.location.href.substring(window.location.href.indexOf('message=') + 8)) + " - Auto. Countdown Generator | Justin Coding Projects"
   }
     
   // Time calculations for days, hours, minutes and seconds
