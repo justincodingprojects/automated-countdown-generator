@@ -2,7 +2,9 @@
   <script src="./js/script.js"></script>
   <link rel="stylesheet" href="./css/style.css">
   <script>
+    var isMaintenance = false;
     var isinIFrame = top.location != self.location
+    document.getElementById("bannerdiv").style.display = "none";
   if(isinIFrame == true) {
     /*document.getElementById("title").style = "text-align: center; font-size: 275%; margin-top: 0px; font-family: 'Roboto', sans-serif; color: white; position: absolute; top: 40%; left: 50%; margin-right: -50%; transform: translate(-40%, -50%);"
     document.getElementById("demo").style = "text-align: center; font-size: 275%; margin-top: 0px; font-family: 'Roboto', sans-serif; color: white; position: absolute; top: 65%; left: 50%; margin-right: -50%; transform: translate(-50%, -65%);"
@@ -12,8 +14,11 @@
   } else {
     console.log(isinIframe)
   }
+    if(isMaintenance){
+      document.getElementById("bannerdiv").style.display = "auto";
+    }
   </script>
-  <div class="topnav">
+  <div id="bannerdiv" class="topnav">
   <a id="mainbanner" class="active">This website is currently in ongoing maintenance, expect to see some small design changes over the days.</a>
 </div>
 </head>
