@@ -3,9 +3,10 @@
   <link rel="stylesheet" href="./css/style.css">
   <script>
     var isInIFrame = top.location != self.location
-    alert(isInIFrame)
+  if(isInIFrame == true) {
   document.getElementById("title").style.width = "300%"
   document.getElementById("demo").style.width = "300%"
+  }
   </script>
 </head>
 <body>
