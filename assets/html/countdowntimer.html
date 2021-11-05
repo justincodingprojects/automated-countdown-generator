@@ -2,7 +2,14 @@
   <script src="./js/script.js"></script>
   <link rel="stylesheet" href="./css/style.css">
   <script>
-    if ( window.location !== window.parent.location ) {
+    function inIframe () {
+    try {
+        return window.self !== window.top;
+    } catch (e) {
+        return true;
+    }
+}
+    if (inIframe() == true) {
       alert("You are trying to play this in a iframe")
   document.getElementById("title").style.width = "300%"
       document.getElementById("demo").style.width = "300%"
