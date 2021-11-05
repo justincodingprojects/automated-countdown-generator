@@ -7,7 +7,41 @@ var countDownDate = new Date(window.location.href.substring(window.location.href
 ":" + window.location.href.substring(window.location.href.indexOf('minute=') + 7).split(`][second`)[0] + 
 ":" + window.location.href.substring(window.location.href.indexOf('second=') + 7).split(`][millisecond`)[0] + 
 "." + window.location.href.substring(window.location.href.indexOf('millisecond=') + 12).split(`]&p0=2966`)[0]).getTime();
+if ('wakeLock' in navigator) {
+  // The wake lock sentinel.
+let wakeLock = null;
 
+// Function that attempts to request a screen wake lock.
+const requestWakeLock = async () => {
+  try {
+    wakeLock = await navigator.wakeLock.request();
+    alert("")
+    wakeLock.addEventListener('release', () => {
+      console.log('Screen Wake Lock released:', wakeLock.released);
+    });
+    console.log('Screen Wake Lock released:', wakeLock.released);
+  } catch (err) {
+    console.error(`${err.name}, ${err.message}`);
+  }
+};
+
+// Request a screen wake lock…
+await requestWakeLock();
+// …and release it again after 5s.
+  setInterval(function() {
+  if(distance < 0) {
+  wakeLock.release();
+  wakeLock = null;
+  }
+  }, 100)
+      const handleVisibilityChange = async () => {
+  if (wakeLock !== null && document.visibilityState === 'visible' && distance !< 0) {
+    await requestWakeLock();
+  }
+};
+
+document.addEventListener('visibilitychange', handleVisibilityChange);
+}
 // Update the count down every 1 second
 var x = setInterval(function() {
 
