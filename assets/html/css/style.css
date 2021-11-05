@@ -28,7 +28,7 @@ body {
 }
 .topnav {
   background-color: #34b518;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .topnav a {
@@ -38,6 +38,6 @@ body {
   width: 100%;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 25px;
   font-family: 'Roboto', sans-serif;
 }
