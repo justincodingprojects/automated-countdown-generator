@@ -18,11 +18,13 @@
       var a = document.createElement("a")
       div.id = "topmainnav"
       div.setAttribute('class', "topnav")
+      div.style = "background-color: #34b518; overflow: hidden;"
       document.head.appendChild(div)
       div = document.getElementById("topmainnav")
       a.setAttribute('class', "active")
       a.id = "mainbanner"
       a.innerHTML = "This website is currently in ongoing maintenance, expect to see some small design changes over the days. Oh no... THE MAINTAINENANCE BANNER, IS STUCK! :("
+      a.style = "float: left; color: #f2f2f2; text-align: center; width: 100%; padding: 14px 16px; text-decoration: none; font-size: 20px; font-family: 'Roboto', sans-serif;"
       div.appendChild(a)
     }
   </script>
