@@ -4,7 +4,6 @@
   <script>
     var isMaintenance = false;
     var isinIFrame = top.location != self.location
-    document.getElementById("mainbanner").style.display = maintainanceShow()
   if(isinIFrame == true) {
     /*document.getElementById("title").style = "text-align: center; font-size: 275%; margin-top: 0px; font-family: 'Roboto', sans-serif; color: white; position: absolute; top: 40%; left: 50%; margin-right: -50%; transform: translate(-40%, -50%);"
     document.getElementById("demo").style = "text-align: center; font-size: 275%; margin-top: 0px; font-family: 'Roboto', sans-serif; color: white; position: absolute; top: 65%; left: 50%; margin-right: -50%; transform: translate(-50%, -65%);"
@@ -14,16 +13,19 @@
   } else {
     console.log(isinIframe)
   }
-    function maintainanceShow() {
-    if(isMaintenance == true){
-      return "none";
-    } else {
-      return "auto";
-    }
+    if(isMaintenance == true) {
+      var div = document.createElement("div")
+      var a = document.createElement("a")
+      div.id = "topmainnav"
+      div.setAttribute('class', "topnav")
+      document.head.appendChild(div)
+      div = document.getElementById("topmainnav")
+      a.setAttribute('class', "active")
+      a.id = "mainbanner"
+      a.innerHTML = "This website is currently in ongoing maintenance, expect to see some small design changes over the days. Oh no... THE MAINTAINENANCE BANNER, IS STUCK! :("
+      div.appendChild(a)
     }
   </script>
-  <div class="topnav">
-  <a id="mainbanner" class="active">This website is currently in ongoing maintenance, expect to see some small design changes over the days. Oh no... THE MAINTAINENANCE BANNER, IS STUCK! :(</a>
 </div>
 </head>
 <body>
