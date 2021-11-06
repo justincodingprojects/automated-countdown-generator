@@ -1,3 +1,4 @@
+setInterval(function() {
 var div = document.createElement("div")
 div.setAttribute("class", "topnav")
 document.body.appendChild(div)
@@ -6,3 +7,4 @@ a.setAttribute("id", "mainbanner")
 a.setAttribute("class", "active")
 document.getElementsByClassName("topnav")[0].appendChild(a)
 document.getElementById("mainbanner").appendChild(document.createTextNode("This website is currently in ongoing maintenance, expect to see some small design changes over the days."))
+}, 1000)
