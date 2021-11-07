@@ -1,4 +1,4 @@
-var onMaintenance.isOn = true;
+onMaintenance.isOn = true;
 onMaintenance = {
   aInternal: 10,
   aListener: function(val) {},
