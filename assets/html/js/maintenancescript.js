@@ -20,21 +20,12 @@ onMaintenance.registerListener(function(val) {
 
 function setMaintenanceBanner(bool) {
   if(bool == true) {
-    if(document.getElementsByClassName("topnav")[0] == undefined) {
-setTimeout(function() {
-var div = document.createElement("div")
-div.setAttribute("class", "topnav")
-document.body.appendChild(div)
-var a = document.createElement("a")
-a.setAttribute("id", "mainbanner")
-a.setAttribute("class", "active")
-document.getElementsByClassName("topnav")[0].appendChild(a)
-document.getElementById("mainbanner").appendChild(document.createTextNode("This website is currently in ongoing maintenance, expect to see some small design changes over the days."))
-}, 100)
+    if(document.getElementsByClassName("topnav")[0].style.display !== "" || document.getElementsByClassName("topnav")[0].style.display !== "block") {
+    document.getElementsByClassName("topnav")[0].style.display == "block"
 }
   } else if(bool == false) {
-    if(document.getElementsByClassName("topnav")[0] !== undefined) {
-      document.body.removeChild(document.getElementsByClassName("topnav")[0])
+    if(document.getElementsByClassName("topnav")[0].style.display == "block" || document.getElementsByClassName("topnav")[0].style.display == "") {
+      document.getElementsByClassName("topnav")[0].style.display == "none"
     }
   }
 }
