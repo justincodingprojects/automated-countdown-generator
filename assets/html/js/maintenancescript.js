@@ -19,13 +19,6 @@ onMaintenance.registerListener(function(val) {
 });
 
 function setMaintenanceBanner(bool) {
-  if(bool == true) {
-    if(document.getElementsByClassName("topnav")[0].style.display !== "" || document.getElementsByClassName("topnav")[0].style.display !== "block") {
-    document.getElementsByClassName("topnav")[0].style.display == "block"
-}
-  } else if(bool == false) {
-    if(document.getElementsByClassName("topnav")[0].style.display == "block" || document.getElementsByClassName("topnav")[0].style.display == "") {
-      document.getElementsByClassName("topnav")[0].style.display == "none"
-    }
-  }
+  if(bool) {
+    alert("true :)")
 }
