@@ -1,12 +1,4 @@
-var onMaintenance = Bool(true);
-setInterval(function() {
-if(typeof onMaintenance !== "function") {
-  
-  }
-}, 500)
-function Bool(value) {
-  return value;
-}
+var onMaintenance = true;
 if(onMaintenance) {
 setTimeout(function() {
 var div = document.createElement("div")
