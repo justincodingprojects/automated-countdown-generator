@@ -1,5 +1,12 @@
-var onMaintenance = true;
-if(onMaintenance) {
+var onMaintenance = Bool(true);
+setInterval(function() {
+if(typeof onMaintenance !== "function") {
+  
+  }
+}, 500)
+function Bool(value) {
+  return value;
+}
 setTimeout(function() {
 var div = document.createElement("div")
 div.setAttribute("class", "topnav")
