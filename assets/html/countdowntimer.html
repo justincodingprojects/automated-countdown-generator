@@ -6,9 +6,9 @@
   <script>
     setTimeout(function() {
     onMaintenance.isOn = true;
-      setInterval(function() {
-      document.getElementById("mainbanner").innerHTML = (top.location != self.location).toString()
-      }, 1000)
+      if(top.location != self.location) {
+       alert("You're in an iframe")   
+      }
     }, 50)
   </script>
 </head>
