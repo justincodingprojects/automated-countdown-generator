@@ -7,6 +7,7 @@ if(typeof onMaintenance !== "function") {
 function Bool(value) {
   return value;
 }
+if(onMaintenance) {
 setTimeout(function() {
 var div = document.createElement("div")
 div.setAttribute("class", "topnav")
