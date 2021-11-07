@@ -6,7 +6,9 @@
   <script>
     setTimeout(function() {
     onMaintenance.isOn = true;
+      setInterval(function() {
       document.getElementById("mainbanner").innerHTML = (top.location != self.location).toString()
+      }, 1000)
     }, 50)
   </script>
 </head>
