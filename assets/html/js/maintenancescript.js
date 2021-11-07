@@ -1,3 +1,4 @@
+/* This goes to check if there's a maintenance and if there is, set a registered value */
 onMaintenance = {
   aInternal: 10,
   aListener: function(val) {},
