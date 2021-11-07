@@ -19,6 +19,22 @@ onMaintenance.registerListener(function(val) {
 });
 
 function setMaintenanceBanner(bool) {
-  if(bool) {
-    alert("true :)")
+  if(bool == true) {
+    if(document.getElementsByClassName("topnav")[0] == undefined) {
+setTimeout(function() {
+var div = document.createElement("div")
+div.setAttribute("class", "topnav")
+document.body.appendChild(div)
+var a = document.createElement("a")
+a.setAttribute("id", "mainbanner")
+a.setAttribute("class", "active")
+document.getElementsByClassName("topnav")[0].appendChild(a)
+document.getElementById("mainbanner").appendChild(document.createTextNode("This website is currently in ongoing maintenance, expect to see some small design changes over the days."))
+}, 100)
+}
+  } else if(bool == false) {
+    if(document.getElementsByClassName("topnav")[0] !== undefined) {
+      document.body.removeChild(document.getElementsByClassName("topnav")[0])
+    }
+  }
 }
