@@ -134,7 +134,7 @@ function generateURL(year, month, day, hour, minute, dayofweek, templateURL) {
         var newURL = templateURL
         alert("URL + Overlay generated!")
         if (confirm(`Is this correct?
-        ${newURL}`)) {
+${newURL}`)) {
             var timeriframe = document.createElement("iframe")
             timeriframe.id="timeriframe"
             timeriframe.width = 600
