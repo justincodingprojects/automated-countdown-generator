@@ -133,8 +133,7 @@ function generateURL(year, month, day, hour, minute, dayofweek, templateURL) {
     if (hasWorked == true && dayofweek !== "Sunday" && dayofweek !== "Saturday") {
         var newURL = templateURL
         alert("URL generated!")
-        if (confirm(`Is this correct?
-${newURL}`)) {
+        if (confirm("Is this correct?\n" + newURL)) {
             window.open(newURL)
         }
     } else if (dayofweek == "Sunday" || dayofweek == "Saturday") {
