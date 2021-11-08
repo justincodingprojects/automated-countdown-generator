@@ -2,6 +2,21 @@
   <script src="./js/script.js"></script>
   <script src="./js/maintenancescript.js"></script>
   <script src="./js/config.js"></script>
+  <script>
+    if(top.location != self.location) {
+        var link  = document.createElement('link');
+        link.rel  = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './css/style-iframe.css';
+        document.head.appendChild(link);
+      } else {
+        var link  = document.createElement('link');
+        link.rel  = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './css/style.css';
+        document.head.appendChild(link);
+      }
+  </script>
 </head>
 <body>
 <p id="title"></p>
