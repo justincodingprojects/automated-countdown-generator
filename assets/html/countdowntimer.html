@@ -4,11 +4,19 @@
   <script src="./js/config.js"></script>
   <script>
     if(top.location != self.location) {
+      if(onMaintenance.isOn) {
+        var link  = document.createElement('link');
+        link.rel  = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './css/style-iframe-maintenance.css';
+        document.head.appendChild(link);
+      } else {
         var link  = document.createElement('link');
         link.rel  = 'stylesheet';
         link.type = 'text/css';
         link.href = './css/style-iframe.css';
         document.head.appendChild(link);
+      }
       } else {
         var link  = document.createElement('link');
         link.rel  = 'stylesheet';
