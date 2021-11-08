@@ -133,8 +133,7 @@ function generateURL(year, month, day, hour, minute, dayofweek, templateURL) {
     if (hasWorked == true && dayofweek !== "Sunday" && dayofweek !== "Saturday") {
         var newURL = templateURL
         alert("URL + Overlay generated!")
-        if (confirm(`Is this correct?
-${newURL}`)) {
+        if (confirm("Is this correct?\n" + newURL)) {
             var timeriframe = document.createElement("iframe")
             timeriframe.id="timeriframe"
             timeriframe.width = 600
