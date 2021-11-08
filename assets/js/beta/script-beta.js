@@ -134,7 +134,7 @@ function generateURL(year, month, day, hour, minute, dayofweek, templateURL) {
         var newURL = templateURL
         alert("URL generated!")
         if (confirm(`Is this correct?
-        ${newURL}`)) {
+${newURL}`)) {
             window.open(newURL)
         }
     } else if (dayofweek == "Sunday" || dayofweek == "Saturday") {
