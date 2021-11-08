@@ -9,10 +9,10 @@ body {
   font-family: 'Roboto', sans-serif;
   color: white;
   position: absolute;
-    top: 62%;
+    top: 64%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -62%);
+    transform: translate(-50%, -64%);
 }
 #title {
   text-align: center;
@@ -21,10 +21,10 @@ body {
   font-family: 'Roboto', sans-serif;
   color: white;
   position: absolute;
-    top: 39%;
+    top: 41%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -39%);
+    transform: translate(-50%, -41%);
 }
 .topnav {
   background-color: #34b518;
