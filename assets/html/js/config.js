@@ -1,3 +1,3 @@
 setTimeout(function() {
-    onMaintenance.isOn = false;
+    onMaintenance.isOn = true;
     }, 50)
