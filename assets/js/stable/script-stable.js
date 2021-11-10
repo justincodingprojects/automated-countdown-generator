@@ -28,13 +28,13 @@ function generateURL(year, month, day, hour, minute, dayofweek, templateURL) {
         if (minute < 30) {
             templateURL = templateURL.replace("[hour]", "12")
             templateURL = templateURL.replace("[minute]", "30")
-            templateURL = templateURL.replace("[second]", "01")
+            templateURL = templateURL.replace("[second]", "00")
             templateURL = templateURL.replace("[message]", text5)
             hasWorked = true
         } else {
             templateURL = templateURL.replace("[hour]", "13")
             templateURL = templateURL.replace("[minute]", "20")
-            templateURL = templateURL.replace("[second]", "01")
+            templateURL = templateURL.replace("[second]", "00")
             templateURL = templateURL.replace("[message]", text6)
             hasWorked = true
         }
@@ -43,13 +43,13 @@ function generateURL(year, month, day, hour, minute, dayofweek, templateURL) {
         if (minute < 20) {
             templateURL = templateURL.replace("[hour]", "13")
             templateURL = templateURL.replace("[minute]", "20")
-            templateURL = templateURL.replace("[second]", "01")
+            templateURL = templateURL.replace("[second]", "00")
             templateURL = templateURL.replace("[message]", text6)
             hasWorked = true
         } else {
             templateURL = templateURL.replace("[hour]", "14")
             templateURL = templateURL.replace("[minute]", "10")
-            templateURL = templateURL.replace("[second]", "01")
+            templateURL = templateURL.replace("[second]", "00")
             templateURL = templateURL.replace("[message]", text7)
             hasWorked = true
         }
@@ -58,7 +58,7 @@ function generateURL(year, month, day, hour, minute, dayofweek, templateURL) {
         if (minute < 10) {
             templateURL = templateURL.replace("[hour]", "14")
             templateURL = templateURL.replace("[minute]", "10")
-            templateURL = templateURL.replace("[second]", "01")
+            templateURL = templateURL.replace("[second]", "00")
             templateURL = templateURL.replace("[message]", text6)
             hasWorked = true
         }
