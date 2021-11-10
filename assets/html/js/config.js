@@ -14,6 +14,5 @@ timeriframe.style.float = "right"
 timeriframe.style.zIndex = "9999"
 timeriframe.frameBorder = 0;
 document.body.appendChild(timeriframe)
-        document.location.assign("./maintenance/sitebroken.html")
     }
     }, 50)
