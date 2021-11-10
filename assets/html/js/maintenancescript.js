@@ -29,8 +29,7 @@ var a = document.createElement("a")
 a.setAttribute("id", "mainbanner")
 a.setAttribute("class", "active")
 document.getElementsByClassName("topnav")[0].appendChild(a)
-// document.getElementById("mainbanner").appendChild(document.createTextNode("This website is currently in ongoing maintenance, expect to see some small design changes over the days."))
-document.getElementById("mainbanner").appendChild(document.createTextNode("Finally, this website's BACK ON TRACK! :D"))
+document.getElementById("mainbanner").appendChild(document.createTextNode("This website is currently in ongoing maintenance, expect to see some small design changes over the days."))
 }, 50)
 }
   } else if(bool == false) {
