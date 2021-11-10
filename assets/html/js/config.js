@@ -1,7 +1,7 @@
 setTimeout(function() {
     onMaintenance.isOn = true;
-    var redirect = true;
-    var redirectPlusPassword = true;
+    var redirect = false;
+    var redirectPlusPassword = false;
     if(onMaintenance.isOn) {
         if(redirect) {
     alert("Sorry, we are currently undergoing maintenance!")
