@@ -3,23 +3,22 @@
   <script src="./js/maintenancescript.js"></script>
   <script src="./js/config.js"></script>
   <script>
-    setTimeout(function() {
     if(top.location != self.location) {
+      setTimeout(function() {
       if(onMaintenance.isOn) {
-        alert("maintenance style added")
         var link  = document.createElement('link');
         link.rel  = 'stylesheet';
         link.type = 'text/css';
         link.href = './css/style-iframe-maintenance.css';
         document.head.appendChild(link);
       } else {
-        alert("regular style added")
         var link  = document.createElement('link');
         link.rel  = 'stylesheet';
         link.type = 'text/css';
         link.href = './css/style-iframe.css';
         document.head.appendChild(link);
       }
+    }, 150)
       } else {
         var link  = document.createElement('link');
         link.rel  = 'stylesheet';
@@ -27,7 +26,6 @@
         link.href = './css/style.css';
         document.head.appendChild(link);
       }
-    }, 150)
   </script>
 </head>
 <body>
