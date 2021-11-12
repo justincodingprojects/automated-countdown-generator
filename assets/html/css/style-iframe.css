@@ -4,27 +4,27 @@ body {
 }
 #demo {
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
   margin-top: 0px;
   font-family: 'Roboto', sans-serif;
   color: white;
   position: absolute;
-    top: 64%;
+    top: 67%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -64%);
+    transform: translate(-50%, -67%);
 }
 #title {
   text-align: center;
-  font-size: 40px;
+  font-size: 50px;
   margin-top: 0px;
   font-family: 'Roboto', sans-serif;
   color: white;
   position: absolute;
-    top: 41%;
+    top: 44%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -41%);
+    transform: translate(-50%, -44%);
 }
 .topnav {
   background-color: #34b518;
