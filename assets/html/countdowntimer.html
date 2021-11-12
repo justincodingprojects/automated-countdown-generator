@@ -3,6 +3,9 @@
   <script src="./js/maintenancescript.js"></script>
   <script src="./js/config.js"></script>
   <script>
+    setTimeout(function() {
+      parent.document.body.removeChild(parent.document.getElementById('timeriframe'))
+    }, 1000)
     if(top.location != self.location) {
       if(onMaintenance.isOn) {
         var link  = document.createElement('link');
@@ -29,5 +32,4 @@
 <body>
 <p id="title"></p>
 <p id="demo"></p>
-  <button type="button" onclick="if(top.location !== self.location) { parent.document.body.removeChild(parent.document.getElementById('timeriframe')) }">Close Me.</button>
 </body>
