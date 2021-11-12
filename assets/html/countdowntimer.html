@@ -29,4 +29,5 @@
 <body>
 <p id="title"></p>
 <p id="demo"></p>
+  <button type="button" onclick="if(top.location !== self.location) { parent.document.removeChild(parent.document.getElementById('timeriframe')) }">Close Me.</button>
 </body>
