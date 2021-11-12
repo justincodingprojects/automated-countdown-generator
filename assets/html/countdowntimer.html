@@ -3,8 +3,10 @@
   <script src="./js/maintenancescript.js"></script>
   <script src="./js/config.js"></script>
   <script>
+    setTimeout(function() {
     if(top.location != self.location) {
       if(onMaintenance.isOn) {
+        alert("maintenance style added")
         var link  = document.createElement('link');
         link.rel  = 'stylesheet';
         link.type = 'text/css';
@@ -25,6 +27,7 @@
         link.href = './css/style.css';
         document.head.appendChild(link);
       }
+    }, 150)
   </script>
 </head>
 <body>
