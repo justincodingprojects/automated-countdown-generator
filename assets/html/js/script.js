@@ -49,8 +49,11 @@ var x = setInterval(function() {
   if(minutes < 10) {
     minutes = "0" + minutes.toString()
   }
+   if(days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s" != document.getElementById("demo").innerHTML) {
     document.getElementById("demo").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s";
+   }
     if(decodeURIComponent(window.location.href.substring(window.location.href.indexOf('message=') + 8).split(`]&font=`)[0]) == "") {
     document.title = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s" + " - Auto. Countdown Generator | Justin Coding Projects"
