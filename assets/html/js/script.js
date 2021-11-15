@@ -60,7 +60,7 @@ var x = setInterval(function() {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "Period Ended";
   }
-}, 50);
+}, 1000);
 } else {
  alert("Incorrect parameters.")
 }
