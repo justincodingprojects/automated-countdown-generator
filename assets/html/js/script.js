@@ -54,11 +54,10 @@ var x = setInterval(function() {
       document.body.removeChild(document.getElementById("demo"))
       var pElement = document.createElement("p")
       pElement.id = "demo"
-      pElement.style.opacity = 0
+      // pElement.style.opacity = 0
+      pElement.innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s"
       document.body.appendChild(pElement)
-      pElement = undefined
-    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s";
    }
     if(decodeURIComponent(window.location.href.substring(window.location.href.indexOf('message=') + 8).split(`]&font=`)[0]) == "") {
     document.title = days + "d " + hours + "h "
