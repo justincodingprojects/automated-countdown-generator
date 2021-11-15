@@ -54,7 +54,7 @@ var x = setInterval(function() {
       document.body.removeChild(document.getElementById("demo"))
       var pElement = document.createElement("p")
       pElement.id = "demo"
-      document.body.appendChild("p")
+      document.body.appendChild(pElement)
       pElement = undefined
     document.getElementById("demo").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s";
