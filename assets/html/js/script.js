@@ -58,7 +58,7 @@ var x = setInterval(function() {
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "Time Ended";
+    document.getElementById("demo").innerHTML = "Countdown Ended";
   }
 }, 1000);
 } else {
