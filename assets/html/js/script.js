@@ -51,6 +51,11 @@ var x = setInterval(function() {
   }
    if(days + "d " + hours + "h "
   + minutes + "m " + seconds + "s" != document.getElementById("demo").innerHTML) {
+      document.body.removeChild(document.getElementById("demo"))
+      var pElement = document.createElement("p")
+      pElement.id = "demo"
+      document.body.appendChild("p")
+      pElement = undefined
     document.getElementById("demo").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s";
    }
