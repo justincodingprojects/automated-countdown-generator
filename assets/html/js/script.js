@@ -60,7 +60,7 @@ var x = setInterval(function() {
     clearInterval(x);
     document.getElementById("demo").innerHTML = "Countdown Ended";
   }
-}, 1000);
+}, 50);
 } else {
  alert("Incorrect parameters.")
 }
