@@ -53,9 +53,11 @@ var x = setInterval(function() {
   + minutes + "m " + seconds + "s" != document.getElementById("demo").innerHTML) {
       var pElement = document.createElement("p")
       pElement.id = "demo1"
+      pElement.style.opacity = 0
       pElement.innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s"
       document.body.appendChild(pElement)
+      document.getElementById("demo1").style.opacity = 1
       $("#demo1").fadeIn(500)
       $("#demo").fadeOut(500)
       setTimeout(function() {
