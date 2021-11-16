@@ -59,36 +59,34 @@ var x = setInterval(function() {
   + minutes + "m " + seconds + "s"
       document.body.appendChild(pElement)
       $("#demo").fadeOut(500)
-      setTimeout(function() {
-	pElement.style.opacity = 0.1
-	setTimeout(function() {
-		pElement.style.opacity = 0.2
-		setTimeout(function() {
-			pElement.style.opacity = 0.3
-			setTimeout(function() {
-				pElement.style.opacity = 0.4
-				setTimeout(function() {
-					pElement.style.opacity = 0.5
-					setTimeout(function() {
-						pElement.style.opacity = 0.6
-						setTimeout(function() {
-							pElement.style.opacity = 0.7
-							setTimeout(function() {
-								pElement.style.opacity = 0.8
-								setTimeout(function() {
-									pElement.style.opacity = 0.9
-									setTimeout(function() {
-										pElement.style.opacity = 1
-									}, 50)
-								}, 50)
-							}, 50)
-						}, 50)
-					}, 50)
-				}, 50)
-			}, 50)
-		}, 50)
-	}, 50)
-}, 0)
+         pElement.style.opacity = 0.1
+         setTimeout(function() {
+         pElement.style.opacity = 0.2
+            setTimeout(function() {
+         pElement.style.opacity = 0.3
+               setTimeout(function() {
+         pElement.style.opacity = 0.4
+                  setTimeout(function() {
+         pElement.style.opacity = 0.5
+                     setTimeout(function() {
+         pElement.style.opacity = 0.6
+                        setTimeout(function() {
+         pElement.style.opacity = 0.7
+                           setTimeout(function() {
+         pElement.style.opacity = 0.8
+                              setTimeout(function() {
+         pElement.style.opacity = 0.9
+                                 setTimeout(function() {
+         pElement.style.opacity = 1
+      }, 50)
+      }, 50)
+      }, 50)
+      }, 50)
+      }, 50)
+      }, 50)
+      }, 50)
+      }, 50)
+      }, 50)
       setTimeout(function() {
       document.body.removeChild(document.getElementById("demo"))
       document.getElementById("demo1").id = "demo"
