@@ -93,6 +93,9 @@ var x = setInterval(function() {
       document.getElementById("demo1").id = "demo"
       pElement = undefined
       }, 500)
+      } else {
+         document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s"
       }
    }
    }
@@ -103,7 +106,9 @@ var x = setInterval(function() {
   // If the count down is over, write some text 
   if (distance < 0) {
     clearInterval(x);
+     setTimeout(function() {
     document.getElementById("demo").innerHTML = "Countdown Ended";
+     }, 500)
   }
 }, 50);
 } else {
