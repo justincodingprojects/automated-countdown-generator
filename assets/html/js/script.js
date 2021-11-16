@@ -60,7 +60,34 @@ var x = setInterval(function() {
       document.body.appendChild(pElement)
       $("#demo").fadeOut(500)
       setTimeout(function() {
-         $("#demo1").fadeIn(500)
+         pElement.style.opacity = 0.1
+         setTimeout(function() {
+         pElement.style.opacity = 0.2
+            setTimeout(function() {
+         pElement.style.opacity = 0.3
+               setTimeout(function() {
+         pElement.style.opacity = 0.4
+                  setTimeout(function() {
+         pElement.style.opacity = 0.5
+                     setTimeout(function() {
+         pElement.style.opacity = 0.6
+                        setTimeout(function() {
+         pElement.style.opacity = 0.7
+                           setTimeout(function() {
+         pElement.style.opacity = 0.8
+                              setTimeout(function() {
+         pElement.style.opacity = 0.9
+                                 setTimeout(function() {
+         pElement.style.opacity = 1
+      }, 50)
+      }, 50)
+      }, 50)
+      }, 50)
+      }, 50)
+      }, 50)
+      }, 50)
+      }, 50)
+      }, 50)
       }, 250)
       setTimeout(function() {
       document.body.removeChild(document.getElementById("demo"))
