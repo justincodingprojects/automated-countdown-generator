@@ -52,6 +52,7 @@ var x = setInterval(function() {
    if (distance > 0) {
    if(days + "d " + hours + "h "
   + minutes + "m " + seconds + "s" != document.getElementById("demo").innerHTML) {
+      if(top.location == self.location) {
       var pElement = document.createElement("p")
       pElement.id = "demo1"
       pElement.style.opacity = 0
@@ -92,6 +93,7 @@ var x = setInterval(function() {
       document.getElementById("demo1").id = "demo"
       pElement = undefined
       }, 500)
+      }
    }
    }
     if(decodeURIComponent(window.location.href.substring(window.location.href.indexOf('message=') + 8).split(`]&font=`)[0]) == "") {
