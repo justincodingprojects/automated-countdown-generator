@@ -8,6 +8,7 @@ body {
   margin-top: 0px;
   font-family: 'Roboto', sans-serif;
   color: white;
+  z-index: 10;
   position: absolute;
     top: 74%;
     left: 50%;
