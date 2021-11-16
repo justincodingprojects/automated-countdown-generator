@@ -58,10 +58,10 @@ body {
   font-family: 'Roboto', sans-serif;
   color: white;
   position: absolute;
-    top: 77%;
+    top: 80%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -77%);
+    transform: translate(-50%, -80%);
 }
 .topnav {
   background-color: #34b518;
