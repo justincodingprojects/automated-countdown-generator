@@ -50,7 +50,8 @@ var x = setInterval(function() {
     minutes = "0" + minutes.toString()
   }
    if(days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s" != document.getElementById("demo").innerHTML) {
+  + minutes + "m " + seconds + "s" != document.getElementById("demo").innerHTML || days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s" != "Countdown Ended") {
       var pElement = document.createElement("p")
       pElement.id = "demo1"
       pElement.innerHTML = days + "d " + hours + "h "
