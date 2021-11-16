@@ -88,7 +88,7 @@ var x = setInterval(function() {
       }, 50)
       }, 50)
       }, 50)
-      }, 250)
+      }, 100)
       setTimeout(function() {
       document.body.removeChild(document.getElementById("demo"))
       document.getElementById("demo1").id = "demo"
