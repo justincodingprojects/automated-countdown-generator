@@ -88,9 +88,7 @@ var x = setInterval(function() {
       }, 50)
       }, 50)
       setTimeout(function() {
-      if (document.getElementById("demo") !== null) {
       document.body.removeChild(document.getElementById("demo"))
-      }
       document.getElementById("demo1").id = "demo"
       pElement = undefined
       }, 500)
