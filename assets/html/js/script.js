@@ -59,7 +59,6 @@ var x = setInterval(function() {
   + minutes + "m " + seconds + "s"
       document.body.appendChild(pElement)
       $("#demo").fadeOut(500)
-      setTimeout(function() {
          pElement.style.opacity = 0.1
          setTimeout(function() {
          pElement.style.opacity = 0.2
@@ -88,7 +87,6 @@ var x = setInterval(function() {
       }, 50)
       }, 50)
       }, 50)
-      }, 100)
       setTimeout(function() {
       document.body.removeChild(document.getElementById("demo"))
       document.getElementById("demo1").id = "demo"
