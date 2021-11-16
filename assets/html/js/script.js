@@ -49,7 +49,8 @@ var x = setInterval(function() {
   if(minutes < 10) {
     minutes = "0" + minutes.toString()
   }
-   if (distance !< 0) {
+   if (distance < 0) {
+   } else {
    if(days + "d " + hours + "h "
   + minutes + "m " + seconds + "s" != document.getElementById("demo").innerHTML) {
       var pElement = document.createElement("p")
