@@ -56,8 +56,8 @@ var x = setInterval(function() {
       pElement.innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s"
       document.body.appendChild(pElement)
-      $("#demo").fadeOut(500)
-      $("#demo1").fadeIn(500)
+      $("#demo").fadeOut(500, "linear")
+      $("#demo1").fadeIn(500, "linear")
       setTimeout(function() {
       document.body.removeChild(document.getElementById("demo"))
       document.getElementById("demo1").id = "demo"
