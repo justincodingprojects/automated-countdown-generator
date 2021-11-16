@@ -49,8 +49,9 @@ var x = setInterval(function() {
   if(minutes < 10) {
     minutes = "0" + minutes.toString()
   }
+   if (distance !< 0) {
    if(days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s" != document.getElementById("demo").innerHTML && document.getElementById("demo").innerHTML != "Countdown Ended") {
+  + minutes + "m " + seconds + "s" != document.getElementById("demo").innerHTML) {
       var pElement = document.createElement("p")
       pElement.id = "demo1"
       pElement.innerHTML = days + "d " + hours + "h "
@@ -63,6 +64,7 @@ var x = setInterval(function() {
       document.getElementById("demo1").id = "demo"
       pElement = undefined
       }, 500)
+   }
    }
     if(decodeURIComponent(window.location.href.substring(window.location.href.indexOf('message=') + 8).split(`]&font=`)[0]) == "") {
     document.title = days + "d " + hours + "h "
