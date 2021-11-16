@@ -51,13 +51,19 @@ var x = setInterval(function() {
   }
    if(days + "d " + hours + "h "
   + minutes + "m " + seconds + "s" != document.getElementById("demo").innerHTML) {
-      document.body.removeChild(document.getElementById("demo"))
       var pElement = document.createElement("p")
-      pElement.id = "demo"
-      // pElement.style.opacity = 0
+      pElement.id = "demo1"
+      pElement.style.opacity = 0
       pElement.innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s"
       document.body.appendChild(pElement)
+      $("#demo1").fadeIn(500)
+      $("#demo").fadeOut(500)
+      setTimeout(function() {
+      document.body.removeChild(document.getElementById("demo"))
+      document.getElementById("demo1").id = "demo"
+      pElement = undefined
+      }, 500)
    }
     if(decodeURIComponent(window.location.href.substring(window.location.href.indexOf('message=') + 8).split(`]&font=`)[0]) == "") {
     document.title = days + "d " + hours + "h "
