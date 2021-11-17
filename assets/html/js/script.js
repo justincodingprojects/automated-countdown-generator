@@ -13,6 +13,7 @@ var countDownDate = new Date(window.location.href.substring(window.location.href
 ":" + window.location.href.substring(window.location.href.indexOf('minute=') + 7).split(`&second=`)[0] + 
 ":" + window.location.href.substring(window.location.href.indexOf('second=') + 7).split(`&millisecond=`)[0] + 
 "." + window.location.href.substring(window.location.href.indexOf('millisecond=') + 12).split(`&message=`)[0]).getTime();
+   var fadeBool = true;
 // Update the count down every 1 second
 var x = setInterval(function() {
 
@@ -53,6 +54,7 @@ var x = setInterval(function() {
    if(days + "d " + hours + "h "
   + minutes + "m " + seconds + "s" != document.getElementById("demo").innerHTML) {
       if(top.location == self.location) {
+         if(fadeBool) {
       var pElement = document.createElement("p")
       pElement.id = "demo1"
       pElement.style.opacity = 0
@@ -93,6 +95,10 @@ var x = setInterval(function() {
       document.getElementById("demo1").id = "demo"
       pElement = undefined
       }, 250)
+         } else {
+            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s"
+         }
       } else {
          document.getElementById("demo").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s"
@@ -120,6 +126,6 @@ var x = setInterval(function() {
         alert("Fade animation removed, switched to classic animation...")
         document.getElementById("fadetolinear").style.display = "none"
         document.getElementById("fadetolinear2").style.display = "none"
-        pElement = undefined
+        fadeBool = false;
      }
    }
