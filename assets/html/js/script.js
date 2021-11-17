@@ -13,12 +13,6 @@ var countDownDate = new Date(window.location.href.substring(window.location.href
 ":" + window.location.href.substring(window.location.href.indexOf('minute=') + 7).split(`&second=`)[0] + 
 ":" + window.location.href.substring(window.location.href.indexOf('second=') + 7).split(`&millisecond=`)[0] + 
 "." + window.location.href.substring(window.location.href.indexOf('millisecond=') + 12).split(`&message=`)[0]).getTime();
-// Sets function if it's not in an overlay
-   if(top.location == self.location) {
-   	document.getElementById("fadetolinearclick").onclick = function() {
-         alert("Still, not implemented yet. D:")
-      }
-   }
 // Update the count down every 1 second
 var x = setInterval(function() {
 
