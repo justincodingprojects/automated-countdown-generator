@@ -130,8 +130,10 @@ var x = setInterval(function() {
         if(document.getElementById("demo") != null) {
          document.body.removeChild(document.getElementById("demo"))
         }
-        if(document.getElementById("demo1") != null) {
          document.body.removeChild(document.getElementById("demo1"))
-        }
+         document.body.removeChild(document.getElementById("demo1"))
+         document.body.removeChild(document.getElementById("demo1"))
+         document.body.removeChild(document.getElementById("demo1"))
+         document.body.removeChild(document.getElementById("demo1"))
      }
    }
