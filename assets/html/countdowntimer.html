@@ -29,10 +29,9 @@
       }
     
     // Sets function if it's not in an overlay
-   if(top.location == self.location) {
-   	document.getElementById("fadetolinearclick").onclick = function() {
+   var fadetoclassicfunction = function() {
+     if(top.location == self.location) {
          alert("Still, not implemented yet. D:")
-      }
    }
   </script>
 </head>
@@ -40,5 +39,5 @@
   <p id="title"></p>
   <p id="demo"></p>
   <p id="fadetolinear">Countdown text too choppy?</p>
-  <p id="fadetolinear2"><span id="fadetolinearclick" style="color: cornflowerblue; cursor: pointer;">Click Here</span> to return to the classic countdown animation.</p>
+  <p id="fadetolinear2"><span style="color: cornflowerblue; cursor: pointer;">Click Here</span> to return to the classic countdown animation.</p>
 </body>
