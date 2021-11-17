@@ -27,6 +27,13 @@
         link.href = './css/style.css';
         document.head.appendChild(link);
       }
+    
+    // Sets function if it's not in an overlay
+   if(top.location == self.location) {
+   	document.getElementById("fadetolinearclick").onclick = function() {
+         alert("Still, not implemented yet. D:")
+      }
+   }
   </script>
 </head>
 <body>
