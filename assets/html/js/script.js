@@ -114,6 +114,11 @@ var x = setInterval(function() {
 } else {
  alert("Incorrect parameters.")
 }
+if(top.location != self.location) {
+   document.body.removeChild(document.getElementById("fadetobanner"))
+   document.body.removeChild(document.getElementById("fadetobanner2"))
+   document.body.removeChild(document.getElementById("fadetobannerclick"))
+}
 // Sets function if it's not in an overlay
    var fadetoclassicfunction = function() {
      if(top.location == self.location) {
