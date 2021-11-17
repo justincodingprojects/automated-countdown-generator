@@ -120,5 +120,10 @@ var x = setInterval(function() {
         alert("Fade animation removed, switched to classic animation...")
         document.getElementById("fadetolinear").style.display = "none"
         document.getElementById("fadetolinear2").style.display = "none"
+        document.body.removeChild(document.getElementById("demo"))
+        document.getElementById("demo1").style.opacity = 1
+        document.getElementById("demo1").id = "demo"
+        pElement = undefined
+      }, 250)
      }
    }
