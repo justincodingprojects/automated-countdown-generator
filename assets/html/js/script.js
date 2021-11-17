@@ -117,8 +117,7 @@ var x = setInterval(function() {
 // Sets function if it's not in an overlay
    var fadetoclassicfunction = function() {
      if(top.location == self.location) {
-         alert("Still, not implemented yet. D:")
-        alert("But I will remove thy shoes.")
+        alert("Fade animation removed, switched to classic animation...")
         document.getElementById("fadetolinear").style.display = "none"
         document.getElementById("fadetolinear2").style.display = "none"
      }
