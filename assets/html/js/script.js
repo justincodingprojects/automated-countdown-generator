@@ -127,5 +127,11 @@ var x = setInterval(function() {
         document.getElementById("fadetolinear").style.display = "none"
         document.getElementById("fadetolinear2").style.display = "none"
         fadeBool = false;
+        if(document.getElementById("demo") != null) {
+         document.body.removeChild(document.getElementById("demo"))
+        }
+        if(document.getElementById("demo1") != null) {
+         document.body.removeChild(document.getElementById("demo1"))
+        }
      }
    }
