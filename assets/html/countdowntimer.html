@@ -5,6 +5,15 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script>
     if(top.location != self.location) {
+      initializeMegaLoad()
+      } else {
+        var link  = document.createElement('link');
+        link.rel  = 'stylesheet';
+        link.type = 'text/css';
+        link.href = './css/style.css';
+        document.head.appendChild(link);
+      }
+    function initiaizeMegaLoad() {
       setTimeout(function() {
       if(onMaintenance.isOn) {
         var link  = document.createElement('link');
@@ -19,15 +28,7 @@
         link.href = './css/style-iframe.css';
         document.head.appendChild(link);
       }
-    }, 150)
-      } else {
-        var link  = document.createElement('link');
-        link.rel  = 'stylesheet';
-        link.type = 'text/css';
-        link.href = './css/style.css';
-        document.head.appendChild(link);
-      }
-    if(top.location != self.location) {
+        }, 150)
       var pElement1 = document.createElement("p")
       var pElement2 = document.createElement("p")
       var pElementSpan = document.createElement("span")
@@ -40,8 +41,10 @@
       document.getElementById("fadetolinear2").appendChild(pElementSpan)
       document.getElementsByTagName("SPAN")[0].appendChild(document.createTextNode("Click Here"))
       document.getElementById("fadetolinear2").appendChild(document.createTextNode(" to return to the classic countdown animation."))
-      document.getElementsByTagName("SPAN")[0].onClick = fadetoclassicfunction()
-}
+      document.getElementsByTagName("SPAN")[0].onclick = function() {
+        fadetoclassicfunction()
+      }
+    }
   </script>
 </head>
 <body>
