@@ -29,7 +29,7 @@ var a = document.createElement("a")
 a.setAttribute("id", "mainbanner")
 a.setAttribute("class", "active")
 document.getElementsByClassName("topnav")[0].appendChild(a)
-document.getElementById("mainbanner").appendChild(/*document.createTextNode("This website is currently in ongoing maintenance, expect to see some small design changes over the days.")*/document.createTextNode("Maintenance: First, I need to create my status page, second, I fixed the text, but I had to use some other method to change it when the editor was blocked.."))
+document.getElementById("mainbanner").appendChild(/*document.createTextNode("This website is currently in ongoing maintenance, expect to see some small design changes over the days.")*/document.createTextNode("Maintenance Status: I need to create my status page, and I fixed the text, but I had to use some other method to change it when the editor was blocked. :("))
 }, 50)
 }
   } else if(bool == false) {
