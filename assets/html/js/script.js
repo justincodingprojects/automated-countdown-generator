@@ -118,5 +118,8 @@ var x = setInterval(function() {
    var fadetoclassicfunction = function() {
      if(top.location == self.location) {
          alert("Still, not implemented yet. D:")
+        alert("But I will remove thy shoes.")
+        document.getElementById("fadetolinear").style.display = "none"
+        document.getElementById("fadetolinear2").style.display = "none"
      }
    }
