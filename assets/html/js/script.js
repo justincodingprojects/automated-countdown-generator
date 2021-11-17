@@ -13,6 +13,12 @@ var countDownDate = new Date(window.location.href.substring(window.location.href
 ":" + window.location.href.substring(window.location.href.indexOf('minute=') + 7).split(`&second=`)[0] + 
 ":" + window.location.href.substring(window.location.href.indexOf('second=') + 7).split(`&millisecond=`)[0] + 
 "." + window.location.href.substring(window.location.href.indexOf('millisecond=') + 12).split(`&message=`)[0]).getTime();
+// Sets function if it's not in an overlay
+   if(top.location == self.location) {
+   	document.getElementById("fadetolinearclick").onclick = function() {
+         alert("Still, not implemented yet. D:")
+      }
+   }
 // Update the count down every 1 second
 var x = setInterval(function() {
 
@@ -59,7 +65,7 @@ var x = setInterval(function() {
       pElement.innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s"
       document.body.appendChild(pElement)
-      $("#demo").fadeOut(500)
+      $("#demo").fadeOut(250)
          pElement.style.opacity = 0.1
          setTimeout(function() {
          pElement.style.opacity = 0.2
@@ -79,20 +85,20 @@ var x = setInterval(function() {
          pElement.style.opacity = 0.9
                                  setTimeout(function() {
          pElement.style.opacity = 1
-      }, 50)
-      }, 50)
-      }, 50)
-      }, 50)
-      }, 50)
-      }, 50)
-      }, 50)
-      }, 50)
+      }, 25)
+      }, 25)
+      }, 25)
+      }, 25)
+      }, 25)
+      }, 25)
+      }, 25)
+      }, 25)
       }, 50)
       setTimeout(function() {
       document.body.removeChild(document.getElementById("demo"))
       document.getElementById("demo1").id = "demo"
       pElement = undefined
-      }, 500)
+      }, 250)
       } else {
          document.getElementById("demo").innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s"
