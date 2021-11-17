@@ -114,3 +114,9 @@ var x = setInterval(function() {
 } else {
  alert("Incorrect parameters.")
 }
+// Sets function if it's not in an overlay
+   var fadetoclassicfunction = function() {
+     if(top.location == self.location) {
+         alert("Still, not implemented yet. D:")
+     }
+   }
