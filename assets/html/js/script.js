@@ -115,8 +115,19 @@ var x = setInterval(function() {
  alert("Incorrect parameters.")
 }
 if(top.location != self.location) {
-   document.body.removeChild(document.getElementById("fadetolinear"))
-   document.body.removeChild(document.getElementById("fadetolinear2"))
+   var pElement1 = document.createElement("p")
+   var pElement2 = document.createElement("p")
+   var pElementSpan = document.createElement("span")
+   pElement1.id = "fadetolinear"
+   document.body.appendChild(pElement1)
+   document.getElementById("fadetolinear").appendChild(document.createTextNode("Countdown text too choppy?"))
+   pElement2.id = "fadetolinear2"
+   document.body.appendChild(pElement2)
+   pElementSpan.style = "color: cornflowerblue; cursor: pointer;"
+   document.getElementById("fadetolinear2").appendChild(pElementSpan)
+   document.getElementsByTagName("SPAN")[0].appendChild(document.createTextNode("Click Here"))
+   document.getElementById("fadetolinear2").appendChild(document.createTextNode(" to return to the classic countdown animation."))
+   document.getElementsByTagName("SPAN")[0].onClick = fadetoclassicfunction()
 }
 // Sets function if it's not in an overlay
    var fadetoclassicfunction = function() {
