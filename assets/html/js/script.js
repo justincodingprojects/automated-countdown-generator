@@ -116,16 +116,14 @@ var x = setInterval(function() {
         if(fadeBool) {
         fadeBool = false;
         }
-        document.getElementById("demo").style.opacity = 1
-        document.getElementById("demo").style.opacity = 1
+        setTimeout(function() {
         document.getElementById("demo").style.opacity = 1
         document.getElementById("demo").style.opacity = 1
         document.getElementById("demo").style.opacity = 1
         document.getElementById("demo1").style.opacity = 1
         document.getElementById("demo1").style.opacity = 1
         document.getElementById("demo1").style.opacity = 1
-        document.getElementById("demo1").style.opacity = 1
-        document.getElementById("demo1").style.opacity = 1
+        }, 500)
         document.getElementById("demo").innerHTML = "Countdown Ended"
      }, 500)
   }
@@ -140,15 +138,13 @@ var x = setInterval(function() {
         document.getElementById("fadetolinear").style.display = "none"
         document.getElementById("fadetolinear2").style.display = "none"
         fadeBool = false;
-        document.getElementById("demo").style.opacity = 1
-        document.getElementById("demo").style.opacity = 1
+        setTimeout(function() {
         document.getElementById("demo").style.opacity = 1
         document.getElementById("demo").style.opacity = 1
         document.getElementById("demo").style.opacity = 1
         document.getElementById("demo1").style.opacity = 1
         document.getElementById("demo1").style.opacity = 1
         document.getElementById("demo1").style.opacity = 1
-        document.getElementById("demo1").style.opacity = 1
-        document.getElementById("demo1").style.opacity = 1
+        }, 500)
      }
    }
