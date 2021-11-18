@@ -116,18 +116,7 @@ var x = setInterval(function() {
         if(fadeBool) {
         fadeBool = false;
         }
-        if(document.getElementById("demo") != null) {
-         document.body.removeChild(document.getElementById("demo"))
-        }
-         document.body.removeChild(document.getElementById("demo1"))
-         document.body.removeChild(document.getElementById("demo1"))
-         document.body.removeChild(document.getElementById("demo1"))
-         document.body.removeChild(document.getElementById("demo1"))
-         document.body.removeChild(document.getElementById("demo1"))
-         var pElementDemo = document.createElement("p")
-         pElementDemo.id = "demo"
-         pElementDemo.innerHTML = "Countdown Ended"
-      document.body.appendChild(pElementDemo)
+        document.getElementById("demo").innerHTML = "Countdown Ended"
      }, 500)
   }
 }, 50);
@@ -141,18 +130,5 @@ var x = setInterval(function() {
         document.getElementById("fadetolinear").style.display = "none"
         document.getElementById("fadetolinear2").style.display = "none"
         fadeBool = false;
-        if(document.getElementById("demo") != null) {
-         document.body.removeChild(document.getElementById("demo"))
-        }
-         document.body.removeChild(document.getElementById("demo1"))
-         document.body.removeChild(document.getElementById("demo1"))
-         document.body.removeChild(document.getElementById("demo1"))
-         document.body.removeChild(document.getElementById("demo1"))
-         document.body.removeChild(document.getElementById("demo1"))
-         var pElementDemo2 = document.createElement("p")
-         pElementDemo2.id = "demo"
-         pElementDemo2.innerHTML = Math.floor(countDownDate - new Date().getTime / (1000 * 60 * 60 * 24)) + "d " + Math.floor(countDownDate - new Date().getTime % (1000 * 60 * 60 * 24)) + "h "
-  + Math.floor(countDownDate - new Date().getTime % (1000 * 60 * 60)) / (1000 * 60)) + "m " + Math.floor((countDownDate - new Date().getTime % (1000 * 60)) / 1000) + "s"
-         document.body.appendChild(pElementDemo2)
      }
    }
