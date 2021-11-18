@@ -58,6 +58,7 @@ var x = setInterval(function() {
       var pElement = document.createElement("p")
       pElement.id = "demo1"
       pElement.style.opacity = 0
+      pElement.onclick = function() {addClickDemo()}
       pElement.innerHTML = days + "d " + hours + "h "
   + minutes + "m " + seconds + "s"
       document.body.appendChild(pElement)
