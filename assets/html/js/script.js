@@ -89,7 +89,7 @@ var x = setInterval(function() {
       }, 25)
       }, 25)
       }, 25)
-      }, 50)
+      }, 25)
       setTimeout(function() {
       document.body.removeChild(document.getElementById("demo"))
       document.getElementById("demo1").id = "demo"
@@ -113,7 +113,21 @@ var x = setInterval(function() {
   if (distance < 0) {
     clearInterval(x);
      setTimeout(function() {
-    document.getElementById("demo").innerHTML = "Countdown Ended";
+        if(fadeBool) {
+        fadeBool = false;
+        }
+        if(document.getElementById("demo") != null) {
+         document.body.removeChild(document.getElementById("demo"))
+        }
+         document.body.removeChild(document.getElementById("demo1"))
+         document.body.removeChild(document.getElementById("demo1"))
+         document.body.removeChild(document.getElementById("demo1"))
+         document.body.removeChild(document.getElementById("demo1"))
+         document.body.removeChild(document.getElementById("demo1"))
+         var pElementDemo = document.createElement("p")
+         pElementDemo.id = "demo"
+         pElementDemo.innerHTML = "Countdown Ended"
+      document.body.appendChild(pElementDemo)
      }, 500)
   }
 }, 50);
@@ -135,5 +149,10 @@ var x = setInterval(function() {
          document.body.removeChild(document.getElementById("demo1"))
          document.body.removeChild(document.getElementById("demo1"))
          document.body.removeChild(document.getElementById("demo1"))
+         var pElementDemo2 = document.createElement("p")
+         pElementDemo2.id = "demo"
+         pElementDemo2.innerHTML = Math.floor(countDownDate - new Date().getTime / (1000 * 60 * 60 * 24)) + "d " + Math.floor(countDownDate - new Date().getTime % (1000 * 60 * 60 * 24)) + "h "
+  + Math.floor(countDownDate - new Date().getTime % (1000 * 60 * 60)) / (1000 * 60)) + "m " + Math.floor((countDownDate - new Date().getTime % (1000 * 60)) / 1000) + "s"
+         document.body.appendChild(pElementDemo2)
      }
    }
