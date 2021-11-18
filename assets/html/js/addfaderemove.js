@@ -1,8 +1,8 @@
 var clicks = 0;
 var egg = new Egg("f", function() {
   if(clicks == 3) {
-    document.getElementById("fadetolinear").style.display = ""
-    document.getElementById("fadetolinear2").style.display = ""
+    document.getElementById("fadetolinear").style.display = "block"
+    document.getElementById("fadetolinear2").style.display = "block"
   }
 }).listen();
 function addClickTitle() {
