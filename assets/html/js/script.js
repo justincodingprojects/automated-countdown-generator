@@ -130,5 +130,10 @@ var x = setInterval(function() {
         document.getElementById("fadetolinear").style.display = "none"
         document.getElementById("fadetolinear2").style.display = "none"
         fadeBool = false;
+        document.getElementById("demo1").style.opacity = 1
+        document.getElementById("demo1").style.opacity = 1
+        document.getElementById("demo1").style.opacity = 1
+        document.getElementById("demo1").style.opacity = 1
+        document.getElementById("demo1").style.opacity = 1
      }
    }
