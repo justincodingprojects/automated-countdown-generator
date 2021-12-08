@@ -25,58 +25,60 @@ function generateURL(year, month, day, hour, minute, dayofweek, templateURL) {
     templateURL = templateURL.replace("[month]", month)
     templateURL = templateURL.replace("[day]", day)
     if (hour == 7) {
-        if (minute < 55) {
+        if(minute < 55) {
             templateURL = templateURL.replace("[hour]", "07")
             templateURL = templateURL.replace("[minute]", "55")
             templateURL = templateURL.replace("[second]", "02")
             templateURL = templateURL.replace("[message]", text1)
             hasWorked = true
         } else {
-            templateURL = templateURL.replace("[hour]", "09")
-            templateURL = templateURL.replace("[minute]", "05")
+            templateURL = templateURL.replace("[hour]", "08")
+            templateURL = templateURL.replace("[minute]", "50")
             templateURL = templateURL.replace("[second]", "01")
-            templateURL = templateURL.replace("[message]", encodeURIComponent("End of Testing Block"))
+            templateURL = templateURL.replace("[message]", text2)
             hasWorked = true
         }
     }
     if (hour == 8) {
-        templateURL = templateURL.replace("[hour]", "09")
-        templateURL = templateURL.replace("[minute]", "05")
-        templateURL = templateURL.replace("[second]", "01")
-        templateURL = templateURL.replace("[message]", encodeURIComponent("End of Testing Block"))
-        hasWorked = true
-    }
-    if (hour == 9) {
-        if (minute < 5) {
-            templateURL = templateURL.replace("[hour]", "09")
-            templateURL = templateURL.replace("[minute]", "05")
-            templateURL = templateURL.replace("[second]", "01")
-            templateURL = templateURL.replace("[message]", encodeURIComponent("End of Testing Block"))
-            hasWorked = true
-        } else if (minute > 5 && minute < 56) {
-            templateURL = templateURL.replace("[hour]", "09")
-            templateURL = templateURL.replace("[minute]", "56")
+        if (minute < 50) {
+            templateURL = templateURL.replace("[hour]", "08")
+            templateURL = templateURL.replace("[minute]", "50")
             templateURL = templateURL.replace("[second]", "01")
             templateURL = templateURL.replace("[message]", text2)
             hasWorked = true
         } else {
-            templateURL = templateURL.replace("[hour]", "10")
-            templateURL = templateURL.replace("[minute]", "47")
+            templateURL = templateURL.replace("[hour]", "09")
+            templateURL = templateURL.replace("[minute]", "48")
             templateURL = templateURL.replace("[second]", "01")
             templateURL = templateURL.replace("[message]", text3)
             hasWorked = true
         }
     }
-    if (hour == 10) {
-        if (minute < 47) {
-            templateURL = templateURL.replace("[hour]", "10")
-            templateURL = templateURL.replace("[minute]", "47")
+    if (hour == 9) {
+        if (minute < 48) {
+            templateURL = templateURL.replace("[hour]", "09")
+            templateURL = templateURL.replace("[minute]", "48")
             templateURL = templateURL.replace("[second]", "01")
             templateURL = templateURL.replace("[message]", text3)
             hasWorked = true
         } else {
+            templateURL = templateURL.replace("[hour]", "10")
+            templateURL = templateURL.replace("[minute]", "46")
+            templateURL = templateURL.replace("[second]", "00")
+            templateURL = templateURL.replace("[message]", text4)
+            hasWorked = true
+        }
+    }
+    if (hour == 10) {
+        if (minute < 46) {
+            templateURL = templateURL.replace("[hour]", "10")
+            templateURL = templateURL.replace("[minute]", "46")
+            templateURL = templateURL.replace("[second]", "00")
+            templateURL = templateURL.replace("[message]", text4)
+            hasWorked = true
+        } else {
             templateURL = templateURL.replace("[hour]", "12")
-            templateURL = templateURL.replace("[minute]", "11")
+            templateURL = templateURL.replace("[minute]", "14")
             templateURL = templateURL.replace("[second]", "01")
             templateURL = templateURL.replace("[message]", text5)
             hasWorked = true
@@ -84,30 +86,30 @@ function generateURL(year, month, day, hour, minute, dayofweek, templateURL) {
     }
     if (hour == 11) {
         templateURL = templateURL.replace("[hour]", "12")
-        templateURL = templateURL.replace("[minute]", "11")
+        templateURL = templateURL.replace("[minute]", "14")
         templateURL = templateURL.replace("[second]", "01")
         templateURL = templateURL.replace("[message]", text5)
         hasWorked = true
     }
     if (hour == 12) {
-        if (minute < 11) {
+        if (minute < 14) {
             templateURL = templateURL.replace("[hour]", "12")
-            templateURL = templateURL.replace("[minute]", "11")
+            templateURL = templateURL.replace("[minute]", "14")
             templateURL = templateURL.replace("[second]", "01")
             templateURL = templateURL.replace("[message]", text5)
             hasWorked = true
-        } else if (minute > 11 && minute < 50) {
-            templateURL = templateURL.replace("[hour]", "12")
-            templateURL = templateURL.replace("[minute]", "50")
+        } else {
+            templateURL = templateURL.replace("[hour]", "13")
+            templateURL = templateURL.replace("[minute]", "12")
             templateURL = templateURL.replace("[second]", "01")
-            templateURL = templateURL.replace("[message]", text4)
+            templateURL = templateURL.replace("[message]", text6)
             hasWorked = true
         }
     }
     if (hour == 13) {
-        if (minute < 30) {
+        if (minute < 12) {
             templateURL = templateURL.replace("[hour]", "13")
-            templateURL = templateURL.replace("[minute]", "30")
+            templateURL = templateURL.replace("[minute]", "12")
             templateURL = templateURL.replace("[second]", "01")
             templateURL = templateURL.replace("[message]", text6)
             hasWorked = true
@@ -130,7 +132,7 @@ function generateURL(year, month, day, hour, minute, dayofweek, templateURL) {
     }
     if (hasWorked == true && dayofweek !== "Sunday" && dayofweek !== "Saturday") {
         var newURL = templateURL
-        alert("URL generated! (Script Updated to fit testing scedule for November 8th)")
+        alert("URL generated!")
         if (confirm("Is this correct?\n" + newURL)) {
             window.open(newURL)
         }
