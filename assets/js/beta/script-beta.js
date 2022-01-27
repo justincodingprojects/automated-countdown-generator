@@ -25,10 +25,10 @@ function generateURL(year, month, day, hour, minute, dayofweek, templateURL) {
     templateURL = templateURL.replace("[month]", month)
     templateURL = templateURL.replace("[day]", day)
     if (hour == 7) {
-        if(minute < 55) {
+        if (minute < 55) {
             templateURL = templateURL.replace("[hour]", "07")
             templateURL = templateURL.replace("[minute]", "55")
-            templateURL = templateURL.replace("[second]", "02")
+            templateURL = templateURL.replace("[second]", "01")
             templateURL = templateURL.replace("[message]", text1)
             hasWorked = true
         } else {
@@ -64,7 +64,7 @@ function generateURL(year, month, day, hour, minute, dayofweek, templateURL) {
         } else {
             templateURL = templateURL.replace("[hour]", "10")
             templateURL = templateURL.replace("[minute]", "46")
-            templateURL = templateURL.replace("[second]", "00")
+            templateURL = templateURL.replace("[second]", "01")
             templateURL = templateURL.replace("[message]", text4)
             hasWorked = true
         }
@@ -73,7 +73,7 @@ function generateURL(year, month, day, hour, minute, dayofweek, templateURL) {
         if (minute < 46) {
             templateURL = templateURL.replace("[hour]", "10")
             templateURL = templateURL.replace("[minute]", "46")
-            templateURL = templateURL.replace("[second]", "00")
+            templateURL = templateURL.replace("[second]", "01")
             templateURL = templateURL.replace("[message]", text4)
             hasWorked = true
         } else {
@@ -126,7 +126,7 @@ function generateURL(year, month, day, hour, minute, dayofweek, templateURL) {
             templateURL = templateURL.replace("[hour]", "14")
             templateURL = templateURL.replace("[minute]", "10")
             templateURL = templateURL.replace("[second]", "01")
-            templateURL = templateURL.replace("[message]", text6)
+            templateURL = templateURL.replace("[message]", text7)
             hasWorked = true
         }
     }
