@@ -132,6 +132,7 @@ function generateURL(year, month, day, hour, minute, dayofweek, templateURL) {
     }
     if (hasWorked == true && dayofweek !== "Sunday" && dayofweek !== "Saturday") {
         var newURL = templateURL
+        alert("WARNING: This feature will get deprecated on monday in favor of the intro screen.")
         alert("URL generated!")
         if (confirm("Is this correct?\n" + newURL)) {
             window.open(newURL)
