@@ -1,4 +1,5 @@
-var TEMPLATEURL = "https://script.google.com/a/macros/students.leeschools.net/s/AKfycbz2NLEwDcSuv3fAv0wiPuFObXA8QDUpHNkP7hSc1IgOO2UuOCwhHtvLV0W_1pEiGqMoDQ/exec#?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
+/* OLD CODE */
+/*var TEMPLATEURL = "https://script.google.com/a/macros/students.leeschools.net/s/AKfycbz2NLEwDcSuv3fAv0wiPuFObXA8QDUpHNkP7hSc1IgOO2UuOCwhHtvLV0W_1pEiGqMoDQ/exec#?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
 const currentMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
     currentDays = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
     currentHours = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
@@ -132,6 +133,7 @@ function generateURL(year, month, day, hour, minute, dayofweek, templateURL) {
     }
     if (hasWorked == true && dayofweek !== "Sunday" && dayofweek !== "Saturday") {
         var newURL = templateURL
+        alert("WARNING: This feature will get deprecated on monday in favor of the intro screen.")
         alert("URL generated!")
         if (confirm("Is this correct?\n" + newURL)) {
             window.open(newURL)
@@ -141,4 +143,11 @@ function generateURL(year, month, day, hour, minute, dayofweek, templateURL) {
     } else {
         alert(`The countdown URL can't be generated because the school session has already ended and/or it hasn't started yet.`)
     }
+}
+*/
+/* NEW CODE*/
+var prompt = confirm("Do you want to go to the intro screen?")
+alert("Automation of Countdown from bookmark has been deprecated in favor of intro screen.")
+if (prompt) {
+    window.open("https://script.google.com/a/macros/students.leeschools.net/s/AKfycbz2NLEwDcSuv3fAv0wiPuFObXA8QDUpHNkP7hSc1IgOO2UuOCwhHtvLV0W_1pEiGqMoDQ/exec")
 }
