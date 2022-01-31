@@ -146,8 +146,8 @@ function generateURL(year, month, day, hour, minute, dayofweek, templateURL) {
 }
 */
 /* NEW CODE*/
-var prompt = confirm("Do you want to go to the intro screen?")
 alert("Automation of Countdown from bookmark has been deprecated in favor of intro screen.")
+var prompt = confirm("Do you want to go to the intro screen?")
 if (prompt) {
     window.open("https://script.google.com/a/macros/students.leeschools.net/s/AKfycbz2NLEwDcSuv3fAv0wiPuFObXA8QDUpHNkP7hSc1IgOO2UuOCwhHtvLV0W_1pEiGqMoDQ/exec")
 }
