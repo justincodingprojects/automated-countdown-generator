@@ -1,0 +1,6 @@
+name: script-stable-trigger
+
+on:
+
+repository_dispatch:
+types: [change_script_stable]
