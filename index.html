@@ -292,14 +292,7 @@
         urlParams = window.location.href
 
         function changePage(page) {
-            var contents = "Sorry : ( IMPORT FAILED...";
-            var file = new XMLHttpRequest();
-            file.open("GET", "./countdown.html", false);
-            file.onreadystatechange = function() {
-                contents = file.responseText;
-            }
-            file.send(null);
-            document.getElementsByTagName("html")[0].innerHTML = contents;
+            fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/countdown.html").then((r) => r.text().then((t) => document.write(t)));
         }
         if (urlParams.indexOf("?month=") != -1 &&
             urlParams.indexOf("&day=") != -1 &&
