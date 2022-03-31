@@ -4,4 +4,4 @@ This is the repository for an ongoing project for an automated countdown generat
 # How to use
 Go to this website:
 
-https://automated-countdown-generator.ml/ (I will add the "www" part of the domain eventually)
+https://automated-countdown-generator.ml/
