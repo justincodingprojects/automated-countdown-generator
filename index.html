@@ -313,8 +313,8 @@
                         }).listen()
                         var egg2 = new Egg("e,d,i,t,p,a,g,e", function() {
                             if (confirm("Are you the owner of this website?")) {
-                                if (prompt("What is the email address of the owner?") == "jo09201@students.leeschools.net") {
-                                    if (prompt("What is the password of the owner?") == "332027290") {
+                                if (prompt("What is the email address of the owner? (it's \"default\")") == "default") {
+                                    if (prompt("What is the password of the owner? (it's \"default\")") == "default") {
                                         var iframeModal = document.createElement("iframe")
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
