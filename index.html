@@ -308,7 +308,7 @@
         function signInCallback(authResult) {
             if (authResult['code']) {
 
-                // Send the code to the server
+                /*// Send the code to the server
                 $.ajax({
                     type: 'POST',
                     url: 'http://automated-countdown-generated.ml/storeauthcode',
@@ -323,7 +323,8 @@
                     },
                     processData: false,
                     data: authResult['code']
-                });
+                });*/
+                initWebsite()
             } else {
                 // There was an error.
             }
