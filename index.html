@@ -299,6 +299,31 @@
             });
         }
         start()
+        auth2.grantOfflineAccess().then(signInCallback);
+
+        function signInCallback(authResult) {
+            if (authResult['code']) {
+
+                // Send the code to the server
+                $.ajax({
+                    type: 'POST',
+                    url: 'http://automated-countdown-generated.ml/storeauthcode',
+                    // Always include an `X-Requested-With` header in every AJAX request,
+                    // to protect against CSRF attacks.
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    contentType: 'application/octet-stream; charset=utf-8',
+                    success: function(result) {
+                        // Handle or verify the server response.
+                    },
+                    processData: false,
+                    data: authResult['code']
+                });
+            } else {
+                // There was an error.
+            }
+        }
 
         function initWebsite() {
             var urlParams = ""
