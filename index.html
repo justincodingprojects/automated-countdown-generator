@@ -301,7 +301,9 @@
             }, 250)
         }
         start()
-        auth2.grantOfflineAccess().then(signInCallback);
+        setTimeout(function() {
+            auth2.grantOfflineAccess().then(signInCallback);
+        }, 750)
 
         function signInCallback(authResult) {
             if (authResult['code']) {
