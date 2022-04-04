@@ -288,7 +288,22 @@
         }
     </style>
     <script>
-        alert("In order to use this website, which is made only for this district, I need to verify by Google Login. (Don't worry, I cannot get your password by that)")
+            var urlParams = ""
+            urlParams = window.location.href
+
+            function changePage(page) {
+                fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/countdown.html").then((r) => r.text().then((t) => document.write(t)));
+            }
+            if (urlParams.indexOf("?month=") != -1 &&
+                urlParams.indexOf("&day=") != -1 &&
+                urlParams.indexOf("&year=") != -1 &&
+                urlParams.indexOf("&hour=") != -1 &&
+                urlParams.indexOf("&minute=") != -1 &&
+                urlParams.indexOf("&second=") != -1 &&
+                urlParams.indexOf("&message=") != -1) {
+                changePage()
+            } else {
+                alert("In order to use this website, which is made only for this district, I need to verify by Google Login. (Don't worry, I cannot get your password by that)")
 
         function start() {
             function waitForElement1(){
@@ -341,23 +356,7 @@ waitForElement1()
                 // There was an error.
             }
         }
-
         function initWebsite() {
-            var urlParams = ""
-            urlParams = window.location.href
-
-            function changePage(page) {
-                fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/countdown.html").then((r) => r.text().then((t) => document.write(t)));
-            }
-            if (urlParams.indexOf("?month=") != -1 &&
-                urlParams.indexOf("&day=") != -1 &&
-                urlParams.indexOf("&year=") != -1 &&
-                urlParams.indexOf("&hour=") != -1 &&
-                urlParams.indexOf("&minute=") != -1 &&
-                urlParams.indexOf("&second=") != -1 &&
-                urlParams.indexOf("&message=") != -1) {
-                changePage()
-            } else {
                 setTimeout(function() {
                     document.getElementById("video1").play()
                 }, 500)
