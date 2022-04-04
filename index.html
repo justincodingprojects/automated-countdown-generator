@@ -291,19 +291,29 @@
         alert("In order to use this website, which is made only for this district, I need to verify by Google Login. (Don't worry, I cannot get your password by that)")
 
         function start() {
-            setTimeout(function() {
-                gapi.load('auth2', function() {
+            function waitForElement1(){
+                if(typeof gapi !== "undefined"){
+                    gapi.load('auth2', function() {
                     auth2 = gapi.auth2.init({
                         client_id: '904159946422-ugli4anuorhqnit6skokc08l03ciq1so.apps.googleusercontent.com',
                         scope: 'email'
                     });
                 });
-            }, 250)
+            }
+            else {
+                setTimeout(waitForElement1, 10);
+            }
+}
         }
         start()
-        setTimeout(function() {
-            auth2.grantOfflineAccess().then(signInCallback);
-        }, 750)
+        function waitForElement2() {
+            if(typeof someVariable !== "undefined"){
+                auth2.grantOfflineAccess().then(signInCallback);
+            }
+            else {
+            setTimeout(waitForElement2, 10);
+            }
+        }
 
         function signInCallback(authResult) {
             if (authResult['code']) {
