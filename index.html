@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=9" charset="utf-8">
-    <meta name="google-signin-client_id" content="904159946422-ugli4anuorhqnit6skokc08l03ciq1so.apps.googleusercontent.com">
+    <!--<meta name="google-signin-client_id" content="904159946422-3ljs0jlej7i7ir8ed2uli868ibg8cur7.apps.googleusercontent.com.apps.googleusercontent.com">-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -288,24 +288,24 @@
         }
     </style>
     <script>
-            var urlParams = ""
-            urlParams = window.location.href
+        var urlParams = ""
+        urlParams = window.location.href
 
-            function changePage(page) {
-                fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/countdown.html").then((r) => r.text().then((t) => document.write(t)));
-            }
-            if (urlParams.indexOf("?month=") != -1 &&
-                urlParams.indexOf("&day=") != -1 &&
-                urlParams.indexOf("&year=") != -1 &&
-                urlParams.indexOf("&hour=") != -1 &&
-                urlParams.indexOf("&minute=") != -1 &&
-                urlParams.indexOf("&second=") != -1 &&
-                urlParams.indexOf("&message=") != -1) {
-                changePage()
-            } else {
-                alert("In order to use this website, which is made only for this district, I need to verify by Google Login. (Don't worry, I cannot get your password by that)")
+        function changePage(page) {
+            fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/countdown.html").then((r) => r.text().then((t) => document.write(t)));
+        }
+        if (urlParams.indexOf("?month=") != -1 &&
+            urlParams.indexOf("&day=") != -1 &&
+            urlParams.indexOf("&year=") != -1 &&
+            urlParams.indexOf("&hour=") != -1 &&
+            urlParams.indexOf("&minute=") != -1 &&
+            urlParams.indexOf("&second=") != -1 &&
+            urlParams.indexOf("&message=") != -1) {
+            changePage()
+        } else {
+            alert("In order to use this website, which is made only for this district, I need to verify by Google Login. (Don't worry, I cannot get your password by that)")
 
-        function start() {
+            /*function start() {
             function waitForElement1(){
                 if(typeof gapi !== "undefined"){
                     gapi.load('auth2', function() {
@@ -335,7 +335,7 @@ waitForElement1()
         function signInCallback(authResult) {
             if (authResult['code']) {
 
-                /*// Send the code to the server
+                // Send the code to the server
                 $.ajax({
                     type: 'POST',
                     url: 'http://automated-countdown-generated.ml/storeauthcode',
@@ -350,13 +350,16 @@ waitForElement1()
                     },
                     processData: false,
                     data: authResult['code']
-                });*/
+                });
                 initWebsite()
             } else {
                 // There was an error.
             }
         }
-        function initWebsite() {
+        */
+            initWebsite()
+
+            function initWebsite() {
                 setTimeout(function() {
                     document.getElementById("video1").play()
                 }, 500)
