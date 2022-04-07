@@ -349,7 +349,7 @@ waitForElement1()
                     processData: false,
                     data: authResult['code']
                 });*/
-                alert(JSON.stringify(authResult))
+                document.cookie="GAUTHCODE="+authResult['code']
                 initWebsite()
             } else {
                 // There was an error.
