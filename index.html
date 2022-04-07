@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=9" charset="utf-8">
-    <!--<meta name="google-signin-client_id" content="904159946422-3ljs0jlej7i7ir8ed2uli868ibg8cur7.apps.googleusercontent.com.apps.googleusercontent.com">-->
+    <meta name="google-signin-client_id" content="904159946422-3ljs0jlej7i7ir8ed2uli868ibg8cur7.apps.googleusercontent.com.apps.googleusercontent.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
@@ -349,6 +349,7 @@ waitForElement1()
                     processData: false,
                     data: authResult['code']
                 });*/
+                alert(authResult)
                 initWebsite()
             } else {
                 // There was an error.
