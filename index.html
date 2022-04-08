@@ -293,7 +293,9 @@
 
         function checkForVideo() {
             if (typeof document.getElementById("video1") !== 'undefined') {
-
+                fetch(
+                    "https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/introvideo.txt"
+                ).then((r) => r.text().then((t) => document.getElementById("video1").src = t))
             } else {
                 setTimeout(checkForVideo(), 10)
             }
