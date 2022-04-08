@@ -304,7 +304,7 @@
             changePage()
         } else {
             function init() {
-                gapi.load('auth2', function() {
+                var gAuth = gapi.load('auth2', function() {
                     gapi.auth2.init({
                         client_id: "904159946422-3ljs0jlej7i7ir8ed2uli868ibg8cur7.apps.googleusercontent.com"
                     }).then(success(), failure())
@@ -312,7 +312,12 @@
             }
 
             function success() {
-                alert("success")
+                var options = new gapi.auth2.SigninOptionsBuilder();
+                options.setAppPackageName('Automated Countdown Generator');
+                options.setFetchBasicProfile(True);
+                options.setPrompt('select_account');
+                options.setScope('profile').setScope('email');
+                gAuth.signIn(options)
             }
 
             function failure() {
