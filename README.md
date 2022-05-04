@@ -4,4 +4,4 @@ This is the repository for an ongoing project for an automated countdown generat
 # How to use
 Go to this website:
 
-https://automatedcountdowngenerator.ml/
+https://countdown.justincodingprojects.ml/
