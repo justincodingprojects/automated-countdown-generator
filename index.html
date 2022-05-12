@@ -349,9 +349,10 @@ waitForElement1()
             }
         }
         waitForElement2()
-            initWebsite()
+            
             function signInCallback() {
             if(auth2.isSignedIn.get() == true){
+                initWebsite()
                 var profile = auth2.currentUser.get().getBasicProfile();
                 alert('ID: ' + profile.getId());
                 alert('Full Name: ' + profile.getName());
