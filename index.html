@@ -328,12 +328,11 @@
                 function waitForElement1(){
                 if(typeof gapi !== "undefined"){
                     gapi.load('auth2', function() {
-                    gapi.auth2.init({
-                        client_id: "904159946422-3ljs0jlej7i7ir8ed2uli868ibg8cur7.apps.googleusercontent.com"
-                    }).then(success(), failure())
-                });
-            }
-            }
+        auth2 = gapi.auth2.init({
+          client_id: '904159946422-3ljs0jlej7i7ir8ed2uli868ibg8cur7.apps.googleusercontent.com',
+        });
+      });
+    }
             else {
                 setTimeout(waitForElement1, 10);
             }
