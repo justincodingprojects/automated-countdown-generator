@@ -324,7 +324,7 @@
             urlParams.indexOf("&message=") != -1) {
             changePage()
         } else {
-            /*function init() {
+            function init() {
                 var gAuth = gapi.load('auth2', function() {
                     gapi.auth2.init({
                         client_id: "904159946422-3ljs0jlej7i7ir8ed2uli868ibg8cur7.apps.googleusercontent.com"
@@ -343,8 +343,19 @@
 
             function failure() {
                 alert("failure")
-            }*/
+            }
             initWebsite()
+            setTimeout(function() {
+                if (auth2.isSignedIn.get()) {
+  var profile = auth2.currentUser.get().getBasicProfile();
+  alert('ID: ' + profile.getId());
+  alert('Full Name: ' + profile.getName());
+  alert('Given Name: ' + profile.getGivenName());
+  alert('Family Name: ' + profile.getFamilyName());
+  alert('Image URL: ' + profile.getImageUrl());
+  alert('Email: ' + profile.getEmail());
+}
+            }, 20000)
 
             function initWebsite() {
                 setTimeout(function() {
