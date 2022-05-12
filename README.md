@@ -5,3 +5,5 @@ This is the repository for an ongoing project for an automated countdown generat
 Go to this website:
 
 https://acg-by-justincodingprojects.ml/
+
+https://github.dev/justincodingprojects/automated-countdown-generator/
