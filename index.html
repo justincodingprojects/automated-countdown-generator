@@ -350,7 +350,7 @@ waitForElement1()
         }
         waitForElement2()
             initWebsite()
-            function waitForElement3() {
+            function signInCallback() {
             if(auth2.isSignedIn.get() == true){
                 var profile = auth2.currentUser.get().getBasicProfile();
                 alert('ID: ' + profile.getId());
@@ -360,11 +360,7 @@ waitForElement1()
                 alert('Image URL: ' + profile.getImageUrl());
                 alert('Email: ' + profile.getEmail());
             }
-            else {
-            setTimeout(waitForElement3, 10);
             }
-        }
-        waitForElement3()
 
             function initWebsite() {
                 setTimeout(function() {
