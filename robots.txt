@@ -1,0 +1,4 @@
+User-agent: Googlebot
+Disallow: /assets/html/
+
+Sitemap: http://acg-by-justincodingprojects.ml/sitemap.xml
