@@ -347,6 +347,7 @@
                     auth2.signIn({
                         scope: 'profile email',
                         ux_mode: 'redirect',
+                        redirect_uri: 'https://acg-by-justincodingprojects.ml/',
                     }).then(signInCallback)
                 } else {
                     setTimeout(waitForElement2, 10);
