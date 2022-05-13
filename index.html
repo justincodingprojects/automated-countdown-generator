@@ -341,6 +341,7 @@
                 }
                 waitForElement1()
             }
+            var tried = false;
 
             function waitForElement2() {
                 if (typeof auth2 !== "undefined") {
@@ -349,6 +350,14 @@
                     }).then(signInCallback, function(resp) {
                         if (resp.error == "popup_closed_by_user") {
                             alert("You need to log in with your Google Account to access this. (It's a one-time thing)")
+                            if (confirm("Do you want to try again?")) {
+                                if (!tried) {
+                                    tried = true
+                                    waitForElement2()
+                                } else {
+                                    alert("Already tried, refresh the page to try again.")
+                                }
+                            }
                         } else if (resp.error == "access_denied") {
                             alert("You may have logged in, but denied. Just allow them.")
                         } else if (resp.error == "immediate_failed") {
