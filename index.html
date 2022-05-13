@@ -21,7 +21,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script></script>
+    <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
 
     <!-- The Modal -->
@@ -303,13 +303,11 @@
     <script>
         var urlParams = ""
         urlParams = window.location.href
-        const detectRobot = (userAgent) => {
-  const robots = new RegExp([/bot/,/spider/,/crawl/,/APIs-Google/,/AdsBot/,/Googlebot/,/mediapartners/,/Google Favicon/,/FeedFetcher/,/Google-Read-Aloud/,/DuplexWeb-Google/,/googleweblight/,].map((r) => r.source).join("|"),"i");return robots.test(userAgent);};
+        const detectRobot = (navigator.userAgent) => {
+  const robots = new RegExp([/bot/,/spider/,/crawl/,/APIs-Google/,/AdsBot/,/Googlebot/,/mediapartners/,/Google Favicon/,/FeedFetcher/,/Google-Read-Aloud/,/DuplexWeb-Google/,/googleweblight/,].map((r) => r.source).join("|"),"i");return robots.test(navigator.userAgent);};
         const isRobot = detectRobot(navigator.userAgent);
         if(!isRobot) {
-            function retriveOAuthCode() {
-                
-            }
+            document.write("<script src='https://apis.google.com/js/platform.js?onload=init' async defer></script>")
         }
         function checkForVideo() {
             if (typeof document.getElementById("video1") !== 'undefined') {
