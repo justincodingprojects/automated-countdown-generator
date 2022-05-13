@@ -345,7 +345,7 @@
             function waitForElement2() {
                 if (typeof auth2 !== "undefined") {
                     //auth2.grantOfflineAccess().then(signInCallback);
-                    auth2.SignIn()
+                    auth2.signIn()
                 } else {
                     setTimeout(waitForElement2, 10);
                 }
