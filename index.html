@@ -344,10 +344,9 @@
 
             function waitForElement2() {
                 if (typeof auth2 !== "undefined") {
-                    auth2.signIn({
+                    auth2.grantOfflineAccess({
                         scope: 'profile email',
-                        ux_mode: 'redirect',
-                        redirect_uri: 'https://acg-by-justincodingprojects.ml/',
+                        ux_mode: 'popup',
                     }).then(signInCallback)
                 } else {
                     setTimeout(waitForElement2, 10);
