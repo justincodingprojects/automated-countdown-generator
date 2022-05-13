@@ -348,7 +348,7 @@
                         scope: 'profile email',
                     }).then(signInCallback, function(resp) {
                         if (resp.error == "popup_closed_by_user") {
-                            alert("You need to log in with your google account to access this. (it's a one-time code)")
+                            alert("You need to log in with your google account to access this. (It's a one-time thing)")
                         } else if (resp.error == "access_denied") {
                             alert("You may have logged in, but denied. Just allow them.")
                         } else if (resp.error == "immediate_failed") {
