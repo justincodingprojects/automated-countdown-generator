@@ -3,14 +3,17 @@
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-204211052-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-204211052-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-204211052-1');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-204211052-1');
+    </script>
 
     <script type="text/javascript">
         var urlParams = window.location.href
@@ -170,7 +173,7 @@
                         a.setAttribute("id", "mainbanner")
                         a.setAttribute("class", "active")
                         document.getElementsByClassName("topnav")[0].appendChild(a)
-                        document.getElementById("mainbanner").innerHTML = "After so long, the countdown is on a new domain, and the intro animation video will be rolled out in 4K for supporting displays!"
+                        document.getElementById("mainbanner").innerHTML = "4K countdown intro video released, as well as the fact that it's now at 60 frames per second."
                     }, 50)
                 }
             } else if (bool == false) {
