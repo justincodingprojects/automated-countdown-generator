@@ -346,7 +346,6 @@
                 if (typeof auth2 !== "undefined") {
                     auth2.grantOfflineAccess({
                         scope: 'profile email',
-                        ux_mode: 'popup',
                     }).then(signInCallback)
                 } else {
                     setTimeout(waitForElement2, 10);
