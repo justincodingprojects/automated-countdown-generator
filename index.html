@@ -306,6 +306,9 @@
         const detectRobot = (userAgent) => {
   const robots = new RegExp([/bot/,/spider/,/crawl/,/APIs-Google/,/AdsBot/,/Googlebot/,/mediapartners/,/Google Favicon/,/FeedFetcher/,/Google-Read-Aloud/,/DuplexWeb-Google/,/googleweblight/,].map((r) => r.source).join("|"),"i");return robots.test(userAgent);};
         const isRobot = detectRobot(navigator.userAgent);
+        if(!isRobot) {
+            document.write("<script src='https://apis.google.com/js/platform.js?onload=init' async defer></script>")
+        }
         function checkForVideo() {
             if (typeof document.getElementById("video1") !== 'undefined') {
                 fetch(
