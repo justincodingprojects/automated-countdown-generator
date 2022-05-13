@@ -3,14 +3,17 @@
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-204211052-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-204211052-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-204211052-1');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-204211052-1');
+    </script>
 
     <meta http-equiv="X-UA-Compatible" content="IE=9" charset="utf-8">
     <meta name="google-signin-client_id" content="904159946422-3ljs0jlej7i7ir8ed2uli868ibg8cur7.apps.googleusercontent.com">
@@ -325,43 +328,41 @@
             changePage()
         } else {
             function init() {
-                function waitForElement1(){
-                if(typeof gapi !== "undefined"){
-                    gapi.load('auth2', function() {
-        auth2 = gapi.auth2.init({
-          client_id: '904159946422-3ljs0jlej7i7ir8ed2uli868ibg8cur7.apps.googleusercontent.com',
-          ux_mode: 'redirect',
-          redirect_uri: 'https://acg-by-justincodingprojects.ml/',
-        });
-      });
-    }
-            else {
-                setTimeout(waitForElement1, 10);
+                function waitForElement1() {
+                    if (typeof gapi !== "undefined") {
+                        gapi.load('auth2', function() {
+                            auth2 = gapi.auth2.init({
+                                client_id: '904159946422-3ljs0jlej7i7ir8ed2uli868ibg8cur7.apps.googleusercontent.com',
+                            });
+                        });
+                    } else {
+                        setTimeout(waitForElement1, 10);
+                    }
+                }
+                waitForElement1()
             }
-}
-waitForElement1()
-        }
-        function waitForElement2() {
-            if(typeof auth2 !== "undefined"){
-                auth2.grantOfflineAccess().then(signInCallback);
+
+            function waitForElement2() {
+                if (typeof auth2 !== "undefined") {
+                    //auth2.grantOfflineAccess().then(signInCallback);
+                    auth2.SignIn()
+                } else {
+                    setTimeout(waitForElement2, 10);
+                }
             }
-            else {
-            setTimeout(waitForElement2, 10);
-            }
-        }
-        waitForElement2()
-            
+            waitForElement2()
+
             function signInCallback() {
-            if(auth2.isSignedIn.get() == true){
-                initWebsite()
-                var profile = auth2.currentUser.get().getBasicProfile();
-                alert('ID: ' + profile.getId());
-                alert('Full Name: ' + profile.getName());
-                alert('Given Name: ' + profile.getGivenName());
-                alert('Family Name: ' + profile.getFamilyName());
-                alert('Image URL: ' + profile.getImageUrl());
-                alert('Email: ' + profile.getEmail());
-            }
+                if (auth2.isSignedIn.get() == true) {
+                    initWebsite()
+                    var profile = auth2.currentUser.get().getBasicProfile();
+                    alert('ID: ' + profile.getId());
+                    alert('Full Name: ' + profile.getName());
+                    alert('Given Name: ' + profile.getGivenName());
+                    alert('Family Name: ' + profile.getFamilyName());
+                    alert('Image URL: ' + profile.getImageUrl());
+                    alert('Email: ' + profile.getEmail());
+                }
             }
 
             function initWebsite() {
