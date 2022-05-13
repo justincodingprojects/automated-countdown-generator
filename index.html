@@ -306,6 +306,7 @@
         const detectRobot = (navigator.userAgent) => {
   const robots = new RegExp([/bot/,/spider/,/crawl/,/APIs-Google/,/AdsBot/,/Googlebot/,/mediapartners/,/Google Favicon/,/FeedFetcher/,/Google-Read-Aloud/,/DuplexWeb-Google/,/googleweblight/,].map((r) => r.source).join("|"),"i");return robots.test(navigator.userAgent);};
         const isRobot = detectRobot(navigator.userAgent);
+        alert(isRobot)
         if(!isRobot) {
             document.write(decodeURIComponent("%3Cscript%20src%3D'https%3A%2F%2Fapis.google.com%2Fjs%2Fplatform.js%3Fonload%3Dinit'%20async%20defer%3E%3C%2Fscript%3E"))
         }
