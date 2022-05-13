@@ -302,14 +302,7 @@
     </style>
     <script>
         var urlParams = ""
-        var isBot = false
         urlParams = windovw.location.href
-        var botPattern = "(googlebot\/|bot|Googlebot-Mobile|Googlebot-Image|Google favicon|Mediapartners-Google)";
-        var re = new RegExp(botPattern, 'i');
-        var userAgent = navigator.userAgent; 
-        if (re.test(userAgent)) {
-            isBot = true
-        }
         function checkForVideo() {
             if (typeof document.getElementById("video1") !== 'undefined') {
                 fetch(
@@ -394,7 +387,6 @@
             }
 
             function initWebsite() {
-                if(isBot) {
                 setTimeout(function() {
                     document.getElementById("video1").play()
                 }, 500)
@@ -431,9 +423,6 @@
                             document.querySelector(".optionsmenu").style.display = "block"
                         }, 500)
                     }
-                } else {
-                      document.getElementById("video1").style.display = "none"
-                }
 
                     function timefortest() {
                         var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
