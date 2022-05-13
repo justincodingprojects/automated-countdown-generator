@@ -327,64 +327,63 @@
             urlParams.indexOf("&message=") != -1) {
             changePage()
         } else {
-            function init() {
-                function waitForElement1() {
-                    if (typeof gapi !== "undefined") {
-                        gapi.load('auth2', function() {
-                            auth2 = gapi.auth2.init({
-                                client_id: '904159946422-3ljs0jlej7i7ir8ed2uli868ibg8cur7.apps.googleusercontent.com',
+            if (localStorage.getItem("getId") == null || localStorage.getItem("getId") == "") {
+                function init() {
+                    function waitForElement1() {
+                        if (typeof gapi !== "undefined") {
+                            gapi.load('auth2', function() {
+                                auth2 = gapi.auth2.init({
+                                    client_id: '904159946422-3ljs0jlej7i7ir8ed2uli868ibg8cur7.apps.googleusercontent.com',
+                                });
                             });
-                        });
+                        } else {
+                            setTimeout(waitForElement1, 10);
+                        }
+                    }
+                    waitForElement1()
+                }
+                var tried = false;
+
+                function waitForElement2() {
+                    if (typeof auth2 !== "undefined") {
+                        auth2.grantOfflineAccess({
+                            scope: 'profile email',
+                        }).then(signInCallback, function(resp) {
+                            if (resp.error == "popup_closed_by_user") {
+                                alert("You need to log in with your Google Account to access this. (It's a one-time thing)")
+                                if (confirm("Do you want to try again?")) {
+                                    if (!tried) {
+                                        tried = true
+                                        waitForElement2()
+                                    } else {
+                                        alert("Already tried, refresh the page to try again.")
+                                    }
+                                }
+                            } else if (resp.error == "access_denied") {
+                                alert("You may have logged in, but denied. Just allow them.")
+                            } else if (resp.error == "immediate_failed") {
+                                alert("That's rare. The owner of this website is notified of this and will fix it soon. Please check back later.")
+                            }
+                        })
                     } else {
-                        setTimeout(waitForElement1, 10);
+                        setTimeout(waitForElement2, 10);
                     }
                 }
-                waitForElement1()
-            }
-            var tried = false;
+                waitForElement2()
 
-            function waitForElement2() {
-                if (typeof auth2 !== "undefined") {
-                    auth2.grantOfflineAccess({
-                        scope: 'profile email',
-                    }).then(signInCallback, function(resp) {
-                        if (resp.error == "popup_closed_by_user") {
-                            alert("You need to log in with your Google Account to access this. (It's a one-time thing)")
-                            if (confirm("Do you want to try again?")) {
-                                if (!tried) {
-                                    tried = true
-                                    waitForElement2()
-                                } else {
-                                    alert("Already tried, refresh the page to try again.")
-                                }
-                            }
-                        } else if (resp.error == "access_denied") {
-                            alert("You may have logged in, but denied. Just allow them.")
-                        } else if (resp.error == "immediate_failed") {
-                            alert("That's rare. The owner of this website is notified of this and will fix it soon. Please check back later.")
-                        }
-                    })
-                } else {
-                    setTimeout(waitForElement2, 10);
+                function signInCallback() {
+                    if (auth2.isSignedIn.get() == true) {
+                        initWebsite()
+                        var profile = auth2.currentUser.get().getBasicProfile();
+                        localStorage.setItem("getId", profile.getId())
+                        localStorage.setItem("getFullName", profile.getName())
+                        localStorage.setItem("getFirstName", profile.getGivenName())
+                        localStorage.setItem("getLastName", profile.getFamilyName())
+                        localStorage.setItem("getEmail", profile.getEmail())
+                    }
                 }
-            }
-            waitForElement2()
-
-            function signInCallback() {
-                if (auth2.isSignedIn.get() == true) {
-                    initWebsite()
-                    var profile = auth2.currentUser.get().getBasicProfile();
-                    localStorage.setItem("getId", profile.getId())
-                    localStorage.setItem("getFullName", profile.getName())
-                    localStorage.setItem("getFirstName", profile.getGivenName())
-                    localStorage.setItem("getLastName", profile.getFamilyName())
-                    localStorage.setItem("getEmail", profile.getEmail())
-                    alert('ID: ' + localStorage.getItem("getId"));
-                    alert('Full Name: ' + localStorage.getItem("getFullName"));
-                    alert('Given Name: ' + localStorage.getItem("getFirstName"));
-                    alert('Family Name: ' + localStorage.getItem("getLastName"));
-                    alert('Email: ' + localStorage.getItem("getEmail"));
-                }
+            } else {
+                initWebsite()
             }
 
             function initWebsite() {
