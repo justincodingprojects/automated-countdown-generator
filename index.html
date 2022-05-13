@@ -363,6 +363,14 @@
                     alert('Family Name: ' + profile.getFamilyName());
                     alert('Image URL: ' + profile.getImageUrl());
                     alert('Email: ' + profile.getEmail());
+                } else {
+                    if (resp.code == "popup_closed_by_user") {
+                        alert("You need to log in with your google account to access this. (its' one time)")
+                    } else if (resp.code == "access_denied") {
+                        alert("You may have logged in, but denied. Just allow them.")
+                    } else if (resp.code == "immediate_failed") {
+                        alert("That's rare. The owner of this website is notified of this and will fix it soon. Please check back later.")
+                    }
                 }
             }
 
