@@ -321,16 +321,9 @@
         function checkIfBot() {
             if (typeof document.getElementById("video1") !== 'undefined') {
                 if (!isRobot) {
-                    var hasValidSrc = function() {
-                        var videotext = ""
-                        fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/introvideo.txt").then((r) => r.text().then((t) => videotext = t))
-                        if (document.getElementById("video1").src == videotext) {
-                            document.getElementById("video1").play()
-                        } else {
-                            setTimeout(checkForVideo(), 10)
-                        }
-                    }
-                    hasValidSrc()
+                    setTimeout(function() {
+                        document.getElementById("video1").play()
+                    }, 500)
                 } else {
                     document.getElementById("video1").style.display = "none"
                     document.getElementById("svg1").style.display = "block"
