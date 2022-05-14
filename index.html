@@ -333,6 +333,8 @@
                     hasValidSrc()
                 } else {
                     document.getElementById("video1").style.display = "none"
+                    document.getElementById("svg1").style.display = "block"
+                    document.querySelector(".optionsmenu").style.display = "block"
                     setTimeout(function() {
                         var egg = new Egg("esc", function() {
                             document.body.removeChild(document.getElementById("iframeModal"))
