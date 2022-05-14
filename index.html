@@ -323,9 +323,7 @@
                 if (!isRobot) {
                     var hasValidSrc = function() {
                         var videotext = ""
-                        fetch(
-                            "https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/introvideo.txt"
-                        ).then((r) => r.text().then((t) => videotext = t))
+                        fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/introvideo.txt").then((r) => r.text().then((t) => videotext = t))
                         if (document.getElementById("video1").src == videotext) {
                             document.getElementById("video1").play()
                         } else {
