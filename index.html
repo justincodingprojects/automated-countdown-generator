@@ -310,8 +310,7 @@
         }
 
         function staticOpen() {
-            if (typeof document.getElementById("video1") !== 'undefined' && typeof document.getElementById("svg1") !== 'undefined' && typeof document.querySelector(".optionsmenu") !== 'undefined') {
-                document.getElementById("video1").style.display = "none"
+            if (typeof document.getElementById("svg1") !== 'undefined' && typeof document.querySelector(".optionsmenu") !== 'undefined') {
                 document.getElementById("svg1").style.display = "block"
                 document.querySelector(".optionsmenu").style.display = "block"
             } else {
@@ -404,9 +403,9 @@
             function initWebsite() {
                 setTimeout(function() {
                     if (!isRobot) {
+                        document.getElementById("video1").style.display = "block"
                         document.getElementById("video1").play()
                     } else {
-                        document.getElementById("video1").style.display = "none"
                         document.getElementById("svg1").style.display = "block"
                         document.querySelector(".optionsmenu").style.display = "block"
                         setTimeout(function() {
@@ -1864,7 +1863,7 @@
 </head>
 
 <body style="background-color: black;">
-    <video muted id="video1" style="display: block; margin: auto; position: absolute; z-index: 1;" width="99%" height="99%" src="">
+    <video muted id="video1" style="display: none; margin: auto; position: absolute; z-index: 1;" width="99%" height="99%" src="">
 </video>
     </video>
     <div class="slide" name="slide" id="slideslideIface1"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="80%" height="100%" class="slides-canvas" viewBox="0 0 960 540" style="display: none; margin: auto;">
