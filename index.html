@@ -310,7 +310,7 @@
         }
 
         function staticOpen() {
-            if (typeof document.getElementById("video1") !== 'undefined' && typeof document.getElementById("svg1") !== 'undefined' && typeof document.querySelector(".optionsmenu") !== 'undefined') {
+            if (typeof document.getElementById("video1").style !== null && typeof document.getElementById("svg1").style !== null && typeof document.querySelector(".optionsmenu").style !== null) {
                 document.getElementById("video1").style.display = "none"
                 document.getElementById("svg1").style.display = "block"
                 document.querySelector(".optionsmenu").style.display = "block"
