@@ -310,7 +310,7 @@
         }
 
         function staticOpen() {
-            if (document.contains(document.getElementById("video1")) && document.contains(document.getElementById("svg1")) !== null && document.contains(document.querySelector(".optionsmenu"))) {
+            if (document.getElementById("video1") !== null && document.getElementById("svg1") !== null && document.querySelector(".optionsmenu") !== null) {
                 document.getElementById("video1").style.display = "none"
                 document.getElementById("svg1").style.display = "block"
                 document.querySelector(".optionsmenu").style.display = "block"
@@ -320,7 +320,7 @@
         }
 
         function checkForVideo() {
-            if (document.contains(document.getElementById("video1"))) {
+            if (document.getElementById("video1") !== null) {
                 fetch(
                     "https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/introvideo.txt"
                 ).then((r) => r.text().then((t) => document.getElementById("video1").src = t))
@@ -345,7 +345,7 @@
             if (localStorage.getItem("getId") == null || localStorage.getItem("getId") == "") {
                 function init() {
                     function waitForElement1() {
-                        if (document.contains(document.getElementById("gap1"))) {
+                        if (document.getElementById("gapi") !== null) {
                             gapi.load('auth2', function() {
                                 auth2 = gapi.auth2.init({
                                     client_id: '904159946422-3ljs0jlej7i7ir8ed2uli868ibg8cur7.apps.googleusercontent.com',
@@ -360,7 +360,7 @@
                 var tried = false;
 
                 function waitForElement2() {
-                    if (document.contains(document.getElementById("auth2"))) {
+                    if (document.getElementById("auth2") !== null) {
                         auth2.grantOfflineAccess({
                             scope: 'profile email',
                         }).then(signInCallback, function(resp) {
