@@ -92,7 +92,7 @@
                 initWebsite()
             }
                 function setCookie(cname, cvalue) {
-  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+  document.cookie = cname + "=" + cvalue + ";"
 }
                 function getCookie(cname) {
   let name = cname + "=";
