@@ -20,6 +20,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
 
@@ -46,259 +47,42 @@
         </div>
 
     </div>
-    <style>
-        /* The Modal (background) */
-        
-        .modal {
-            display: none;
-            /* Hidden by default */
-            position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Sit on top */
-            padding-top: 100px;
-            /* Location of the box */
-            left: 0;
-            top: 0;
-            width: 100%;
-            /* Full width */
-            height: 100%;
-            /* Full height */
-            overflow: auto;
-            /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0);
-            /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4);
-            /* Black w/ opacity */
-        }
-        /* Modal Content */
-        
-        .modal-content {
-            position: relative;
-            background-color: #333333;
-            margin: auto;
-            padding: 0;
-            border: 1px solid #888;
-            width: 50%;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            -webkit-animation-name: animatetop;
-            -webkit-animation-duration: 0.4s;
-            animation-name: animatetop;
-            animation-duration: 0.4s
-        }
-        /* Add Animation */
-        
-        @-webkit-keyframes animatetop {
-            from {
-                top: -300px;
-                opacity: 0
-            }
-            to {
-                top: 0;
-                opacity: 1
-            }
-        }
-        
-        @keyframes animatetop {
-            from {
-                top: -300px;
-                opacity: 0
-            }
-            to {
-                top: 0;
-                opacity: 1
-            }
-        }
-        
-        @-webkit-keyframes animatebottom {
-            from {
-                top: 0;
-                opacity: 1
-            }
-            to {
-                top: -300px;
-                opacity: 0
-            }
-        }
-        
-        @keyframes animatebottom {
-            from {
-                top: 0;
-                opacity: 1
-            }
-            to {
-                top: -300px;
-                opacity: 0
-            }
-        }
-        
-        @-webkit-keyframes animatetop2 {
-            from {
-                left: 95.5%;
-            }
-            to {
-                left: 75%;
-            }
-        }
-        
-        @keyframes animatetop2 {
-            from {
-                left: 95.5%;
-            }
-            to {
-                left: 75%;
-            }
-        }
-        
-        @-webkit-keyframes animatebottom2 {
-            from {
-                left: 75%;
-            }
-            to {
-                left: 95.5%;
-            }
-        }
-        
-        @keyframes animatebottom2 {
-            from {
-                left: 75%;
-            }
-            to {
-                left: 95.5%;
-            }
-        }
-        
-        @-webkit-keyframes animatetop3 {
-            from {
-                left: 97.5%;
-            }
-            to {
-                left: 77.5%;
-            }
-        }
-        
-        @keyframes animatetop3 {
-            from {
-                left: 97.5%;
-            }
-            to {
-                left: 77.5%;
-            }
-        }
-        
-        @-webkit-keyframes animatebottom3 {
-            from {
-                left: 77.5%;
-            }
-            to {
-                left: 97.5%;
-            }
-        }
-        
-        @keyframes animatebottom3 {
-            from {
-                left: 77.5%;
-            }
-            to {
-                left: 97.5%;
-            }
-        }
-        /* The Close Button */
-        
-        .close {
-            color: white;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        
-        .close:hover,
-        .close:focus {
-            color: #000;
-            text-decoration: none;
-            cursor: pointer;
-        }
-        
-        .modal-header {
-            padding: 2px 16px;
-            background-color: #4a4a4a;
-            color: white;
-        }
-        
-        .modal-header h2 {
-            font-family: "Roboto", sans-serif;
-            font-weight: 500;
-        }
-        
-        .modal-body {
-            padding: 2px 16px;
-            color: white;
-            font-family: "Roboto", sans-serif;
-            font-weight: 400;
-        }
-        
-        .modal-footer {
-            padding: 2px 16px;
-            background-color: #4a4a4a;
-            color: white;
-        }
-        
-        .modal-footer h3 {
-            display: inline-block;
-            font-family: "Roboto", sans-serif;
-            font-weight: 500;
-        }
-        
-        .button {
-            border: none;
-            color: white;
-            padding: 10px 32px;
-            text-align: center;
-            display: block;
-            font-size: 16px;
-            margin: 10px 2px;
-            transition-duration: 0.4s;
-            cursor: pointer;
-            border-radius: 12px;
-            float: right;
-        }
-        
-        .button1 {
-            background-color: #666666;
-            color: white;
-            position: relative;
-        }
-        
-        .button1:hover {
-            background-color: #333333;
-            color: white;
-        }
-        
-        .optionsmenu {
-            display: none;
-            background-color: #262626;
-            position: fixed;
-            top: 1.5%;
-            left: 95.5%;
-            right: 0.5%;
-            height: 175px;
-            overflow: hidden;
-        }
-        
-        .optionsmenu a {
-            color: #f2f2f2;
-            text-decoration: none;
-            font-size: 20px;
-            font-weight: 500;
-            font-family: 'Roboto', sans-serif;
-            transform: rotate(-90deg);
-            position: fixed;
-            top: 20%;
-            left: 97.5%;
-            right: 50%;
-            cursor: pointer;
-        }
-    </style>
+</head>
+
+<body style="background-color: black;">
+    <video muted id="video1" style="display: none; margin: auto; position: absolute; z-index: 1;" width="99%" height="99%" src="">
+</video>
+    </video>
+    <div class="slide" name="slide" id="slideslideIface1"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="80%" height="100%" class="slides-canvas" viewBox="0 0 960 540" style="display: none; margin: auto;">
+  <g text-rendering="geometricPrecision" pointer-events="painted" transform="scale(1, 1)">
+    <rect x="0" y="0" width="960" height="540" fill="#000000" />
+    <path fill="#262626" d="M186.89 49.47L772.43 49.47 772.43 125.32 186.89 125.32z" />
+    <g transform="matrix(1, 0, 0, 1, 194.09357, 53.07165)"><text font-family="Roboto" font-style="normal" font-weight="500" font-stretch="normal" font-size="27pt" fill="#FFFFFF" x="25.566833" y="47.730087"><tspan x="25.566833" y="47.730087">Which Countdown do you need?</tspan></text></g>
+    <path id="svg2" fill="#262626" d="M269.18 153.62L690.14 153.62 690.14 203.43 269.18 203.43z" style="cursor: pointer;"/>
+    <g transform="matrix(1, 0, 0, 1, 276.3849, 157.22244)"><text font-family="Roboto" font-style="normal" font-weight="500" font-stretch="normal" font-size="21pt" fill="#FFFFFF" x="1.5254211" y="31.732204"><tspan id="svg3" x="42.5254211" y="31.732204" style="cursor: pointer;">Automatic School Periods</tspan></text></g>
+    <path id="svg4" fill="#262626" d="M50.04 226.08L446.26 226.08 446.26 275.89 50.04 275.89z" style="cursor: pointer;"/>
+    <g transform="matrix(1, 0, 0, 1, 57.237564, 229.67528)"><text font-family="Roboto" font-style="normal" font-weight="500" font-stretch="normal" font-size="21pt" fill="#FFFFFF" x="84.28818" y="31.732204" style="cursor: pointer;"><tspan id="svg5" x="84.28818" y="31.732204">Start of 1/2 Block</tspan></text></g>
+    <path id="svg6" fill="#262626" d="M50.04 299.66L446.26 299.66 446.26 349.47 50.04 349.47z" style="cursor: pointer;"/>
+    <g transform="matrix(1, 0, 0, 1, 57.237473, 303.26007)"><text font-family="Roboto" font-style="normal" font-weight="500" font-stretch="normal" font-size="21pt" fill="#FFFFFF" x="88.91318" y="31.732204" style="cursor: pointer;"><tspan id="svg7" x="88.91318" y="31.732204">End of 1/2 Block</tspan></text></g>
+    <path id="svg8" fill="#262626" d="M50.04 376.64L446.26 376.64 446.26 426.45 50.04 426.45z" style="cursor: pointer;"/>
+    <g transform="matrix(1, 0, 0, 1, 57.237396, 380.24118)"><text font-family="Roboto" font-style="normal" font-weight="500" font-stretch="normal" font-size="21pt" fill="#FFFFFF" x="88.91318" y="31.732204" style="cursor: pointer;"><tspan id="svg9" x="88.91318" y="31.732204">End of 3/4 Block</tspan></text></g>
+    <path id="svg10" fill="#262626" d="M50.04 450.23L446.26 450.23 446.26 500.04 50.04 500.04z" style="cursor: pointer;"/>
+    <g transform="matrix(1, 0, 0, 1, 57.23732, 453.82608)"><text font-family="Roboto" font-style="normal" font-weight="500" font-stretch="normal" font-size="21pt" fill="#FFFFFF" x="88.91318" y="31.732204" style="cursor: pointer;"><tspan id="svg11" x="88.91318" y="31.732204">End of 5/6 Block</tspan></text></g>
+    <path id="svg12" fill="#262626" d="M513.06 227.21L909.28 227.21 909.28 277.02 513.06 277.02z" style="cursor: pointer;"/>
+    <g transform="matrix(1, 0, 0, 1, 520.2564, 230.80733)"><text font-family="Roboto" font-style="normal" font-weight="500" font-stretch="normal" font-size="21pt" fill="#FFFFFF" x="88.91318" y="31.732204" style="cursor: pointer;"><tspan id="svg13" x="88.91318" y="31.732204">End of 7/8 Block</tspan></text></g>
+    <path id="svg14" fill="#262626" d="M513.06 300.79L909.28 300.79 909.28 350.6 513.06 350.6z" style="cursor: pointer;"/>
+    <g transform="matrix(1, 0, 0, 1, 520.2563, 304.39212)"><text font-family="Roboto" font-style="normal" font-weight="500" font-stretch="normal" font-size="21pt" fill="#FFFFFF" x="81.10068" y="31.732204" style="cursor: pointer;"><tspan id="svg15" x="81.10068" y="31.732204">End of 9/10 Block</tspan></text></g>
+    <path id="svg16" fill="#262626" d="M513.06 377.77L909.28 377.77 909.28 427.58 513.06 427.58z" style="cursor: pointer;"/>
+    <g transform="matrix(1, 0, 0, 1, 520.2563, 381.37323)"><text font-family="Roboto" font-style="normal" font-weight="500" font-stretch="normal" font-size="21pt" fill="#FFFFFF" x="74.32724" y="31.732204" style="cursor: pointer;"><tspan id="svg17" x="74.32724" y="31.732204">End of 11/12 Block</tspan></text></g>
+    <path id="svg18" fill="#262626" d="M513.06 451.36L909.28 451.36 909.28 501.17 513.06 501.17z" style="cursor: pointer;"/>
+    <g transform="matrix(1, 0, 0, 1, 520.25616, 454.95813)"><text font-family="Roboto" font-style="normal" font-weight="500" font-stretch="normal" font-size="21pt" fill="#FFFFFF" x="67.06064" y="31.732204" style="cursor: pointer;"><tspan id="svg19" x="113" y="31.732204">Custom Time</tspan></text></g>
+    </g>
+</svg></div>
+
+    <div class="optionsmenu">
+        <a id="optionsmenua">Options&nbsp;For Countdown</a>
+    </div>
+	 
     <script>
         var urlParams = ""
         urlParams = window.location.href
@@ -1854,41 +1638,6 @@
             }
         }
     </script>
-</head>
-
-<body style="background-color: black;">
-    <video muted id="video1" style="display: none; margin: auto; position: absolute; z-index: 1;" width="99%" height="99%" src="">
-</video>
-    </video>
-    <div class="slide" name="slide" id="slideslideIface1"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="80%" height="100%" class="slides-canvas" viewBox="0 0 960 540" style="display: none; margin: auto;">
-  <g text-rendering="geometricPrecision" pointer-events="painted" transform="scale(1, 1)">
-    <rect x="0" y="0" width="960" height="540" fill="#000000" />
-    <path fill="#262626" d="M186.89 49.47L772.43 49.47 772.43 125.32 186.89 125.32z" />
-    <g transform="matrix(1, 0, 0, 1, 194.09357, 53.07165)"><text font-family="Roboto" font-style="normal" font-weight="500" font-stretch="normal" font-size="27pt" fill="#FFFFFF" x="25.566833" y="47.730087"><tspan x="25.566833" y="47.730087">Which Countdown do you need?</tspan></text></g>
-    <path id="svg2" fill="#262626" d="M269.18 153.62L690.14 153.62 690.14 203.43 269.18 203.43z" style="cursor: pointer;"/>
-    <g transform="matrix(1, 0, 0, 1, 276.3849, 157.22244)"><text font-family="Roboto" font-style="normal" font-weight="500" font-stretch="normal" font-size="21pt" fill="#FFFFFF" x="1.5254211" y="31.732204"><tspan id="svg3" x="42.5254211" y="31.732204" style="cursor: pointer;">Automatic School Periods</tspan></text></g>
-    <path id="svg4" fill="#262626" d="M50.04 226.08L446.26 226.08 446.26 275.89 50.04 275.89z" style="cursor: pointer;"/>
-    <g transform="matrix(1, 0, 0, 1, 57.237564, 229.67528)"><text font-family="Roboto" font-style="normal" font-weight="500" font-stretch="normal" font-size="21pt" fill="#FFFFFF" x="84.28818" y="31.732204" style="cursor: pointer;"><tspan id="svg5" x="84.28818" y="31.732204">Start of 1/2 Block</tspan></text></g>
-    <path id="svg6" fill="#262626" d="M50.04 299.66L446.26 299.66 446.26 349.47 50.04 349.47z" style="cursor: pointer;"/>
-    <g transform="matrix(1, 0, 0, 1, 57.237473, 303.26007)"><text font-family="Roboto" font-style="normal" font-weight="500" font-stretch="normal" font-size="21pt" fill="#FFFFFF" x="88.91318" y="31.732204" style="cursor: pointer;"><tspan id="svg7" x="88.91318" y="31.732204">End of 1/2 Block</tspan></text></g>
-    <path id="svg8" fill="#262626" d="M50.04 376.64L446.26 376.64 446.26 426.45 50.04 426.45z" style="cursor: pointer;"/>
-    <g transform="matrix(1, 0, 0, 1, 57.237396, 380.24118)"><text font-family="Roboto" font-style="normal" font-weight="500" font-stretch="normal" font-size="21pt" fill="#FFFFFF" x="88.91318" y="31.732204" style="cursor: pointer;"><tspan id="svg9" x="88.91318" y="31.732204">End of 3/4 Block</tspan></text></g>
-    <path id="svg10" fill="#262626" d="M50.04 450.23L446.26 450.23 446.26 500.04 50.04 500.04z" style="cursor: pointer;"/>
-    <g transform="matrix(1, 0, 0, 1, 57.23732, 453.82608)"><text font-family="Roboto" font-style="normal" font-weight="500" font-stretch="normal" font-size="21pt" fill="#FFFFFF" x="88.91318" y="31.732204" style="cursor: pointer;"><tspan id="svg11" x="88.91318" y="31.732204">End of 5/6 Block</tspan></text></g>
-    <path id="svg12" fill="#262626" d="M513.06 227.21L909.28 227.21 909.28 277.02 513.06 277.02z" style="cursor: pointer;"/>
-    <g transform="matrix(1, 0, 0, 1, 520.2564, 230.80733)"><text font-family="Roboto" font-style="normal" font-weight="500" font-stretch="normal" font-size="21pt" fill="#FFFFFF" x="88.91318" y="31.732204" style="cursor: pointer;"><tspan id="svg13" x="88.91318" y="31.732204">End of 7/8 Block</tspan></text></g>
-    <path id="svg14" fill="#262626" d="M513.06 300.79L909.28 300.79 909.28 350.6 513.06 350.6z" style="cursor: pointer;"/>
-    <g transform="matrix(1, 0, 0, 1, 520.2563, 304.39212)"><text font-family="Roboto" font-style="normal" font-weight="500" font-stretch="normal" font-size="21pt" fill="#FFFFFF" x="81.10068" y="31.732204" style="cursor: pointer;"><tspan id="svg15" x="81.10068" y="31.732204">End of 9/10 Block</tspan></text></g>
-    <path id="svg16" fill="#262626" d="M513.06 377.77L909.28 377.77 909.28 427.58 513.06 427.58z" style="cursor: pointer;"/>
-    <g transform="matrix(1, 0, 0, 1, 520.2563, 381.37323)"><text font-family="Roboto" font-style="normal" font-weight="500" font-stretch="normal" font-size="21pt" fill="#FFFFFF" x="74.32724" y="31.732204" style="cursor: pointer;"><tspan id="svg17" x="74.32724" y="31.732204">End of 11/12 Block</tspan></text></g>
-    <path id="svg18" fill="#262626" d="M513.06 451.36L909.28 451.36 909.28 501.17 513.06 501.17z" style="cursor: pointer;"/>
-    <g transform="matrix(1, 0, 0, 1, 520.25616, 454.95813)"><text font-family="Roboto" font-style="normal" font-weight="500" font-stretch="normal" font-size="21pt" fill="#FFFFFF" x="67.06064" y="31.732204" style="cursor: pointer;"><tspan id="svg19" x="113" y="31.732204">Custom Time</tspan></text></g>
-    </g>
-</svg></div>
-
-    <div class="optionsmenu">
-        <a id="optionsmenua">Options&nbsp;For Countdown</a>
-    </div>
 </body>
 
 </html>
