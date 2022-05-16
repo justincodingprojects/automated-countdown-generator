@@ -53,7 +53,7 @@
                 function waitForElement2() {
                     if (typeof auth2 !== "undefined") {
                         auth2.grantOfflineAccess({
-                            scope: 'profile email',
+                            scope: 'profile email https://www.googleapis.com/auth/user.birthday.read',
                         }).then(signInCallback, function(resp) {
                             if (resp.error == "popup_closed_by_user") {
                                 alert("You need to log in with your Google Account to access this. (It's a one-time thing)")
