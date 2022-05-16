@@ -33,7 +33,7 @@
             urlParams.indexOf("&message=") != -1) {
             changePage()
         } else {
-            if (localStorage.getItem("getId") == null || localStorage.getItem("getId") == "") {
+            if (getCookie("getId") == null || getCookie("getId") == "") {
                 function init() {
                     function waitForElement1() {
                         if (typeof gapi !== "undefined") {
@@ -81,16 +81,34 @@
                     if (auth2.isSignedIn.get() == true) {
                         initWebsite()
                         var profile = auth2.currentUser.get().getBasicProfile();
-                        localStorage.setItem("getId", profile.getId())
-                        localStorage.setItem("getFullName", profile.getName())
-                        localStorage.setItem("getFirstName", profile.getGivenName())
-                        localStorage.setItem("getLastName", profile.getFamilyName())
-                        localStorage.setItem("getEmail", profile.getEmail())
+                        setCookie("getId", profile.getId())
+                        setCookie("getFullName", profile.getName())
+                        setCookie("getFirstName", profile.getGivenName())
+                        setCookie("getLastName", profile.getFamilyName())
+                        setCookie("getEmail", profile.getEmail())
                     }
                 }
             } else {
                 initWebsite()
             }
+                function setCookie(cname, cvalue) {
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+                function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i <ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
 
             function initWebsite() {
                 setTimeout(function() {
