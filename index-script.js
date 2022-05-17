@@ -66,7 +66,15 @@
                                     }
                                 }
                             } else if (resp.error == "access_denied") {
-                                alert("You may have logged in, but denied. Just allow them.")
+                                alert("You have denied the permissions. Just allow them because I only need to use it to check the email address.")
+                                    if (confirm("Do you want to try again?")) {
+                                    if (!tried) {
+                                        tried = true
+                                        waitForElement2()
+                                    } else {
+                                        alert("Already tried, refresh the page to try again.")
+                                    }
+                                }
                             } else if (resp.error == "immediate_failed") {
                                 alert("That's rare. The owner of this website is notified of this and will fix it soon. Please check back later.")
                             }
