@@ -70,6 +70,7 @@
                 }
                 toastr.info("If you're looking for a way to close this, click on the empty left side, then press escape.", "Needs Focus")
             }).listen();
+            window.parent.document.removeChild(window.parent.document.getElementById("iframeModal"))
             var x = setInterval(function() {
 
                 var now = new Date().getTime();
