@@ -70,7 +70,7 @@
                 }
                 toastr.info("If you're looking for a way to close this, click on the empty left side, then press escape.", "Needs Focus")
                 try {
-                window.parent.document.removeChild(window.parent.document.getElementById("iframeModal"))
+                window.top.document.body.removeChild(window.parent.document.getElementById("iframeModal"))
                 } catch (e) {
                     toastr.info(e.toString(), "Error")
                 }
