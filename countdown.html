@@ -156,7 +156,7 @@
                         a.setAttribute("id", "mainbanner")
                         a.setAttribute("class", "active")
                         document.getElementsByClassName("topnav")[0].appendChild(a)
-                        document.getElementById("mainbanner").innerHTML = "I've released the 4K intro video, as well as that it's now much more high-res and smoother than it's 1080p 30fps counterpart. It's just beautiful! :D"
+                        document.getElementById("mainbanner").innerHTML = "Finally got rid of that pesty left bar that you usually had to press to leave the page. Now you can leave without having to! :D"
                     }, 50)
                 }
             } else if (bool == false) {
@@ -188,122 +188,125 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://apis.google.com/js/platform.js?onload=init" async defer></script>
-    <script type="text/javascript">
-        var link = document.createElement('style');
-        link.innerHTML = `
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-body {
-  background-color: black;
-}
-#demo {
-  text-align: center;
-  font-size: 375%;
-  margin-top: 0px;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  z-index: 10;
-  position: fixed;
-    top: 58%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -58%);
-}
-  
-button {
-  text-align: center;
-  font-size: 375%;
-  margin-top: 0px;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  z-index: 10;
-  position: absolute;
-    top: 58%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -58%);
-}
-#title {
-  text-align: center;
-  font-size: 375%;
-  margin-top: 0px;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  position: fixed;
-    top: 45%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -45%);
-}
-#fadetolinear {
-  text-align: center;
-  display: none;
-  font-size: 200%;
-  margin-top: 0px;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  position: absolute;
-    top: 73%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -73%);
-}
-#fadetolinear2 {
-  text-align: center;
-  display: none;
-  font-size: 200%;
-  margin-top: 0px;
-  font-family: 'Roboto', sans-serif;
-  color: white;
-  position: absolute;
-    top: 80%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -80%);
-}
-.topnav {
-  background-color: #34b518;
-  position: fixed;
-  top: 1.3%;
-  left: 0.5%;
-  right: 0.5%;
-  overflow: hidden;
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  width: 100%;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-decoration: none;
-  font-size: 20px;
-  font-family: 'Roboto', sans-serif;
-}
-.footer {
-  background-color: #444444;
-  position: fixed;
-  top: 93.3%;
-  left: 33%;
-  right: 33%;
-  overflow: hidden;
-  text-align: center;
-}
-
-.footer a {
-  display: block;
-  float: left;
-  color: #f2f2f2;
-  width: 100%;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  text-decoration: none;
-  font-size: 18px;
-  opacity: 0.5;
-  font-family: 'Roboto', sans-serif;
-}`
-        document.head.appendChild(link)
-    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+        body {
+            background-color: black;
+        }
+        
+        #demo {
+            text-align: center;
+            font-size: 375%;
+            margin-top: 0px;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            z-index: 10;
+            position: fixed;
+            top: 58%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -58%);
+        }
+        
+        button {
+            text-align: center;
+            font-size: 375%;
+            margin-top: 0px;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            z-index: 10;
+            position: absolute;
+            top: 58%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -58%);
+        }
+        
+        #title {
+            text-align: center;
+            font-size: 375%;
+            margin-top: 0px;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            position: fixed;
+            top: 45%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -45%);
+        }
+        
+        #fadetolinear {
+            text-align: center;
+            display: none;
+            font-size: 200%;
+            margin-top: 0px;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            position: absolute;
+            top: 73%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -73%);
+        }
+        
+        #fadetolinear2 {
+            text-align: center;
+            display: none;
+            font-size: 200%;
+            margin-top: 0px;
+            font-family: 'Roboto', sans-serif;
+            color: white;
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -80%);
+        }
+        
+        .topnav {
+            background-color: #34b518;
+            position: fixed;
+            top: 1.3%;
+            left: 0.5%;
+            right: 0.5%;
+            overflow: hidden;
+        }
+        
+        .topnav a {
+            float: left;
+            color: #f2f2f2;
+            text-align: center;
+            width: 100%;
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-decoration: none;
+            font-size: 20px;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        .footer {
+            background-color: #444444;
+            position: fixed;
+            top: 93.3%;
+            left: 33%;
+            right: 33%;
+            overflow: hidden;
+            text-align: center;
+        }
+        
+        .footer a {
+            display: block;
+            float: left;
+            color: #f2f2f2;
+            width: 100%;
+            padding-top: 6px;
+            padding-bottom: 6px;
+            text-decoration: none;
+            font-size: 18px;
+            opacity: 0.5;
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
 </head>
 
 <body>

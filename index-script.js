@@ -67,7 +67,7 @@
                                 }
                             } else if (resp.error == "access_denied") {
                                 alert("You have denied the permissions. Just allow them because I only need to use it to check the email address.")
-                                    if (confirm("Do you want to try again?")) {
+                                if (confirm("Do you want to try again?")) {
                                     if (!tried) {
                                         tried = true
                                         waitForElement2()
@@ -99,28 +99,31 @@
             } else {
                 initWebsite()
             }
-                function setCookie(name,value,days) {
-    var expires = "";
-    if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days*24*60*60*1000));
-        expires = "; expires=" + date.toUTCString();
-    }
-    document.cookie = name + "=" + (value || "")  + expires + "; path=/";
-}
-function getCookie(name) {
-    var nameEQ = name + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0;i < ca.length;i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1,c.length);
-        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
-    }
-    return null;
-}
-function eraseCookie(name) {   
-    document.cookie = name +'=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-}
+
+            function setCookie(name, value, days) {
+                var expires = "";
+                if (days) {
+                    var date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            }
+
+            function getCookie(name) {
+                var nameEQ = name + "=";
+                var ca = document.cookie.split(';');
+                for (var i = 0; i < ca.length; i++) {
+                    var c = ca[i];
+                    while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                    if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+                }
+                return null;
+            }
+
+            function eraseCookie(name) {
+                document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+            }
 
             function initWebsite() {
                 setTimeout(function() {
@@ -315,7 +318,7 @@ function eraseCookie(name) {
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 0%; top: 0%; right: 0%; bottom: 0%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -478,7 +481,7 @@ function eraseCookie(name) {
                                             iframeModal.id = "iframeModal"
                                             iframeModal.className = "iframeModal"
                                             iframeModal.frameBorder = "0"
-                                            iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                            iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 0%; top: 0%; right: 0%; bottom: 0%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                             iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                             iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                             document.body.appendChild(iframeModal)
@@ -642,7 +645,7 @@ function eraseCookie(name) {
                                             iframeModal.id = "iframeModal"
                                             iframeModal.className = "iframeModal"
                                             iframeModal.frameBorder = "0"
-                                            iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                            iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 0%; top: 0%; right: 0%; bottom: 0%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                             iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                             iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                             document.body.appendChild(iframeModal)
@@ -702,7 +705,7 @@ function eraseCookie(name) {
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 0%; top: 0%; right: 0%; bottom: 0%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -762,7 +765,7 @@ function eraseCookie(name) {
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 0%; top: 0%; right: 0%; bottom: 0%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -821,7 +824,7 @@ function eraseCookie(name) {
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 0%; top: 0%; right: 0%; bottom: 0%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -880,7 +883,7 @@ function eraseCookie(name) {
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 0%; top: 0%; right: 0%; bottom: 0%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -939,7 +942,7 @@ function eraseCookie(name) {
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 0%; top: 0%; right: 0%; bottom: 0%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -998,7 +1001,7 @@ function eraseCookie(name) {
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 0%; top: 0%; right: 0%; bottom: 0%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -1057,7 +1060,7 @@ function eraseCookie(name) {
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 0%; top: 0%; right: 0%; bottom: 0%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -1116,7 +1119,7 @@ function eraseCookie(name) {
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 0%; top: 0%; right: 0%; bottom: 0%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -1175,7 +1178,7 @@ function eraseCookie(name) {
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 0%; top: 0%; right: 0%; bottom: 0%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -1234,7 +1237,7 @@ function eraseCookie(name) {
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 0%; top: 0%; right: 0%; bottom: 0%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -1293,7 +1296,7 @@ function eraseCookie(name) {
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 0%; top: 0%; right: 0%; bottom: 0%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -1352,7 +1355,7 @@ function eraseCookie(name) {
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 0%; top: 0%; right: 0%; bottom: 0%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -1411,7 +1414,7 @@ function eraseCookie(name) {
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 0%; top: 0%; right: 0%; bottom: 0%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -1470,7 +1473,7 @@ function eraseCookie(name) {
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 0%; top: 0%; right: 0%; bottom: 0%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -1546,7 +1549,7 @@ function eraseCookie(name) {
                                     iframeModal.id = "iframeModal"
                                     iframeModal.className = "iframeModal"
                                     iframeModal.frameBorder = "0"
-                                    iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                    iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 0%; top: 0%; right: 0%; bottom: 0%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                     iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                     iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                     document.body.appendChild(iframeModal)
