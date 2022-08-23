@@ -288,7 +288,7 @@
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 0%; right: 1%; bottom: 0%; width: 98%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -451,7 +451,7 @@
                                             iframeModal.id = "iframeModal"
                                             iframeModal.className = "iframeModal"
                                             iframeModal.frameBorder = "0"
-                                            iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                            iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 0%; right: 1%; bottom: 0%; width: 98%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                             iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                             iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                             document.body.appendChild(iframeModal)
@@ -615,7 +615,7 @@
                                             iframeModal.id = "iframeModal"
                                             iframeModal.className = "iframeModal"
                                             iframeModal.frameBorder = "0"
-                                            iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                            iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 0%; right: 1%; bottom: 0%; width: 98%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                             iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                             iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                             document.body.appendChild(iframeModal)
@@ -675,7 +675,7 @@
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 0%; right: 1%; bottom: 0%; width: 98%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -735,7 +735,7 @@
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 0%; right: 1%; bottom: 0%; width: 98%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -794,7 +794,7 @@
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 0%; right: 1%; bottom: 0%; width: 98%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -853,7 +853,7 @@
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 0%; right: 1%; bottom: 0%; width: 98%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -912,7 +912,7 @@
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 0%; right: 1%; bottom: 0%; width: 98%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -971,7 +971,7 @@
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 0%; right: 1%; bottom: 0%; width: 98%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -1030,7 +1030,7 @@
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 0%; right: 1%; bottom: 0%; width: 98%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -1089,7 +1089,7 @@
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 0%; right: 1%; bottom: 0%; width: 98%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -1148,7 +1148,7 @@
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 0%; right: 1%; bottom: 0%; width: 98%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -1207,7 +1207,7 @@
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 0%; right: 1%; bottom: 0%; width: 98%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -1266,7 +1266,7 @@
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 0%; right: 1%; bottom: 0%; width: 98%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -1325,7 +1325,7 @@
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 0%; right: 1%; bottom: 0%; width: 98%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -1384,7 +1384,7 @@
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 0%; right: 1%; bottom: 0%; width: 98%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -1443,7 +1443,7 @@
                                         iframeModal.id = "iframeModal"
                                         iframeModal.className = "iframeModal"
                                         iframeModal.frameBorder = "0"
-                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                        iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 0%; right: 1%; bottom: 0%; width: 98%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                         iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                         iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                         document.body.appendChild(iframeModal)
@@ -1519,7 +1519,7 @@
                                     iframeModal.id = "iframeModal"
                                     iframeModal.className = "iframeModal"
                                     iframeModal.frameBorder = "0"
-                                    iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 1%; right: 1%; bottom: 1%; width: 100%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
+                                    iframeModal.style = "display: none; margin: auto; position: fixed; z-index: 999; left: 1%; top: 0%; right: 1%; bottom: 0%; width: 98%; height: 100%; overflow: auto; background-color: rgb(0,0,0); background-color: rgba(0,0,0,0.4);"
                                     iframeModal.allow = "accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *"
                                     iframeModal.sandbox = "allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation"
                                     document.body.appendChild(iframeModal)
