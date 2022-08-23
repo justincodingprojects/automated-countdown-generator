@@ -200,6 +200,11 @@
             font-weight: 500;
         }
         
+        body {
+            overflow: hidden;
+        }
+        /* Buttons */
+        
         .button {
             border: none;
             color: white;
@@ -224,6 +229,7 @@
             background-color: #333333;
             color: white;
         }
+        /* Option Menu */
         
         .optionsmenu {
             display: none;
