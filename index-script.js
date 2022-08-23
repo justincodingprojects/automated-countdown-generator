@@ -190,16 +190,16 @@
                                     hasWorked = true
                                 } else {
                                     templateURL = templateURL.replace("[hour]", "08")
-                                    templateURL = templateURL.replace("[minute]", "03")
+                                    templateURL = templateURL.replace("[minute]", "05")
                                     templateURL = templateURL.replace("[second]", "00")
                                     templateURL = templateURL.replace("[message]", "Start of Testing Block")
                                     hasWorked = true
                                 }
                             }
                             if (hour == 8) {
-                                if (minute < 3) {
+                                if (minute < 5) {
                                     templateURL = templateURL.replace("[hour]", "08")
-                                    templateURL = templateURL.replace("[minute]", "03")
+                                    templateURL = templateURL.replace("[minute]", "05")
                                     templateURL = templateURL.replace("[second]", "00")
                                     templateURL = templateURL.replace("[message]", "Start of Testing Block")
                                     hasWorked = true
