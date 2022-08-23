@@ -136,6 +136,7 @@
                         setTimeout(function() {
                             var egg = new Egg("esc", function() {
                                 document.body.removeChild(document.getElementById("iframeModal"))
+                                document.getElementById("optionsmenu").style.display = "block"
                             }).listen()
                         }, 500)
                     }
@@ -145,6 +146,7 @@
                         setTimeout(function() {
                             var egg = new Egg("esc", function() {
                                 document.body.removeChild(document.getElementById("iframeModal"))
+                                document.getElementById("optionsmenu").style.display = "block"
                             }).listen()
                             document.getElementById("video1").style.display = "none"
                             document.getElementById("svg1").style.display = "block"
@@ -283,6 +285,7 @@
                                     if (!!document.getElementById("iframeModal")) {
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     } else {
                                         var iframeModal = document.createElement("iframe")
                                         iframeModal.id = "iframeModal"
@@ -294,6 +297,7 @@
                                         document.body.appendChild(iframeModal)
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     }
                                 }
                             } else if (dayofweek == "Sunday" || dayofweek == "Saturday") {
@@ -446,6 +450,7 @@
                                         if (!!document.getElementById("iframeModal")) {
                                             document.getElementById("iframeModal").src = newURL
                                             document.getElementById("iframeModal").style.display = "block"
+                                            document.getElementById("optionsmenu").style.display = "none"
                                         } else {
                                             var iframeModal = document.createElement("iframe")
                                             iframeModal.id = "iframeModal"
@@ -457,6 +462,7 @@
                                             document.body.appendChild(iframeModal)
                                             document.getElementById("iframeModal").src = newURL
                                             document.getElementById("iframeModal").style.display = "block"
+                                            document.getElementById("optionsmenu").style.display = "none"
                                         }
                                     }
                                 } else if (dayofweek == "Sunday" || dayofweek == "Saturday") {
@@ -610,6 +616,7 @@
                                         if (!!document.getElementById("iframeModal")) {
                                             document.getElementById("iframeModal").src = newURL
                                             document.getElementById("iframeModal").style.display = "block"
+                                            document.getElementById("optionsmenu").style.display = "none"
                                         } else {
                                             var iframeModal = document.createElement("iframe")
                                             iframeModal.id = "iframeModal"
@@ -621,6 +628,7 @@
                                             document.body.appendChild(iframeModal)
                                             document.getElementById("iframeModal").src = newURL
                                             document.getElementById("iframeModal").style.display = "block"
+                                            document.getElementById("optionsmenu").style.display = "none"
                                         }
                                     }
                                 } else if (dayofweek == "Sunday" || dayofweek == "Saturday") {
@@ -670,6 +678,7 @@
                                     if (!!document.getElementById("iframeModal")) {
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     } else {
                                         var iframeModal = document.createElement("iframe")
                                         iframeModal.id = "iframeModal"
@@ -681,6 +690,7 @@
                                         document.body.appendChild(iframeModal)
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
 
                                     }
                                 }
@@ -730,6 +740,7 @@
                                     if (!!document.getElementById("iframeModal")) {
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     } else {
                                         var iframeModal = document.createElement("iframe")
                                         iframeModal.id = "iframeModal"
@@ -741,6 +752,7 @@
                                         document.body.appendChild(iframeModal)
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     }
                                 }
                             } else if (dayofweek == "Sunday" || dayofweek == "Saturday") {
@@ -789,6 +801,7 @@
                                     if (!!document.getElementById("iframeModal")) {
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     } else {
                                         var iframeModal = document.createElement("iframe")
                                         iframeModal.id = "iframeModal"
@@ -800,6 +813,7 @@
                                         document.body.appendChild(iframeModal)
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     }
                                 }
                             } else if (dayofweek == "Sunday" || dayofweek == "Saturday") {
@@ -848,6 +862,7 @@
                                     if (!!document.getElementById("iframeModal")) {
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     } else {
                                         var iframeModal = document.createElement("iframe")
                                         iframeModal.id = "iframeModal"
@@ -859,6 +874,7 @@
                                         document.body.appendChild(iframeModal)
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     }
                                 }
                             } else if (dayofweek == "Sunday" || dayofweek == "Saturday") {
@@ -907,6 +923,7 @@
                                     if (!!document.getElementById("iframeModal")) {
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     } else {
                                         var iframeModal = document.createElement("iframe")
                                         iframeModal.id = "iframeModal"
@@ -918,6 +935,7 @@
                                         document.body.appendChild(iframeModal)
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     }
                                 }
                             } else if (dayofweek == "Sunday" || dayofweek == "Saturday") {
@@ -966,6 +984,7 @@
                                     if (!!document.getElementById("iframeModal")) {
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     } else {
                                         var iframeModal = document.createElement("iframe")
                                         iframeModal.id = "iframeModal"
@@ -977,6 +996,7 @@
                                         document.body.appendChild(iframeModal)
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     }
                                 }
                             } else if (dayofweek == "Sunday" || dayofweek == "Saturday") {
@@ -1025,6 +1045,7 @@
                                     if (!!document.getElementById("iframeModal")) {
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     } else {
                                         var iframeModal = document.createElement("iframe")
                                         iframeModal.id = "iframeModal"
@@ -1036,6 +1057,7 @@
                                         document.body.appendChild(iframeModal)
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     }
                                 }
                             } else if (dayofweek == "Sunday" || dayofweek == "Saturday") {
@@ -1084,6 +1106,7 @@
                                     if (!!document.getElementById("iframeModal")) {
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     } else {
                                         var iframeModal = document.createElement("iframe")
                                         iframeModal.id = "iframeModal"
@@ -1095,6 +1118,7 @@
                                         document.body.appendChild(iframeModal)
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     }
                                 }
                             } else if (dayofweek == "Sunday" || dayofweek == "Saturday") {
@@ -1143,6 +1167,7 @@
                                     if (!!document.getElementById("iframeModal")) {
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     } else {
                                         var iframeModal = document.createElement("iframe")
                                         iframeModal.id = "iframeModal"
@@ -1154,6 +1179,7 @@
                                         document.body.appendChild(iframeModal)
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     }
                                 }
                             } else if (dayofweek == "Sunday" || dayofweek == "Saturday") {
@@ -1202,6 +1228,7 @@
                                     if (!!document.getElementById("iframeModal")) {
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     } else {
                                         var iframeModal = document.createElement("iframe")
                                         iframeModal.id = "iframeModal"
@@ -1213,6 +1240,7 @@
                                         document.body.appendChild(iframeModal)
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     }
                                 }
                             } else if (dayofweek == "Sunday" || dayofweek == "Saturday") {
@@ -1261,6 +1289,7 @@
                                     if (!!document.getElementById("iframeModal")) {
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     } else {
                                         var iframeModal = document.createElement("iframe")
                                         iframeModal.id = "iframeModal"
@@ -1272,6 +1301,7 @@
                                         document.body.appendChild(iframeModal)
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     }
                                 }
                             } else if (dayofweek == "Sunday" || dayofweek == "Saturday") {
@@ -1320,6 +1350,7 @@
                                     if (!!document.getElementById("iframeModal")) {
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     } else {
                                         var iframeModal = document.createElement("iframe")
                                         iframeModal.id = "iframeModal"
@@ -1331,6 +1362,7 @@
                                         document.body.appendChild(iframeModal)
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     }
                                 }
                             } else if (dayofweek == "Sunday" || dayofweek == "Saturday") {
@@ -1379,6 +1411,7 @@
                                     if (!!document.getElementById("iframeModal")) {
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     } else {
                                         var iframeModal = document.createElement("iframe")
                                         iframeModal.id = "iframeModal"
@@ -1390,6 +1423,7 @@
                                         document.body.appendChild(iframeModal)
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     }
                                 }
                             } else if (dayofweek == "Sunday" || dayofweek == "Saturday") {
@@ -1438,6 +1472,7 @@
                                     if (!!document.getElementById("iframeModal")) {
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     } else {
                                         var iframeModal = document.createElement("iframe")
                                         iframeModal.id = "iframeModal"
@@ -1449,6 +1484,7 @@
                                         document.body.appendChild(iframeModal)
                                         document.getElementById("iframeModal").src = newURL
                                         document.getElementById("iframeModal").style.display = "block"
+                                        document.getElementById("optionsmenu").style.display = "none"
                                     }
                                 }
                             } else if (dayofweek == "Sunday" || dayofweek == "Saturday") {
@@ -1514,6 +1550,7 @@
                                 if (!!document.getElementById("iframeModal")) {
                                     document.getElementById("iframeModal").src = newURL
                                     document.getElementById("iframeModal").style.display = "block"
+                                    document.getElementById("optionsmenu").style.display = "none"
                                 } else {
                                     var iframeModal = document.createElement("iframe")
                                     iframeModal.id = "iframeModal"
@@ -1525,6 +1562,7 @@
                                     document.body.appendChild(iframeModal)
                                     document.getElementById("iframeModal").src = newURL
                                     document.getElementById("iframeModal").style.display = "block"
+                                    document.getElementById("optionsmenu").style.display = "none"
                                     document.getElementById("countdownchecker").value = ""
                                     document.getElementById("countdowncheckertext").value = ""
                                     document.getElementById("countdowncheckertext1").value = ""
