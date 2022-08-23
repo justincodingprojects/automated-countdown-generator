@@ -251,7 +251,7 @@
                                     templateURL = templateURL.replace("[hour]", "13")
                                     templateURL = templateURL.replace("[minute]", "12")
                                     templateURL = templateURL.replace("[second]", "00")
-                                    templateURL = templateURL.replace("[message]", text6)
+                                    templateURL = templateURL.replace("[message]", text3)
                                     hasWorked = true
                                 }
                             }
@@ -260,7 +260,7 @@
                                     templateURL = templateURL.replace("[hour]", "13")
                                 templateURL = templateURL.replace("[minute]", "12")
                                 templateURL = templateURL.replace("[second]", "00")
-                                templateURL = templateURL.replace("[message]", text6)
+                                templateURL = templateURL.replace("[message]", text3)
                                 hasWorked = true
                             } else {
                                 templateURL = templateURL.replace("[hour]", "14")
