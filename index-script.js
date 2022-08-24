@@ -167,13 +167,13 @@
                             currentHour = currentHours[new Date().getHours()],
                             currentMinute = currentMinutes[new Date().getMinutes()],
                             currentDayofWeek = currentDayofWeeks[new Date().getDay()],
-                            text1 = encodeURIComponent("Start of 2nd Block (7:55)").replace("%2F", "/"),
-                            text2 = encodeURIComponent("End of 2nd Block").replace("%2F", "/"),
-                            text3 = encodeURIComponent("End of 4th Block").replace("%2F", "/"),
-                            text4 = encodeURIComponent("End of 6th Block").replace("%2F", "/"),
-                            text5 = encodeURIComponent("End of 8th Block").replace("%2F", "/"),
-                            text6 = encodeURIComponent("End of 10th Block").replace("%2F", "/"),
-                            text7 = encodeURIComponent("End of 12th Block").replace("%2F", "/")
+                            text1 = encodeURIComponent("Start of 1st Block (7:55)").replace("%2F", "/"),
+                            text2 = encodeURIComponent("End of 1st Block").replace("%2F", "/"),
+                            text3 = encodeURIComponent("End of 3rd Block").replace("%2F", "/"),
+                            text4 = encodeURIComponent("End of 5th Block").replace("%2F", "/"),
+                            text5 = encodeURIComponent("End of 7th Block").replace("%2F", "/"),
+                            text6 = encodeURIComponent("End of 9th Block").replace("%2F", "/"),
+                            text7 = encodeURIComponent("End of 11th Block").replace("%2F", "/")
                         generateURL(currentYear, currentMonth, currentDay, parseInt(currentHour), parseInt(currentMinute), currentDayofWeek, TEMPLATEURL)
 
                         function generateURL(year, month, day, hour, minute, dayofweek, templateURL) {
