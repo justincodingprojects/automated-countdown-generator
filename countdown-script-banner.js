@@ -29,7 +29,7 @@ function setMaintenanceBanner(bool) {
                 a.setAttribute("id", "mainbanner")
                 a.setAttribute("class", "active")
                 document.getElementsByClassName("topnav")[0].appendChild(a)
-                document.getElementById("mainbanner").innerHTML = "The countdown should now be almost accurate as the bell, and I'm considering to make major improvements alongside the way."
+                document.getElementById("mainbanner").innerHTML = "The countdown should now be almost accurate to the bell ring, and I'm considering to make major improvements alongside the way."
             }, 50)
         }
     } else if (bool == false) {
