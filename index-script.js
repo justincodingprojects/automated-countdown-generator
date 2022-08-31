@@ -288,7 +288,7 @@
                             }*/
                             if (hasWorked == true && dayofweek !== "Sunday" && dayofweek !== "Saturday") {
                                 var newURL = templateURL
-                                alert("URL (For Testing Block) generated!")
+                                alert("URL (For Early Dismissal Day) generated!")
                                 if (confirm("Is this correct?\n" + newURL)) {
                                     if (!!document.getElementById("iframeModal")) {
                                         document.getElementById("iframeModal").src = newURL
@@ -316,7 +316,7 @@
                         }
                     }
                     document.getElementById("svg2").onclick = function() {
-                        if (parseInt(new Array("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31")[new Date().getDate()]) == 0) {
+                        if (parseInt(new Array("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31")[new Date().getDate()]) == 31) {
                             timefortest()
                         } else {
                             var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
@@ -482,7 +482,7 @@
                         }
                     }
                     document.getElementById("svg3").onclick = function() {
-                        if (parseInt(new Array("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31")[new Date().getDate()]) == 0) {
+                        if (parseInt(new Array("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31")[new Date().getDate()]) == 31) {
                             timefortest()
                         } else {
                             var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
