@@ -146,7 +146,7 @@ if (urlParams.indexOf("?month=") != -1 &&
     }
 
     function initWebsite() {
-        waitForElm('#video1').then(() => {
+        waitForElement('#video1').then(() => {
             if (!isRobot) {
                 document.getElementById("video1").style.display = "block"
                 document.getElementById("video1").play()
