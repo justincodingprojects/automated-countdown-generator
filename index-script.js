@@ -173,7 +173,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                     document.querySelector(".optionsmenu").style.display = "block"
                 }, 500)
             }
-
+})
             function timefortest() {
                 var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
                 const currentMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
@@ -1617,6 +1617,5 @@ if (urlParams.indexOf("?month=") != -1 &&
                     }, 350)
                 }
             }
-        })
     }
 }
