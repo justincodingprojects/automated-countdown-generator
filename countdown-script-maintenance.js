@@ -14,4 +14,4 @@ setTimeout(function() {
             }
         }
     }
-}, 50)
+}, 150)
