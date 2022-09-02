@@ -1,3 +1,4 @@
+try {
 var urlParams = ""
 urlParams = window.location.href
 var isRobot = /bot|crawl|spider/i.test(navigator.userAgent)
@@ -1618,4 +1619,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                 }
             }
     }
+}
+} catch(e) {
+alert(e)
 }
