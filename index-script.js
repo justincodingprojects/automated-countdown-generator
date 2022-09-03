@@ -1,180 +1,181 @@
 try {
-var urlParams = ""
-urlParams = window.location.href
-var isRobot = /bot|crawl|spider/i.test(navigator.userAgent)
-if (!isRobot) {
-    document.write(decodeURIComponent("%3Cscript%20src%3D'https%3A%2F%2Fapis.google.com%2Fjs%2Fplatform.js%3Fonload%3Dinit'%20async%20defer%3E%3C%2Fscript%3E"))
-} else {
-    setTimeout(function() {
-        document.getElementById("svg1").style.display = "block"
-        document.querySelector(".optionsmenu").style.display = "block"
-    }, 500)
-}
-
-function checkForVideo() {
-    if (typeof document.getElementById("video1") !== 'undefined') {
-        fetch(
-            "https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/introvideo.txt"
-        ).then((r) => r.text().then((t) => document.getElementById("video1").src = t))
+    var urlParams = ""
+    urlParams = window.location.href
+    var isRobot = /bot|crawl|spider/i.test(navigator.userAgent)
+    if (!isRobot) {
+        document.write(decodeURIComponent("%3Cscript%20src%3D'https%3A%2F%2Fapis.google.com%2Fjs%2Fplatform.js%3Fonload%3Dinit'%20async%20defer%3E%3C%2Fscript%3E"))
     } else {
-        setTimeout(checkForVideo(), 10)
+        setTimeout(function() {
+            document.getElementById("svg1").style.display = "block"
+            document.querySelector(".optionsmenu").style.display = "block"
+        }, 500)
     }
-}
-checkForVideo()
 
-function changePage(page) {
-    fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/countdown.html").then((r) => r.text().then((t) => document.write(t)));
-}
-if (urlParams.indexOf("?month=") != -1 &&
-    urlParams.indexOf("&day=") != -1 &&
-    urlParams.indexOf("&year=") != -1 &&
-    urlParams.indexOf("&hour=") != -1 &&
-    urlParams.indexOf("&minute=") != -1 &&
-    urlParams.indexOf("&second=") != -1 &&
-    urlParams.indexOf("&message=") != -1) {
-    changePage()
-} else {
-    if (getCookie("getId") == null || getCookie("getId") == "") {
-        function init() {
-            function waitForElement1() {
-                if (typeof gapi !== "undefined") {
-                    gapi.load('auth2', function() {
-                        auth2 = gapi.auth2.init({
-                            client_id: '904159946422-3ljs0jlej7i7ir8ed2uli868ibg8cur7.apps.googleusercontent.com',
+    function checkForVideo() {
+        if (typeof document.getElementById("video1") !== 'undefined') {
+            fetch(
+                "https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/introvideo.txt"
+            ).then((r) => r.text().then((t) => document.getElementById("video1").src = t))
+        } else {
+            setTimeout(checkForVideo(), 10)
+        }
+    }
+    checkForVideo()
+
+    function changePage(page) {
+        fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/countdown.html").then((r) => r.text().then((t) => document.write(t)));
+    }
+    if (urlParams.indexOf("?month=") != -1 &&
+        urlParams.indexOf("&day=") != -1 &&
+        urlParams.indexOf("&year=") != -1 &&
+        urlParams.indexOf("&hour=") != -1 &&
+        urlParams.indexOf("&minute=") != -1 &&
+        urlParams.indexOf("&second=") != -1 &&
+        urlParams.indexOf("&message=") != -1) {
+        changePage()
+    } else {
+        if (getCookie("getId") == null || getCookie("getId") == "") {
+            function init() {
+                function waitForElement1() {
+                    if (typeof gapi !== "undefined") {
+                        gapi.load('auth2', function() {
+                            auth2 = gapi.auth2.init({
+                                client_id: '904159946422-3ljs0jlej7i7ir8ed2uli868ibg8cur7.apps.googleusercontent.com',
+                            });
                         });
-                    });
-                } else {
-                    setTimeout(waitForElement1, 10);
-                }
-            }
-            waitForElement1()
-        }
-        var tried = false;
-
-        function waitForElement2() {
-            if (typeof auth2 !== "undefined") {
-                auth2.grantOfflineAccess({
-                    scope: 'profile email',
-                }).then(signInCallback, function(resp) {
-                    if (resp.error == "popup_closed_by_user") {
-                        alert("You need to log in with your Google Account to access this. (It's a one-time thing)")
-                        if (confirm("Do you want to try again?")) {
-                            if (!tried) {
-                                tried = true
-                                waitForElement2()
-                            } else {
-                                alert("Already tried, refresh the page to try again.")
-                            }
-                        }
-                    } else if (resp.error == "access_denied") {
-                        alert("You have denied the permissions. Just allow them because I only need to use it to check the email address.")
-                        if (confirm("Do you want to try again?")) {
-                            if (!tried) {
-                                tried = true
-                                waitForElement2()
-                            } else {
-                                alert("Already tried, refresh the page to try again.")
-                            }
-                        }
-                    } else if (resp.error == "immediate_failed") {
-                        alert("That's rare. The owner of this website is notified of this and will fix it soon. Please check back later.")
+                    } else {
+                        setTimeout(waitForElement1, 10);
                     }
-                })
-            } else {
-                setTimeout(waitForElement2, 10);
-            }
-        }
-        waitForElement2()
-
-        function signInCallback() {
-            if (auth2.isSignedIn.get() == true) {
-                initWebsite()
-                var profile = auth2.currentUser.get().getBasicProfile();
-                setCookie("getId", profile.getId())
-                setCookie("getFullName", profile.getName())
-                setCookie("getFirstName", profile.getGivenName())
-                setCookie("getLastName", profile.getFamilyName())
-                setCookie("getEmail", profile.getEmail())
-            }
-        }
-    } else {
-        initWebsite()
-    }
-
-    function setCookie(name, value, days) {
-        var expires = "";
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + (value || "") + expires + "; path=/";
-    }
-
-    function getCookie(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-        }
-        return null;
-    }
-
-    function eraseCookie(name) {
-        document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-    }
-
-    function waitForElement(selector) {
-        return new Promise(resolve => {
-            if (document.querySelector(selector)) {
-                return resolve(document.querySelector(selector));
-            }
-    
-            const observer = new MutationObserver(mutations => {
-                if (document.querySelector(selector)) {
-                    resolve(document.querySelector(selector));
-                    observer.disconnect();
                 }
-            });
-    
-            observer.observe(document.body, {
-                childList: true,
-                subtree: true
-            });
-        });
-    }
-
-    function initWebsite() {
-        waitForElement('#video1').then(() => {
-            if (!isRobot) {
-                document.getElementById("video1").style.display = "block"
-                document.getElementById("video1").play()
-            } else {
-                document.getElementById("svg1").style.display = "block"
-                document.querySelector(".optionsmenu").style.display = "block"
-                setTimeout(function() {
-                    var egg = new Egg("esc", function() {
-                        document.body.removeChild(document.getElementById("iframeModal"))
-                        document.getElementById("optionsmenu").style.display = "block"
-                    }).listen()
-                }, 500)
+                waitForElement1()
             }
-        })
-        waitForElement('#video1').then(() => {
-            document.getElementById("video1").onended = function() {
-                setTimeout(function() {
-                    var egg = new Egg("esc", function() {
-                        document.body.removeChild(document.getElementById("iframeModal"))
-                        document.getElementById("optionsmenu").style.display = "block"
-                    }).listen()
-                    document.getElementById("video1").style.display = "none"
+            var tried = false;
+
+            function waitForElement2() {
+                if (typeof auth2 !== "undefined") {
+                    auth2.grantOfflineAccess({
+                        scope: 'profile email',
+                    }).then(signInCallback, function(resp) {
+                        if (resp.error == "popup_closed_by_user") {
+                            alert("You need to log in with your Google Account to access this. (It's a one-time thing)")
+                            if (confirm("Do you want to try again?")) {
+                                if (!tried) {
+                                    tried = true
+                                    waitForElement2()
+                                } else {
+                                    alert("Already tried, refresh the page to try again.")
+                                }
+                            }
+                        } else if (resp.error == "access_denied") {
+                            alert("You have denied the permissions. Just allow them because I only need to use it to check the email address.")
+                            if (confirm("Do you want to try again?")) {
+                                if (!tried) {
+                                    tried = true
+                                    waitForElement2()
+                                } else {
+                                    alert("Already tried, refresh the page to try again.")
+                                }
+                            }
+                        } else if (resp.error == "immediate_failed") {
+                            alert("That's rare. The owner of this website is notified of this and will fix it soon. Please check back later.")
+                        }
+                    })
+                } else {
+                    setTimeout(waitForElement2, 10);
+                }
+            }
+            waitForElement2()
+
+            function signInCallback() {
+                if (auth2.isSignedIn.get() == true) {
+                    initWebsite()
+                    var profile = auth2.currentUser.get().getBasicProfile();
+                    setCookie("getId", profile.getId())
+                    setCookie("getFullName", profile.getName())
+                    setCookie("getFirstName", profile.getGivenName())
+                    setCookie("getLastName", profile.getFamilyName())
+                    setCookie("getEmail", profile.getEmail())
+                }
+            }
+        } else {
+            initWebsite()
+        }
+
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+
+        function eraseCookie(name) {
+            document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+        }
+
+        function waitForElement(selector) {
+            return new Promise(resolve => {
+                if (document.querySelector(selector)) {
+                    return resolve(document.querySelector(selector));
+                }
+
+                const observer = new MutationObserver(mutations => {
+                    if (document.querySelector(selector)) {
+                        resolve(document.querySelector(selector));
+                        observer.disconnect();
+                    }
+                });
+
+                observer.observe(document.body, {
+                    childList: true,
+                    subtree: true
+                });
+            });
+        }
+
+        function initWebsite() {
+            waitForElement('#video1').then(() => {
+                if (!isRobot) {
+                    document.getElementById("video1").style.display = "block"
+                    document.getElementById("video1").play()
+                } else {
                     document.getElementById("svg1").style.display = "block"
                     document.querySelector(".optionsmenu").style.display = "block"
-                }, 500)
-            }
-})
+                    setTimeout(function() {
+                        var egg = new Egg("esc", function() {
+                            document.body.removeChild(document.getElementById("iframeModal"))
+                            document.getElementById("optionsmenu").style.display = "block"
+                        }).listen()
+                    }, 500)
+                }
+            })
+            waitForElement('#video1').then(() => {
+                document.getElementById("video1").onended = function() {
+                    setTimeout(function() {
+                        var egg = new Egg("esc", function() {
+                            document.body.removeChild(document.getElementById("iframeModal"))
+                            document.getElementById("optionsmenu").style.display = "block"
+                        }).listen()
+                        document.getElementById("video1").style.display = "none"
+                        document.getElementById("svg1").style.display = "block"
+                        document.querySelector(".optionsmenu").style.display = "block"
+                    }, 500)
+                }
+            })
+
             function timefortest() {
                 var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
                 const currentMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
@@ -233,26 +234,26 @@ if (urlParams.indexOf("?month=") != -1 &&
                         }
                     }
                     if (hour == 9) {
-                      if (minute < 31) {
-                        templateURL = templateURL.replace("[hour]", "09")
-                        templateURL = templateURL.replace("[minute]", "31")
-                        templateURL = templateURL.replace("[second]", "02")
-                        templateURL = templateURL.replace("[message]", text4)
-                        hasWorked = true
-} else {
-                        templateURL = templateURL.replace("[hour]", "11")
-                        templateURL = templateURL.replace("[minute]", "04")
-                        templateURL = templateURL.replace("[second]", "02")
-                        templateURL = templateURL.replace("[message]", text5)
-                        hasWorked = true
-}
-                    }
-                    if (hour == 10) {
+                        if (minute < 31) {
+                            templateURL = templateURL.replace("[hour]", "09")
+                            templateURL = templateURL.replace("[minute]", "31")
+                            templateURL = templateURL.replace("[second]", "02")
+                            templateURL = templateURL.replace("[message]", text4)
+                            hasWorked = true
+                        } else {
                             templateURL = templateURL.replace("[hour]", "11")
                             templateURL = templateURL.replace("[minute]", "04")
                             templateURL = templateURL.replace("[second]", "02")
                             templateURL = templateURL.replace("[message]", text5)
                             hasWorked = true
+                        }
+                    }
+                    if (hour == 10) {
+                        templateURL = templateURL.replace("[hour]", "11")
+                        templateURL = templateURL.replace("[minute]", "04")
+                        templateURL = templateURL.replace("[second]", "02")
+                        templateURL = templateURL.replace("[message]", text5)
+                        hasWorked = true
                     }
                     if (hour == 11) {
                         if (minute < 4) {
@@ -267,7 +268,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                             templateURL = templateURL.replace("[second]", "02")
                             templateURL = templateURL.replace("[message]", text6)
                             hasWorked = true
-                         } else {
+                        } else {
                             templateURL = templateURL.replace("[hour]", "12")
                             templateURL = templateURL.replace("[minute]", "10")
                             templateURL = templateURL.replace("[second]", "02")
@@ -1618,8 +1619,8 @@ if (urlParams.indexOf("?month=") != -1 &&
                     }, 350)
                 }
             }
+        }
     }
-}
-} catch(e) {
-alert(e)
+} catch (e) {
+    alert(e)
 }
