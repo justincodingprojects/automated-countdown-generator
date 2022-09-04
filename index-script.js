@@ -149,7 +149,7 @@ if (urlParams.indexOf("?month=") != -1 &&
         waitForElement('#video1').then(() => {
             if (!isRobot) {
                 document.getElementById("video1").style.display = "block"
-                document.getElementById("video1").play()
+                document.getElementById("video1").style.autoplay = true
                 document.getElementById("video1").onended = function() {
                     setTimeout(function() {
                         var egg = new Egg("esc", function() {
