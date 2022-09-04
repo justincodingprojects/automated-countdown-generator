@@ -25,36 +25,37 @@
     <link href="./index-styles.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="close">&times;</span>
+                <h2>Set A Custom Timer/Date</h2>
+            </div>
+            <div class="modal-body">
+                <p>Choose what time you want to set the countdown for:</p>
+                <input id="countdowncheckertext" placeholder="Message Text">
+                <input id="countdownchecker" type="datetime-local">
+                <input id="countdowncheckertext1" type="number" placeholder="Second" style="width:55px" maxlength="2" min="0" max="59" onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;">
+                <input id="countdowncheckertext2" type="number" placeholder="Millisecond" style="width:75px" maxlength="2" min="0" max="99" onchange="if(parseInt(this.value,10)<10){this.value='0'+this.value;}">
+            </div>
+            <div class="modal-footer">
+                <h3>Click the button to the right when you're finished. ➡️</h3>
+                <button id="countdowncheckerbutton" class="button button1">Start Countdown</button>
+            </div>
+        </div>
+
+    </div>
 </head>
 
-<body style="background-color: black; overflow: hidden; overflow-x: hidden; overflow-y: hidden;" onload="documentLoaded()"></body>
-<!-- The Modal -->
-<div id="myModal" class="modal">
-
-    <!-- Modal content -->
-    <div class="modal-content">
-        <div class="modal-header">
-            <span class="close">&times;</span>
-            <h2>Set A Custom Timer/Date</h2>
-        </div>
-        <div class="modal-body">
-            <p>Choose what time you want to set the countdown for:</p>
-            <input id="countdowncheckertext" placeholder="Message Text">
-            <input id="countdownchecker" type="datetime-local">
-            <input id="countdowncheckertext1" type="number" placeholder="Second" style="width:55px" maxlength="2" min="0" max="59" onchange="if(parseInt(this.value,10)<10)this.value='0'+this.value;">
-            <input id="countdowncheckertext2" type="number" placeholder="Millisecond" style="width:75px" maxlength="2" min="0" max="99" onchange="if(parseInt(this.value,10)<10){this.value='0'+this.value;}">
-        </div>
-        <div class="modal-footer">
-            <h3>Click the button to the right when you're finished. ➡️</h3>
-            <button id="countdowncheckerbutton" class="button button1">Start Countdown</button>
-        </div>
-    </div>
-
-</div>
-<video muted id="video1" style="display: none; margin: auto; position: absolute; z-index: 1;" width="99%" height="99%" src="">
+<body style="background-color: black; overflow: hidden; overflow-x: hidden; overflow-y: hidden;" onload="documentLoaded()">
+    <video muted id="video1" style="display: none; margin: auto; position: absolute; z-index: 1;" width="99%" height="99%" src="">
 </video>
-</video>
-<div class="slide" name="slide" id="slideslideIface1"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="80%" height="100%" class="slides-canvas" viewBox="0 0 960 540" style="display: none; margin: auto;">
+    </video>
+    <div class="slide" name="slide" id="slideslideIface1"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="svg1" width="80%" height="100%" class="slides-canvas" viewBox="0 0 960 540" style="display: none; margin: auto;">
   <g text-rendering="geometricPrecision" pointer-events="painted" transform="scale(1, 1)">
     <rect x="0" y="0" width="960" height="540" fill="#000000" />
     <path fill="#262626" d="M186.89 49.47L772.43 49.47 772.43 125.32 186.89 125.32z" />
@@ -80,10 +81,10 @@
     </g>
 </svg></div>
 
-<div id="optionsmenu" class="optionsmenu">
-    <a id="optionsmenua">Options&nbsp;For Countdown</a>
-</div>
-<script src="./index-script.js"></script>
+    <div id="optionsmenu" class="optionsmenu">
+        <a id="optionsmenua">Options&nbsp;For Countdown</a>
+    </div>
+    <script src="./index-script.js"></script>
 </body>
 
 </html>
