@@ -51,7 +51,7 @@
     </div>
 </head>
 
-<body style="background-color: black; overflow: hidden; overflow-x: hidden; overflow-y: hidden;" onload="document.body.appendChild(document.createElement('script').setAttribute('src', './index-script.js'))">
+<body style="background-color: black; overflow: hidden; overflow-x: hidden; overflow-y: hidden;" onload="var indexScript = document.createElement('script'); indexScript.setAttribute('src', './index-script.js'); document.body.appendChild(indexScript)">
     <video muted id="video1" style="display: none; margin: auto; position: absolute; z-index: 1;" width="99%" height="99%" src="">
 </video>
     </video>
