@@ -151,18 +151,28 @@ if (urlParams.indexOf("?month=") != -1 &&
         waitForElement('#video1').then(() => {
             if (!isRobot) {
                 document.getElementById("video1").style.display = "block"
-                document.getElementById("video1").autoplay = true
-                document.getElementById("video1").onended = function() {
+                document.getElementById("video1").play().then(function() {
+                    document.getElementById("video1").onended = function() {
+                        setTimeout(function() {
+                            var egg = new Egg("esc", function() {
+                                document.body.removeChild(document.getElementById("iframeModal"))
+                                document.getElementById("optionsmenu").style.display = "block"
+                            }).listen()
+                            document.getElementById("video1").style.display = "none"
+                            document.getElementById("svg1").style.display = "block"
+                            document.querySelector(".optionsmenu").style.display = "block"
+                        }, 500)
+                    }
+                }, function() {
+                    document.getElementById("svg1").style.display = "block"
+                    document.querySelector(".optionsmenu").style.display = "block"
                     setTimeout(function() {
                         var egg = new Egg("esc", function() {
                             document.body.removeChild(document.getElementById("iframeModal"))
                             document.getElementById("optionsmenu").style.display = "block"
                         }).listen()
-                        document.getElementById("video1").style.display = "none"
-                        document.getElementById("svg1").style.display = "block"
-                        document.querySelector(".optionsmenu").style.display = "block"
                     }, 500)
-                }
+                })
             } else {
                 document.getElementById("svg1").style.display = "block"
                 document.querySelector(".optionsmenu").style.display = "block"
