@@ -37,7 +37,7 @@ if (urlParams.indexOf("?month=") != -1 &&
     urlParams.indexOf("&message=") != -1) {
     changePage()
 } else {
-    if (getCookie("getId") == null || getCookie("getId") == "") {
+    if (getCookie("getEmail") == null) {
         function init() {
             function waitForElement1() {
                 if (typeof gapi !== "undefined") {
@@ -90,7 +90,8 @@ if (urlParams.indexOf("?month=") != -1 &&
         waitForElement2()
 
         function signInCallback() {
-            if (auth2.isSignedIn.wb == true) {
+            alert(auth2.isSignedIn.get())
+            if (auth2.isSignedIn.get() == true) {
                 initWebsite()
                 var profile = auth2.currentUser.get().getBasicProfile();
                 setCookie("getId", profile.getId())
