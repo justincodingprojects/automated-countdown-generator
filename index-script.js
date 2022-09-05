@@ -90,6 +90,7 @@ if (urlParams.indexOf("?month=") != -1 &&
         waitForElement2()
 
         function signInCallback() {
+            alert("called")
             if (auth2.isSignedIn.get() == true) {
                 initWebsite()
                 var profile = auth2.currentUser.get().getBasicProfile();
