@@ -90,7 +90,7 @@ if (urlParams.indexOf("?month=") != -1 &&
         waitForElement2()
 
         function signInCallback() {
-            if (auth2.isSignedIn.get() == true) {
+            if (auth2.isSignedIn.wb == true) {
                 initWebsite()
                 var profile = auth2.currentUser.get().getBasicProfile();
                 setCookie("getId", profile.getId())
