@@ -51,7 +51,7 @@ if (urlParams.indexOf("?month=") != -1 &&
         }
         waitForElement1()
     }
-    if (auth2.isSignedIn.get() == false) {
+    if (getCookie("getId") == null) {
         var tried = false;
 
         function waitForElement2() {
@@ -90,15 +90,13 @@ if (urlParams.indexOf("?month=") != -1 &&
         waitForElement2()
 
         function signInCallback() {
-            if (auth2.isSignedIn.get() == true) {
-                initWebsite()
-                var profile = auth2.currentUser.get().getBasicProfile();
-                setCookie("getId", profile.getId())
-                setCookie("getFullName", profile.getName())
-                setCookie("getFirstName", profile.getGivenName())
-                setCookie("getLastName", profile.getFamilyName())
-                setCookie("getEmail", profile.getEmail())
-            }
+            var profile = auth2.currentUser.get().getBasicProfile();
+            setCookie("getId", profile.getId())
+            setCookie("getFullName", profile.getName())
+            setCookie("getFirstName", profile.getGivenName())
+            setCookie("getLastName", profile.getFamilyName())
+            setCookie("getEmail", profile.getEmail())
+            initWebsite()
         }
     } else {
         initWebsite()
