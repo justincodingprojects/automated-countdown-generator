@@ -37,21 +37,21 @@ if (urlParams.indexOf("?month=") != -1 &&
     urlParams.indexOf("&message=") != -1) {
     changePage()
 } else {
-    if (getCookie("getId") == null) {
-        function init() {
-            function waitForElement1() {
-                if (typeof gapi !== "undefined") {
-                    gapi.load('auth2', function() {
-                        auth2 = gapi.auth2.init({
-                            client_id: '904159946422-3ljs0jlej7i7ir8ed2uli868ibg8cur7.apps.googleusercontent.com',
-                        });
+    function init() {
+        function waitForElement1() {
+            if (typeof gapi !== "undefined") {
+                gapi.load('auth2', function() {
+                    auth2 = gapi.auth2.init({
+                        client_id: '904159946422-3ljs0jlej7i7ir8ed2uli868ibg8cur7.apps.googleusercontent.com',
                     });
-                } else {
-                    setTimeout(waitForElement1, 10);
-                }
+                });
+            } else {
+                setTimeout(waitForElement1, 10);
             }
-            waitForElement1()
         }
+        waitForElement1()
+    }
+    if (getCookie("getId") == null) {
         var tried = false;
 
         function waitForElement2() {
