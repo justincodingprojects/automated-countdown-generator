@@ -37,7 +37,7 @@ if (urlParams.indexOf("?month=") != -1 &&
     urlParams.indexOf("&message=") != -1) {
     changePage()
 } else {
-    if (getCookie("getEmail") == null) {
+    if (getLocalValue("getEmail") == null) {
         function init() {
             function waitForElement1() {
                 if (typeof gapi !== "undefined") {
@@ -90,44 +90,30 @@ if (urlParams.indexOf("?month=") != -1 &&
         waitForElement2()
 
         function signInCallback() {
-            alert(auth2.isSignedIn.get())
             if (auth2.isSignedIn.get() == true) {
                 initWebsite()
                 var profile = auth2.currentUser.get().getBasicProfile();
-                setCookie("getId", profile.getId())
-                setCookie("getFullName", profile.getName())
-                setCookie("getFirstName", profile.getGivenName())
-                setCookie("getLastName", profile.getFamilyName())
-                setCookie("getEmail", profile.getEmail())
+                setLocalValue("getId", profile.getId())
+                setLocalValue("getFullName", profile.getName())
+                setLocalValue("getFirstName", profile.getGivenName())
+                setLocalValue("getLastName", profile.getFamilyName())
+                setLocalValue("getEmail", profile.getEmail())
             }
         }
     } else {
         initWebsite()
     }
 
-    function setCookie(name, value, days) {
-        var expires = "";
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    function setLocalValue(name, value) {
+        localStorage.setItem(name, value || "")
     }
 
-    function getCookie(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-        }
-        return null;
+    function getLocalValue(name) {
+        localStorage.getItem(name)
     }
 
-    function eraseCookie(name) {
-        document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    function eraseLocalValue(name) {
+        localStorage.removeItem(name)
     }
 
     function waitForElement(selector) {
