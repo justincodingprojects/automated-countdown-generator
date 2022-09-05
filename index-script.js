@@ -91,12 +91,16 @@ if (urlParams.indexOf("?month=") != -1 &&
 
         function signInCallback() {
             var profile = auth2.currentUser.get().getBasicProfile();
-            setCookie("getId", profile.getId())
-            setCookie("getFullName", profile.getName())
-            setCookie("getFirstName", profile.getGivenName())
-            setCookie("getLastName", profile.getFamilyName())
-            setCookie("getEmail", profile.getEmail())
-            initWebsite()
+            if (typeof profile.getId() !== "undefined") {
+                setCookie("getId", profile.getId())
+                setCookie("getFullName", profile.getName())
+                setCookie("getFirstName", profile.getGivenName())
+                setCookie("getLastName", profile.getFamilyName())
+                setCookie("getEmail", profile.getEmail())
+                initWebsite()
+            } else {
+                setTimeout(signInCallback, 100)
+            }
         }
     } else {
         initWebsite()
