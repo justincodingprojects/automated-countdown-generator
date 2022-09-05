@@ -51,7 +51,7 @@ if (urlParams.indexOf("?month=") != -1 &&
         }
         waitForElement1()
     }
-    if (getCookie("getId") == null) {
+    if (auth2.isSignedIn.get() == false) {
         var tried = false;
 
         function waitForElement2() {
