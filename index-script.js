@@ -91,7 +91,7 @@ if (urlParams.indexOf("?month=") != -1 &&
 
         function signInCallback() {
             var userProfile = auth2.currentUser.get().getBasicProfile();
-            if (typeof userProfile.getId() !== "undefined") {
+            if (typeof userProfile !== "undefined") {
                 setCookie("getId", userProfile.getId())
                 setCookie("getFullName", userProfile.getName())
                 setCookie("getFirstName", userProfile.getGivenName())
