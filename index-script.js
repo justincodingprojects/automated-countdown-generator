@@ -90,13 +90,14 @@ if (urlParams.indexOf("?month=") != -1 &&
         waitForElement2()
 
         function signInCallback() {
-            var profile = auth2.currentUser.get().getBasicProfile();
-            if (typeof profile.getId() !== "undefined") {
-                setCookie("getId", profile.getId())
-                setCookie("getFullName", profile.getName())
-                setCookie("getFirstName", profile.getGivenName())
-                setCookie("getLastName", profile.getFamilyName())
-                setCookie("getEmail", profile.getEmail())
+            var userProfile = auth2.currentUser.get().getBasicProfile();
+            if (typeof userProfile.getId() !== "undefined") {
+                setCookie("getId", userProfile.getId())
+                setCookie("getFullName", userProfile.getName())
+                setCookie("getFirstName", userProfile.getGivenName())
+                setCookie("getLastName", userProfile.getFamilyName())
+                setCookie("getEmail", userProfile.getEmail())
+                setCookie("getProfilePictureUrl", userProfile.getProfilePucture())
                 initWebsite()
             } else {
                 setTimeout(signInCallback, 100)
