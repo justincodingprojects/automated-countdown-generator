@@ -51,7 +51,7 @@
     </div>
 </head>
 
-<body style="background-color: black; overflow: hidden; overflow-x: hidden; overflow-y: hidden;" onload="if(localStorage.getItem('tester') !== null){var indexScript = document.createElement('script'); indexScript.setAttribute('src', './index-script.js'); document.body.appendChild(indexScript)} else if(window.location.href.includes('tester')){localStorage.setItem('tester', ''); alert('Testing Mode Activated, click ok to redirect to main screen.'); window.location.href = window.location.href.replace('?tester', '')} else {debugger; window.location.href = './temporarymaintenancescreen.html'}">
+<body style="background-color: black; overflow: hidden; overflow-x: hidden; overflow-y: hidden;" onload="if(localStorage.getItem('tester') !== null){var indexScript = document.createElement('script'); indexScript.setAttribute('src', './index-script.js'); document.body.appendChild(indexScript)} else if(window.location.href.includes('tester')){localStorage.setItem('tester', ''); alert('Testing Mode Activated, click OK or press Enter to redirect to main screen.'); window.location.assign('https://acg-by-justincodingprojects.ml')} else {debugger; window.location.href = './temporarymaintenancescreen.html'}">
     <video muted id="video1" style="display: none; margin: auto; position: absolute; z-index: 1;" width="99%" height="99%" src="">
 </video>
     </video>
