@@ -97,7 +97,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                 setCookie("getFirstName", userProfile.getGivenName())
                 setCookie("getLastName", userProfile.getFamilyName())
                 setCookie("getEmail", userProfile.getEmail())
-                setCookie("getProfilePictureUrl", userProfile.getProfilePucture())
+                setCookie("getPictureUrl", userProfile.getImageUrl())
                 initWebsite()
             } else {
                 setTimeout(signInCallback, 100)
