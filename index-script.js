@@ -154,6 +154,7 @@ if (urlParams.indexOf("?month=") != -1 &&
 
     function initWebsite() {
         waitForElement('#video1').then(() => {
+            alert(isRobot)
             if (!isRobot) {
                 document.getElementById("video1").style.display = "block"
                 document.getElementById("video1").play().then(function() {
@@ -178,15 +179,6 @@ if (urlParams.indexOf("?month=") != -1 &&
                         }).listen()
                     }, 500)
                 })
-            } else {
-                document.getElementById("svg1").style.display = "block"
-                document.querySelector(".optionsmenu").style.display = "block"
-                setTimeout(function() {
-                    var egg = new Egg("esc", function() {
-                        document.body.removeChild(document.getElementById("iframeModal"))
-                        document.getElementById("optionsmenu").style.display = "block"
-                    }).listen()
-                }, 500)
             }
         })
 
