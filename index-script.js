@@ -14,17 +14,6 @@ if (!isRobot) {
     }, 500)
 }
 
-function checkForVideo() {
-    if (typeof document.getElementById("video1") !== 'undefined') {
-        fetch(
-            "https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/introvideo.txt"
-        ).then((r) => r.text().then((t) => document.getElementById("video1").src = t))
-    } else {
-        setTimeout(checkForVideo(), 10)
-    }
-}
-checkForVideo()
-
 function changePage(page) {
     fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/countdown.html").then((r) => r.text().then((t) => document.write(t)));
 }
@@ -154,31 +143,24 @@ if (urlParams.indexOf("?month=") != -1 &&
 
     function initWebsite() {
         waitForElement('#video1').then(() => {
-            alert(isRobot)
             if (!isRobot) {
                 document.getElementById("video1").style.display = "block"
-                document.getElementById("video1").play().then(function() {
-                    document.getElementById("video1").onended = function() {
-                        setTimeout(function() {
-                            var egg = new Egg("esc", function() {
-                                document.body.removeChild(document.getElementById("iframeModal"))
-                                document.getElementById("optionsmenu").style.display = "block"
-                            }).listen()
-                            document.getElementById("video1").style.display = "none"
-                            document.getElementById("svg1").style.display = "block"
-                            document.querySelector(".optionsmenu").style.display = "block"
-                        }, 500)
-                    }
-                }, function() {
-                    document.getElementById("svg1").style.display = "block"
-                    document.querySelector(".optionsmenu").style.display = "block"
-                    setTimeout(function() {
-                        var egg = new Egg("esc", function() {
-                            document.body.removeChild(document.getElementById("iframeModal"))
-                            document.getElementById("optionsmenu").style.display = "block"
-                        }).listen()
-                    }, 500)
-                })
+                fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/introvideo.txt").then((r) => r.text().then((t) => function() {
+                    document.getElementById("video1").src = t
+                    document.getElementById("video1").play().then(function() {
+                        document.getElementById("video1").onended = function() {
+                            setTimeout(function() {
+                                var egg = new Egg("esc", function() {
+                                    document.body.removeChild(document.getElementById("iframeModal"))
+                                    document.getElementById("optionsmenu").style.display = "block"
+                                }).listen()
+                                document.getElementById("video1").style.display = "none"
+                                document.getElementById("svg1").style.display = "block"
+                                document.querySelector(".optionsmenu").style.display = "block"
+                            }, 500)
+                        }
+                    })
+                }))
             }
         })
 
