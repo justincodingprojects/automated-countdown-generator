@@ -38,7 +38,11 @@ function waitForElement(selector) {
     });
 }
 
-const video1 = await waitForElement('#video1');
+var video1;
+
+(async function() {
+    video1 = await waitForElement('#video1');
+})
 
 fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/introvideo.txt").then((r) => r.text().then((t) => video1.src = t))
 
