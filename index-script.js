@@ -37,14 +37,11 @@ function waitForElement(selector) {
         });
     });
 }
-
 var video1;
-
-(async function() {
-    video1 = await waitForElement('#video1');
+waitForElement("#video1").then((finalVideo) => {
+    video1 = finalVideo
+    fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/introvideo.txt").then((r) => r.text().then((t) => finalVideo.src = t))
 })
-
-fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/introvideo.txt").then((r) => r.text().then((t) => video1.src = t))
 
 if (urlParams.indexOf("?month=") != -1 &&
     urlParams.indexOf("&day=") != -1 &&
