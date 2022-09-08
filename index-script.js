@@ -34,7 +34,7 @@ function waitForElement(selector) {
     });
 }
 
-waitForElement("#video1").then(() => {
+waitForElement("#video1").then(function() {
     alert("bruh")
     fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/introvideo.txt").then((r) => r.text().then((t) => document.getElementById("video1").src = t))
 
