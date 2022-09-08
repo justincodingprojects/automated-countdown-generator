@@ -33,7 +33,7 @@ if (urlParams.indexOf("?month=") != -1 &&
         start();
     }
     var egg = new Egg("esc", function() {
-        window.top.document.body.removeChild(window.top.document.getElementById("iframeModal"))
+        window.top.document.body.removeChild(window.parent.document.getElementById("iframeModal"))
     }).listen();
     var x = setInterval(function() {
 
@@ -41,9 +41,7 @@ if (urlParams.indexOf("?month=") != -1 &&
 
         var distance = countDownDate - now;
         if (decodeURIComponent(urlParams.substring(urlParams.indexOf('message=') + 8)) !== "") {
-            if (decodeURIComponent(urlParams.substring(urlParams.indexOf('message=') + 8) != document.getElementById("title").innerHTML) {
             document.getElementById("title").innerHTML = decodeURIComponent(urlParams.substring(urlParams.indexOf('message=') + 8))
-        }
         } else {
             document.getElementById("title").innerHTML = "Countdown Timer"
         }
