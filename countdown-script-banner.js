@@ -29,7 +29,7 @@ function setMaintenanceBanner(bool) {
                 a.setAttribute("id", "mainbanner")
                 a.setAttribute("class", "active")
                 document.getElementsByClassName("topnav")[0].appendChild(a)
-                document.getElementById("mainbanner").innerHTML = "Every time there is a early dismissal day or a test, I need to manually change the code each time. Soon, I will make big changes this website."
+                document.getElementById("mainbanner").innerHTML = "This website is no longer in maintenance because the main intro screen has its bugs fixed, although the main countdown page could be bugged."
             }, 50)
         }
     } else if (bool == false) {
