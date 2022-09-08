@@ -17,6 +17,31 @@ if (!isRobot) {
 function changePage(page) {
     fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/countdown.html").then((r) => r.text().then((t) => document.write(t)));
 }
+
+function waitForElement(selector) {
+    return new Promise(resolve => {
+        if (document.querySelector(selector)) {
+            return resolve(document.querySelector(selector));
+        }
+
+        const observer = new MutationObserver(mutations => {
+            if (document.querySelector(selector)) {
+                resolve(document.querySelector(selector));
+                observer.disconnect();
+            }
+        });
+
+        observer.observe(document.body, {
+            childList: true,
+            subtree: true
+        });
+    });
+}
+
+const video1 = await waitForElement('#video1');
+
+fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/introvideo.txt").then((r) => r.text().then((t) => video1.src = t))
+
 if (urlParams.indexOf("?month=") != -1 &&
     urlParams.indexOf("&day=") != -1 &&
     urlParams.indexOf("&year=") != -1 &&
@@ -121,48 +146,41 @@ if (urlParams.indexOf("?month=") != -1 &&
         document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     }
 
-    function waitForElement(selector) {
-        return new Promise(resolve => {
-            if (document.querySelector(selector)) {
-                return resolve(document.querySelector(selector));
-            }
-
-            const observer = new MutationObserver(mutations => {
-                if (document.querySelector(selector)) {
-                    resolve(document.querySelector(selector));
-                    observer.disconnect();
-                }
-            });
-
-            observer.observe(document.body, {
-                childList: true,
-                subtree: true
-            });
-        });
-    }
-
     function initWebsite() {
-        waitForElement('#video1').then(() => {
-            if (!isRobot) {
-                document.getElementById("video1").style.display = "block"
-                fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/introvideo.txt").then((r) => r.text().then((t) => function() {
-                    document.getElementById("video1").src = t
-                    document.getElementById("video1").play().then(function() {
-                        document.getElementById("video1").onended = function() {
-                            setTimeout(function() {
-                                var egg = new Egg("esc", function() {
-                                    document.body.removeChild(document.getElementById("iframeModal"))
-                                    document.getElementById("optionsmenu").style.display = "block"
-                                }).listen()
-                                document.getElementById("video1").style.display = "none"
-                                document.getElementById("svg1").style.display = "block"
-                                document.querySelector(".optionsmenu").style.display = "block"
-                            }, 500)
-                        }
-                    })
-                }))
-            }
-        })
+        if (!isRobot) {
+            video1.style.display = "block"
+            video1.play().then(function() {
+                video1.onended = function() {
+                    setTimeout(function() {
+                        var egg = new Egg("esc", function() {
+                            document.body.removeChild(document.getElementById("iframeModal"))
+                            document.getElementById("optionsmenu").style.display = "block"
+                        }).listen()
+                        video1.style.display = "none"
+                        document.getElementById("svg1").style.display = "block"
+                        document.querySelector(".optionsmenu").style.display = "block"
+                    }, 500)
+                }
+            }, function() {
+                document.getElementById("svg1").style.display = "block"
+                document.querySelector(".optionsmenu").style.display = "block"
+                setTimeout(function() {
+                    var egg = new Egg("esc", function() {
+                        document.body.removeChild(document.getElementById("iframeModal"))
+                        document.getElementById("optionsmenu").style.display = "block"
+                    }).listen()
+                }, 500)
+            })
+        } else {
+            document.getElementById("svg1").style.display = "block"
+            document.querySelector(".optionsmenu").style.display = "block"
+            setTimeout(function() {
+                var egg = new Egg("esc", function() {
+                    document.body.removeChild(document.getElementById("iframeModal"))
+                    document.getElementById("optionsmenu").style.display = "block"
+                }).listen()
+            }, 500)
+        }
 
         function timefortest() {
             var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
