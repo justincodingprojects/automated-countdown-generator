@@ -37,9 +37,11 @@ function waitForElement(selector) {
         });
     });
 }
-var video1 = await waitForElement("#video1")
 
-fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/introvideo.txt").then((r) => r.text().then((t) => finalVideo.src = t))
+fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/introvideo.txt").then(async(r) => r.text().then(async(t) => {
+    const video1 = await waitForElement("#video1");
+    video1.src = t
+}))
 
 if (urlParams.indexOf("?month=") != -1 &&
     urlParams.indexOf("&day=") != -1 &&
@@ -145,7 +147,8 @@ if (urlParams.indexOf("?month=") != -1 &&
         document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     }
 
-    function initWebsite() {
+    async function initWebsite() {
+        var video1 = await waitForElement("#video1")
         if (!isRobot) {
             video1.style.display = "block"
             video1.play().then(function() {
