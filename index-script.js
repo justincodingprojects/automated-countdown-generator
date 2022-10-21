@@ -17,7 +17,7 @@ if (!isRobot) {
     }
     async function testOctokit() {
     // Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
-    const octokit = new Octokit({ auth: `yousureaboutthat?` });
+    const octokit = new Octokit({ auth: `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` });
     // Compare: https://docs.github.com/en/rest/reference/users#get-the-authenticated-user
     const {
         data: { login },
