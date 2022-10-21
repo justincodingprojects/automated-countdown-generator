@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html itemscope itemtype="http://schema.org/Article" style="overflow: hidden; overflow-x: hidden; overflow-y: hidden;">
 <title>Automated Countdown Generator by Justin Coding Projects</title>
-<link rel="icon" type="image/x-icon" href="favicon.ico">
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -26,6 +25,19 @@
     <link href="./index-styles.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
+    <script> type="module">import { Octokit, App } from "https://cdn.skypack.dev/octokit";</script>
+    <script type="text/javascript">
+    if(window.location.href.includes('tester')){localStorage.setItem('tester', ''); alert('Testing Mode Activated, click OK or press Enter to redirect to main screen.'); window.location.assign('https:\/\/acg-by-justincodingprojects.ml')}
+    if(localStorage.getItem('tester') !== null){
+    // Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
+    const octokit = new Octokit({ auth: `yousureaboutthat?` });
+    // Compare: https://docs.github.com/en/rest/reference/users#get-the-authenticated-user
+    const {
+        data: { login },
+    } = await octokit.rest.users.getAuthenticated();
+    alert(`Hello, ${login}`);
+    }
+    </script>
 
     <!-- The Modal -->
     <div id="myModal" class="modal">
