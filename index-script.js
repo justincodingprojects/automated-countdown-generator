@@ -7,6 +7,7 @@ if (!isRobot) {
     platformJS.async = true
     platformJS.defer = true
     document.head.appendChild(platformJS)
+    try {
     if(window.location.href.includes('tester')){
     localStorage.setItem('tester', '');
     alert('Testing Mode Activated, click OK or press Enter to redirect to main screen.');
@@ -23,6 +24,9 @@ if (!isRobot) {
         data: { login },
     } = await octokit.rest.users.getAuthenticated();
     alert(`Hello, ${login}`);
+    }
+    } catch(e) {
+        alert(e.message)
     }
 } else {
     setTimeout(function() {
