@@ -27,6 +27,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
     <script type="module">import { Octokit, App } from "https://cdn.skypack.dev/octokit";</script>
     <script type="text/javascript">
+    document.body.onload = async function() {
     if(window.location.href.includes('tester')){localStorage.setItem('tester', ''); alert('Testing Mode Activated, click OK or press Enter to redirect to main screen.'); window.location.assign('https:\/\/acg-by-justincodingprojects.ml')}
     if(localStorage.getItem('tester') !== null){
     // Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
@@ -36,6 +37,7 @@
         data: { login },
     } = await octokit.rest.users.getAuthenticated();
     alert(`Hello, ${login}`);
+    }
     }
     </script>
 
