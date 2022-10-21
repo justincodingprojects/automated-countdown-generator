@@ -7,6 +7,23 @@ if (!isRobot) {
     platformJS.async = true
     platformJS.defer = true
     document.head.appendChild(platformJS)
+    if(window.location.href.includes('tester')){
+    localStorage.setItem('tester', '');
+    alert('Testing Mode Activated, click OK or press Enter to redirect to main screen.');
+    window.location.assign('https:\/\/acg-by-justincodingprojects.ml')
+    }
+    if(localStorage.getItem('tester') !== null){
+        testOctokit()
+    }
+    async function testOctokit() {
+    // Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
+    const octokit = new Octokit({ auth: `yousureaboutthat?` });
+    // Compare: https://docs.github.com/en/rest/reference/users#get-the-authenticated-user
+    const {
+        data: { login },
+    } = await octokit.rest.users.getAuthenticated();
+    alert(`Hello, ${login}`);
+    }
 } else {
     setTimeout(function() {
         document.getElementById("svg1").style.display = "block"
