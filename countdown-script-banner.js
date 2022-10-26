@@ -29,7 +29,7 @@ function setMaintenanceBanner(bool) {
                 a.setAttribute("id", "mainbanner")
                 a.setAttribute("class", "active")
                 document.getElementsByClassName("topnav")[0].appendChild(a)
-                document.getElementById("mainbanner").innerHTML = "This countdown hasn't had anything changed in weeks 💀..."
+                fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/acgconfig/Maintenance-Banner-Text/maintenancebannertext.txt").then((r) => r.text().then((t) => document.getElementById("mainbanner").innerHTML = t));
             }, 50)
         }
     } else if (bool == false) {
