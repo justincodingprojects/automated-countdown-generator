@@ -1,1 +1,1 @@
-I changed the banner to work programmatically.
+Test 2 of changing the banner to work programmatically.
