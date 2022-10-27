@@ -13,18 +13,6 @@ if (!isRobot) {
     alert('Testing Mode Activated, click OK or press Enter to redirect to main screen.');
     window.location.assign('https:\/\/acg-by-justincodingprojects.ml')
     }
-    if(localStorage.getItem('tester') !== null){
-        testOctokit()
-    }
-    async function testOctokit() {
-    // Create a personal access token at https://github.com/settings/tokens/new?scopes=repo
-    const octokit = new Octokit({ auth: `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` });
-    // Compare: https://docs.github.com/en/rest/reference/users#get-the-authenticated-user
-    const {
-        data: { login },
-    } = await octokit.rest.users.getAuthenticated();
-    alert(`Hello, ${login}`);
-    }
     } catch(e) {
         alert(e.message)
     }
@@ -341,7 +329,7 @@ if (urlParams.indexOf("?month=") != -1 &&
             }
         }
         document.getElementById("svg2").onclick = function() {
-            if (parseInt(new Array("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31")[new Date().getDate()]) == 26) {
+            if (parseInt(new Array("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31")[new Date().getDate()]) == 0) {
                 timefortest()
             } else {
                 var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
@@ -507,7 +495,7 @@ if (urlParams.indexOf("?month=") != -1 &&
             }
         }
         document.getElementById("svg3").onclick = function() {
-            if (parseInt(new Array("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31")[new Date().getDate()]) == 26) {
+            if (parseInt(new Array("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31")[new Date().getDate()]) == 0) {
                 timefortest()
             } else {
                 var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
