@@ -1,1 +1,1 @@
-I'm currently fixing a problem where it takes a while for the text to show on the countdown banner.
+I have found a way to make changing this countdown easier for me. This website may be down at some times for improvements.
