@@ -29,7 +29,7 @@ function setMaintenanceBanner(bool) {
                 a.setAttribute("id", "mainbanner")
                 a.setAttribute("class", "active")
                 document.getElementsByClassName("topnav")[0].appendChild(a)
-                fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/acgconfig/Maintenance-Banner-Text/maintenancebannertext.txt", {cache: "no-store"}).then((r) => r.text().then((t) => document.getElementById("mainbanner").innerHTML = t));
+                fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/acgconfig/Maintenance-Banner-Text/maintenancebannertext.txt?t=" + Math.random(), {cache: "no-store"}).then((r) => r.text().then((t) => document.getElementById("mainbanner").innerHTML = t));
             }, 50)
         }
     } else if (bool == false) {
