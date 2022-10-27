@@ -1,1 +1,1 @@
-Another test to do it programmatically
+If you see this message, them I was just able to change this banner text via my config sheet.
