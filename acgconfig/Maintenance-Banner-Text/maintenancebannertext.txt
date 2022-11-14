@@ -1,1 +1,1 @@
-This countdown website has been up for over 1 year. I'm genuinely surprised that it's still standing after so long.
+I'm currently trying to fix an issue with the countdown ending before or after the bell. I'm also implementing a feature request system.
