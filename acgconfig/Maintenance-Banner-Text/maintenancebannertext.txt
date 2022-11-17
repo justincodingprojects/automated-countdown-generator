@@ -1,1 +1,1 @@
-I'm currently trying to fix an issue with the countdown ending before or after the bell. I'm also implementing a feature request system.
+Sadly, since fixing the delay issue requires changing a lot of code, it will take me a while to fix it. Sorry for any inconvience,
