@@ -1,1 +1,1 @@
-Sadly, since fixing the delay issue requires changing a lot of code, it will take me a while to fix it. Sorry for any inconvience,
+The fact that I have not changed the code on this countdown in a whole month. :O
