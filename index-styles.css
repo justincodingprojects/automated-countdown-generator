@@ -235,31 +235,3 @@
     background-color: #333333;
     color: white;
 }
-
-
-/* Option Menu */
-
-.optionsmenu {
-    display: none;
-    background-color: #262626;
-    position: fixed;
-    top: 1.5%;
-    left: 95.5%;
-    right: 0.5%;
-    height: 175px;
-    overflow: hidden;
-}
-
-.optionsmenu a {
-    color: #f2f2f2;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: 500;
-    font-family: 'Roboto', sans-serif;
-    transform: rotate(-90deg);
-    position: fixed;
-    top: 20%;
-    left: 97.5%;
-    right: 50%;
-    cursor: pointer;
-}
