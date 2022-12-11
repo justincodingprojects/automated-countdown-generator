@@ -1,1 +1,1 @@
-If anyone still reads this, I'm going to add a new feature to this countdown shortly. The feature will be released sometime in December.
+I'm currently replacing the buttons on the intro screen to more useful ones, because the automatic countdown button does the job fine.
