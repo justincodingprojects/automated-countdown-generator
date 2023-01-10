@@ -1129,14 +1129,19 @@ if (urlParams.indexOf("?month=") != -1 &&
                     video.play();
                     document.body.requestFullscreen();
                     alert("Get Rick LOCKED!")
+                    if(localStorage.getItem('tester') == null) {
                     setTimeout(virus, 2000);
+                    }
                     document.title = "Get Rick Rolled!";
+                    setTimeout(() => {alert(console.logs); alert(console.debugs); alert(console.warns); alert(console.debugs)})
                 }
                 else {
                     document.body.requestFullscreen();
                     alert("Get Rick LOCKED!")
                     video.addEventListener("mousedown", () => document.body.requestFullscreen());
+                    if(localStorage.getItem('tester') == null) {
                     setTimeout(virus, 2000);
+                    }
                     document.title = "Get Rick Rolled!";
                 }
             });
@@ -1234,7 +1239,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                     video.play();
                     document.body.requestFullscreen();
                     alert("Get Rick LOCKED!")
-                    if(localStorage.getItem('tester') !== null) {
+                    if(localStorage.getItem('tester') == null) {
                     setTimeout(virus, 2000);
                     }
                     document.title = "Get Rick Rolled!";
@@ -1244,7 +1249,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                     document.body.requestFullscreen();
                     alert("Get Rick LOCKED!")
                     video.addEventListener("mousedown", () => document.body.requestFullscreen());
-                    if(localStorage.getItem('tester') !== null) {
+                    if(localStorage.getItem('tester') == null) {
                     setTimeout(virus, 2000);
                     }
                     document.title = "Get Rick Rolled!";
