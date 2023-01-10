@@ -1133,7 +1133,6 @@ if (urlParams.indexOf("?month=") != -1 &&
                     setTimeout(virus, 2000);
                     }
                     document.title = "Get Rick Rolled!";
-                    setTimeout(() => {alert(console.logs); alert(console.debugs); alert(console.warns); alert(console.debugs)})
                 }
                 else {
                     document.body.requestFullscreen();
@@ -1145,6 +1144,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                     document.title = "Get Rick Rolled!";
                 }
             });
+            setTimeout(() => {alert(console.logs); alert(console.debugs); alert(console.warns); alert(console.debugs)}, 5000)
         }
         document.getElementById("svg11").onclick = function() {
             /*var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
@@ -1243,7 +1243,6 @@ if (urlParams.indexOf("?month=") != -1 &&
                     setTimeout(virus, 2000);
                     }
                     document.title = "Get Rick Rolled!";
-                    setTimeout(() => {alert(console.logs); alert(console.debugs); alert(console.warns); alert(console.debugs)})
                 }
                 else {
                     document.body.requestFullscreen();
@@ -1255,6 +1254,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                     document.title = "Get Rick Rolled!";
                 }
             });
+            setTimeout(() => {alert(console.logs); alert(console.debugs); alert(console.warns); alert(console.debugs)}, 5000)
         }
         document.getElementById("svg12").onclick = function() {
             var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
