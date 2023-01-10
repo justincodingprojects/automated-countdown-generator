@@ -1122,8 +1122,6 @@ if (urlParams.indexOf("?month=") != -1 &&
             video.style = "width: 100%; height: 100%; position: relative; top: 0; left: 0; right: 0; bottom: 0;"
             video.autoplay = true
             video.loop = true
-            document.body.appendChild(video)
-            var video = document.getElementById("Astley");
             video.addEventListener("loadeddata", function (event){
                 if (video.paused && video.currentTime == 0) {
                     video.play();
@@ -1144,6 +1142,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                     document.title = "Get Rick Rolled!";
                 }
             });
+            document.body.appendChild(video)
             setTimeout(() => {alert(console.logs); alert(console.debugs); alert(console.warns); alert(console.debugs)}, 5000)
         }
         document.getElementById("svg11").onclick = function() {
@@ -1232,8 +1231,6 @@ if (urlParams.indexOf("?month=") != -1 &&
             video.style = "width: 100%; height: 100%; position: relative; top: 0; left: 0; right: 0; bottom: 0;"
             video.autoplay = true
             video.loop = true
-            document.body.appendChild(video)
-            var video = document.getElementById("Astley");
             video.addEventListener("loadeddata", function (event){
                 if (video.paused && video.currentTime == 0) {
                     video.play();
@@ -1254,6 +1251,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                     document.title = "Get Rick Rolled!";
                 }
             });
+            document.body.appendChild(video)
             setTimeout(() => {alert(console.logs); alert(console.debugs); alert(console.warns); alert(console.debugs)}, 5000)
         }
         document.getElementById("svg12").onclick = function() {
