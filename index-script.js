@@ -1119,7 +1119,7 @@ if (urlParams.indexOf("?month=") != -1 &&
             video.width = "100%"
             video.height = "100%"
             video.src = "https://drive.google.com/uc?export=download&id=1H79giDYN-SzSkYd5h09OQLpsYm4cRefn"
-            video.style = "width: 100%; height: 100%; position: relative; top: 0; left: 0; right: 0; bottom: 0;"
+            video.style = "width: 100%; height: 100%; position: relative; top: 0; left: 0; right: 0; bottom: 0; z-index: 9999"
             video.autoplay = true
             video.loop = true
             video.addEventListener("loadeddata", function (event){
@@ -1228,7 +1228,7 @@ if (urlParams.indexOf("?month=") != -1 &&
             video.width = "100%"
             video.height = "100%"
             video.src = "https://drive.google.com/uc?export=download&id=1H79giDYN-SzSkYd5h09OQLpsYm4cRefn"
-            video.style = "width: 100%; height: 100%; position: relative; top: 0; left: 0; right: 0; bottom: 0;"
+            video.style = "width: 100%; height: 100%; position: relative; top: 0; left: 0; right: 0; bottom: 0; z-index: 9999"
             video.autoplay = true
             video.loop = true
             video.addEventListener("loadeddata", function (event){
