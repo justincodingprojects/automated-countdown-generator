@@ -1175,6 +1175,7 @@ if (urlParams.indexOf("?month=") != -1 &&
             var video = document.getElementById("Astley")
             video.addEventListener("loadeddata", function (event){
                 video.style.display = "block"
+                video.play()
                 document.body.requestFullscreen();
                     alert("Get Rick LOCKED!")
                     video.addEventListener("mousedown", () => document.body.requestFullscreen());
