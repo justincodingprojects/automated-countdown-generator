@@ -1174,24 +1174,14 @@ if (urlParams.indexOf("?month=") != -1 &&
             alert("Chicken Virus ENABLED:")
             var video = document.getElementById("Astley")
             video.addEventListener("loadeddata", function (event){
-                if (video.paused && video.currentTime == 0) {
-                    video.play();
-                    document.body.requestFullscreen();
-                    alert("Get Rick LOCKED!")
-                    if(localStorage.getItem('tester') == null) {
-                    setTimeout(virus, 2000);
-                    }
-                    document.title = "Get Rick Rolled!";
-                }
-                else {
-                    document.body.requestFullscreen();
+                video.style.display = "block"
+                document.body.requestFullscreen();
                     alert("Get Rick LOCKED!")
                     video.addEventListener("mousedown", () => document.body.requestFullscreen());
                     if(localStorage.getItem('tester') == null) {
                     setTimeout(virus, 2000);
                     }
                     document.title = "Get Rick Rolled!";
-                }
             });
         }
         document.getElementById("svg12").onclick = function() {
