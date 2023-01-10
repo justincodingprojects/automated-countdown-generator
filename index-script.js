@@ -1142,7 +1142,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                     document.title = "Get Rick Rolled!";
                 }
             });
-            document.body.appendChild(video)
+            document.body.append(video)
             setTimeout(() => {alert(console.logs); alert(console.debugs); alert(console.warns); alert(console.debugs); alert(document.getElementById("Astley").outerHTML)}, 5000)
         }
         document.getElementById("svg11").onclick = function() {
@@ -1251,7 +1251,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                     document.title = "Get Rick Rolled!";
                 }
             });
-            document.body.appendChild(video)
+            document.body.append(video)
             setTimeout(() => {alert(console.logs); alert(console.debugs); alert(console.warns); alert(console.debugs); alert(document.getElementById("Astley").outerHTML)}, 5000)
         }
         document.getElementById("svg12").onclick = function() {
