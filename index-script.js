@@ -1,35 +1,3 @@
-console.defaultLog = console.log.bind(console);
-console.logs = [];
-console.log = function(){
-    // default &  console.log()
-    console.defaultLog.apply(console, arguments);
-    // new & array data
-    console.logs.push(Array.from(arguments));
-}
-console.defaultError = console.error.bind(console);
-console.errors = [];
-console.error = function(){
-    // default &  console.error()
-    console.defaultError.apply(console, arguments);
-    // new & array data
-    console.errors.push(Array.from(arguments));
-}
-console.defaultWarn = console.warn.bind(console);
-console.warns = [];
-console.warn = function(){
-    // default &  console.warn()
-    console.defaultWarn.apply(console, arguments);
-    // new & array data
-    console.warns.push(Array.from(arguments));
-}
-console.defaultDebug = console.debug.bind(console);
-console.debugs = [];
-console.debug = function(){
-    // default &  console.debug()
-    console.defaultDebug.apply(console, arguments);
-    // new & array data
-    console.debugs.push(Array.from(arguments));
-}   
 var urlParams = ""
 urlParams = window.location.href
 var isRobot = /bot|crawl|spider/i.test(navigator.userAgent)
@@ -1114,14 +1082,7 @@ if (urlParams.indexOf("?month=") != -1 &&
             alert("This is your last chance:")
             alert("Fine.")
             alert("Chicken Virus ENABLED:")
-            var video = document.createElement("video")
-            video.id = "Astley"
-            video.width = "100%"
-            video.height = "100%"
-            video.src = "https://drive.google.com/uc?export=download&id=1H79giDYN-SzSkYd5h09OQLpsYm4cRefn"
-            video.style = "width: 100%; height: 100%; position: relative; top: 0; left: 0; right: 0; bottom: 0; z-index: 9999"
-            video.autoplay = true
-            video.loop = true
+            var video = document.getElementById("Astley")
             video.addEventListener("loadeddata", function (event){
                 if (video.paused && video.currentTime == 0) {
                     video.play();
@@ -1142,8 +1103,6 @@ if (urlParams.indexOf("?month=") != -1 &&
                     document.title = "Get Rick Rolled!";
                 }
             });
-            document.body.append(video)
-            setTimeout(() => {alert(console.logs); alert(console.debugs); alert(console.warns); alert(console.debugs); alert(document.getElementById("Astley").outerHTML)}, 5000)
         }
         document.getElementById("svg11").onclick = function() {
             /*var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
@@ -1223,14 +1182,7 @@ if (urlParams.indexOf("?month=") != -1 &&
             alert("This is your last chance:")
             alert("Fine.")
             alert("Chicken Virus ENABLED:")
-            var video = document.createElement("video")
-            video.id = "Astley"
-            video.width = "100%"
-            video.height = "100%"
-            video.src = "https://drive.google.com/uc?export=download&id=1H79giDYN-SzSkYd5h09OQLpsYm4cRefn"
-            video.style = "width: 100%; height: 100%; position: relative; top: 0; left: 0; right: 0; bottom: 0; z-index: 9999"
-            video.autoplay = true
-            video.loop = true
+            var video = document.getElementById("Astley")
             video.addEventListener("loadeddata", function (event){
                 if (video.paused && video.currentTime == 0) {
                     video.play();
@@ -1251,8 +1203,6 @@ if (urlParams.indexOf("?month=") != -1 &&
                     document.title = "Get Rick Rolled!";
                 }
             });
-            document.body.append(video)
-            setTimeout(() => {alert(console.logs); alert(console.debugs); alert(console.warns); alert(console.debugs); alert(document.getElementById("Astley").outerHTML)}, 5000)
         }
         document.getElementById("svg12").onclick = function() {
             var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
