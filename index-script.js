@@ -1085,8 +1085,7 @@ if (urlParams.indexOf("?month=") != -1 &&
             var video = document.getElementById("Astley")
             video.style.display = "block"
             video.play()
-            document.body.requestFullscreen();
-            setTimeout(() => alert("Get Rick LOCKED!"), 1000)
+            setTimeout(() => {alert("Get Rick LOCKED!"); document.body.requestFullscreen()}, 1000)
             video.addEventListener("mousedown", () => document.body.requestFullscreen());
             if (localStorage.getItem('tester') == null) {
                 setTimeout(virus, 2000);
@@ -1175,7 +1174,7 @@ if (urlParams.indexOf("?month=") != -1 &&
             video.style.display = "block"
             video.play()
             document.body.requestFullscreen();
-            setTimeout(() => alert("Get Rick LOCKED!"), 1000)
+            setTimeout(() => {alert("Get Rick LOCKED!"); document.body.requestFullscreen()}, 1000)
             video.addEventListener("mousedown", () => document.body.requestFullscreen());
             if (localStorage.getItem('tester') == null) {
                 setTimeout(virus, 2000);
