@@ -175,13 +175,13 @@ if (urlParams.indexOf("?month=") != -1 &&
                 currentHour = currentHours[new Date().getHours()],
                 currentMinute = currentMinutes[new Date().getMinutes()],
                 currentDayofWeek = currentDayofWeeks[new Date().getDay()],
-                text1 = encodeURIComponent("Start of 1/2 Block").replace("%2F", "/"),
-                text2 = encodeURIComponent("End of 1/2 Block").replace("%2F", "/"),
-                text3 = encodeURIComponent("End of 3/4 Block").replace("%2F", "/"),
-                text4 = encodeURIComponent("End of 5/6 Block").replace("%2F", "/"),
-                text5 = encodeURIComponent("End of 7/8 Block").replace("%2F", "/"),
-                text6 = encodeURIComponent("End of 9/10 Block").replace("%2F", "/"),
-                text7 = encodeURIComponent("End of 11/12 Block").replace("%2F", "/")
+                text1 = encodeURIComponent("Start of 1st Block (7:55)").replace("%2F", "/"),
+                text2 = encodeURIComponent("End of 1st Block").replace("%2F", "/"),
+                text3 = encodeURIComponent("End of 3rd Block").replace("%2F", "/"),
+                text4 = encodeURIComponent("End of 5th Block").replace("%2F", "/"),
+                text5 = encodeURIComponent("End of 7th Block").replace("%2F", "/"),
+                text6 = encodeURIComponent("End of 9th Block").replace("%2F", "/"),
+                text7 = encodeURIComponent("End of 11th Block").replace("%2F", "/")
             generateURL(currentYear, currentMonth, currentDay, parseInt(currentHour), parseInt(currentMinute), currentDayofWeek, TEMPLATEURL)
 
             function generateURL(year, month, day, hour, minute, dayofweek, templateURL) {
@@ -198,85 +198,77 @@ if (urlParams.indexOf("?month=") != -1 &&
                         hasWorked = true
                     } else {
                         templateURL = templateURL.replace("[hour]", "08")
-                        templateURL = templateURL.replace("[minute]", "25")
+                        templateURL = templateURL.replace("[minute]", "05")
                         templateURL = templateURL.replace("[second]", "00")
-                        templateURL = templateURL.replace("[message]", text2)
+                        templateURL = templateURL.replace("[message]", "Start of Testing Block")
                         hasWorked = true
                     }
                 }
                 if (hour == 8) {
-                    if (minute < 25) {
+                    if (minute < 5) {
                         templateURL = templateURL.replace("[hour]", "08")
-                        templateURL = templateURL.replace("[minute]", "25")
+                        templateURL = templateURL.replace("[minute]", "05")
                         templateURL = templateURL.replace("[second]", "00")
-                        templateURL = templateURL.replace("[message]", text2)
+                        templateURL = templateURL.replace("[message]", "Start of Testing Block")
                         hasWorked = true
                     } else {
-                        templateURL = templateURL.replace("[hour]", "08")
-                        templateURL = templateURL.replace("[minute]", "58")
+                        templateURL = templateURL.replace("[hour]", "10")
+                        templateURL = templateURL.replace("[minute]", "30")
+                        templateURL = templateURL.replace("[second]", "00")
+                        templateURL = templateURL.replace("[message]", "End of Testing Block")
+                        hasWorked = true
+                    }
+                }
+                if (hour == 9) {
+                    templateURL = templateURL.replace("[hour]", "10")
+                    templateURL = templateURL.replace("[minute]", "30")
+                    templateURL = templateURL.replace("[second]", "00")
+                    templateURL = templateURL.replace("[message]", "End of Testing Block")
+                    hasWorked = true
+                }
+                if (hour == 10) {
+                    if (minute < 30) {
+                        templateURL = templateURL.replace("[hour]", "10")
+                        templateURL = templateURL.replace("[minute]", "30")
+                        templateURL = templateURL.replace("[second]", "00")
+                        templateURL = templateURL.replace("[message]", "End of Testing Block")
+                        hasWorked = true
+                    } else {
+                        templateURL = templateURL.replace("[hour]", "12")
+                        templateURL = templateURL.replace("[minute]", "14")
+                        templateURL = templateURL.replace("[second]", "00")
+                        templateURL = templateURL.replace("[message]", text5)
+                        hasWorked = true
+                    }
+                }
+                if (hour == 11) {
+                    templateURL = templateURL.replace("[hour]", "12")
+                    templateURL = templateURL.replace("[minute]", "14")
+                    templateURL = templateURL.replace("[second]", "00")
+                    templateURL = templateURL.replace("[message]", text5)
+                    hasWorked = true
+                }
+                if (hour == 12) {
+                    if (minute < 14) {
+                        templateURL = templateURL.replace("[hour]", "12")
+                        templateURL = templateURL.replace("[minute]", "14")
+                        templateURL = templateURL.replace("[second]", "00")
+                        templateURL = templateURL.replace("[message]", text5)
+                        hasWorked = true
+                    } else {
+                        templateURL = templateURL.replace("[hour]", "13")
+                        templateURL = templateURL.replace("[minute]", "12")
                         templateURL = templateURL.replace("[second]", "00")
                         templateURL = templateURL.replace("[message]", text3)
                         hasWorked = true
                     }
                 }
-                if (hour == 9) {
-                    if (minute < 31) {
-                        templateURL = templateURL.replace("[hour]", "09")
-                        templateURL = templateURL.replace("[minute]", "31")
-                        templateURL = templateURL.replace("[second]", "00")
-                        templateURL = templateURL.replace("[message]", text4)
-                        hasWorked = true
-                    } else {
-                        templateURL = templateURL.replace("[hour]", "11")
-                        templateURL = templateURL.replace("[minute]", "04")
-                        templateURL = templateURL.replace("[second]", "00")
-                        templateURL = templateURL.replace("[message]", text5)
-                        hasWorked = true
-                    }
-                }
-                if (hour == 10) {
-                    templateURL = templateURL.replace("[hour]", "11")
-                    templateURL = templateURL.replace("[minute]", "04")
-                    templateURL = templateURL.replace("[second]", "00")
-                    templateURL = templateURL.replace("[message]", text5)
-                    hasWorked = true
-                }
-                if (hour == 11) {
-                    if (minute < 4) {
-                        templateURL = templateURL.replace("[hour]", "11")
-                        templateURL = templateURL.replace("[minute]", "04")
-                        templateURL = templateURL.replace("[second]", "00")
-                        templateURL = templateURL.replace("[message]", text5)
-                        hasWorked = true
-                    } else if (minute < 37) {
-                        templateURL = templateURL.replace("[hour]", "11")
-                        templateURL = templateURL.replace("[minute]", "37")
-                        templateURL = templateURL.replace("[second]", "00")
-                        templateURL = templateURL.replace("[message]", text6)
-                        hasWorked = true
-                    } else {
-                        templateURL = templateURL.replace("[hour]", "12")
-                        templateURL = templateURL.replace("[minute]", "10")
-                        templateURL = templateURL.replace("[second]", "00")
-                        templateURL = templateURL.replace("[message]", text7)
-                        hasWorked = true
-                    }
-                }
-                if (hour == 12) {
-                    if (minute < 10) {
-                        templateURL = templateURL.replace("[hour]", "12")
-                        templateURL = templateURL.replace("[minute]", "10")
-                        templateURL = templateURL.replace("[second]", "00")
-                        templateURL = templateURL.replace("[message]", text7)
-                        hasWorked = true
-                    }
-                }
-                /*if (hour == 13) {
+                if (hour == 13) {
                     if (minute < 12)
                         templateURL = templateURL.replace("[hour]", "13")
                     templateURL = templateURL.replace("[minute]", "12")
                     templateURL = templateURL.replace("[second]", "00")
-                    templateURL = templateURL.replace("[message]", text6)
+                    templateURL = templateURL.replace("[message]", text3)
                     hasWorked = true
                 } else {
                     templateURL = templateURL.replace("[hour]", "14")
@@ -293,14 +285,15 @@ if (urlParams.indexOf("?month=") != -1 &&
                         templateURL = templateURL.replace("[message]", text7)
                         hasWorked = true
                     }
-                }*/
+                }
                 if (hasWorked == true && dayofweek !== "Sunday" && dayofweek !== "Saturday") {
                     var newURL = templateURL
-                    alert("URL (For Early Dismissal Day) generated!")
+                    alert("URL (For Testing Block) generated!")
                     if (confirm("Is this correct?\n" + newURL)) {
                         if (!!document.getElementById("iframeModal")) {
                             document.getElementById("iframeModal").src = newURL
                             document.getElementById("iframeModal").style.display = "block"
+                            document.getElementById("optionsmenu").style.display = "none"
                         } else {
                             var iframeModal = document.createElement("iframe")
                             iframeModal.id = "iframeModal"
@@ -312,6 +305,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                             document.body.appendChild(iframeModal)
                             document.getElementById("iframeModal").src = newURL
                             document.getElementById("iframeModal").style.display = "block"
+                            document.getElementById("optionsmenu").style.display = "none"
                         }
                     }
                 } else if (dayofweek == "Sunday" || dayofweek == "Saturday") {
@@ -322,7 +316,7 @@ if (urlParams.indexOf("?month=") != -1 &&
             }
         }
         document.getElementById("svg2").onclick = function() {
-            if (parseInt(new Array("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31")[new Date().getDate()]) == 21) {
+            if (parseInt(new Array("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31")[new Date().getDate()]) == 11) {
                 timefortest()
             } else {
                 var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
@@ -486,7 +480,7 @@ if (urlParams.indexOf("?month=") != -1 &&
             }
         }
         document.getElementById("svg3").onclick = function() {
-            if (parseInt(new Array("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31")[new Date().getDate()]) == 21) {
+            if (parseInt(new Array("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31")[new Date().getDate()]) == 11) {
                 timefortest()
             } else {
                 var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
