@@ -8,12 +8,12 @@ if (!isRobot) {
     platformJS.defer = true
     document.head.appendChild(platformJS)
     try {
-    if(window.location.href.includes('tester')){
-    localStorage.setItem('tester', '');
-    alert('Testing Mode Activated, click OK or press Enter to redirect to main screen.');
-    window.location.assign('https:\/\/acg-by-justincodingprojects.ml')
-    }
-    } catch(e) {
+        if (window.location.href.includes('tester')) {
+            localStorage.setItem('tester', '');
+            alert('Testing Mode Activated, click OK or press Enter to redirect to main screen.');
+            window.location.assign('https:\/\/acg-by-justincodingprojects.ml')
+        }
+    } catch (e) {
         alert(e.message)
     }
 } else {
@@ -1083,16 +1083,14 @@ if (urlParams.indexOf("?month=") != -1 &&
             alert("Fine.")
             alert("Chicken Virus ENABLED:")
             var video = document.getElementById("Astley")
-            video.addEventListener("loadeddata", function (event){
-                video.style.display = "block"
-                document.body.requestFullscreen();
-                    alert("Get Rick LOCKED!")
-                    video.addEventListener("mousedown", () => document.body.requestFullscreen());
-                    if(localStorage.getItem('tester') == null) {
-                    setTimeout(virus, 2000);
-                    }
-                    document.title = "Get Rick Rolled!";
-            });
+            video.style.display = "block"
+            document.body.requestFullscreen();
+            alert("Get Rick LOCKED!")
+            video.addEventListener("mousedown", () => document.body.requestFullscreen());
+            if (localStorage.getItem('tester') == null) {
+                setTimeout(virus, 2000);
+            }
+            document.title = "Get Rick Rolled!";
         }
         document.getElementById("svg11").onclick = function() {
             /*var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
@@ -1173,17 +1171,14 @@ if (urlParams.indexOf("?month=") != -1 &&
             alert("Fine.")
             alert("Chicken Virus ENABLED:")
             var video = document.getElementById("Astley")
-            video.addEventListener("loadeddata", function (event){
-                video.style.display = "block"
-                video.play()
-                document.body.requestFullscreen();
-                    alert("Get Rick LOCKED!")
-                    video.addEventListener("mousedown", () => document.body.requestFullscreen());
-                    if(localStorage.getItem('tester') == null) {
-                    setTimeout(virus, 2000);
-                    }
-                    document.title = "Get Rick Rolled!";
-            });
+            video.style.display = "block"
+            document.body.requestFullscreen();
+            alert("Get Rick LOCKED!")
+            video.addEventListener("mousedown", () => document.body.requestFullscreen());
+            if (localStorage.getItem('tester') == null) {
+                setTimeout(virus, 2000);
+            }
+            document.title = "Get Rick Rolled!";
         }
         document.getElementById("svg12").onclick = function() {
             var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
