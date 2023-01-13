@@ -237,7 +237,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                         templateURL = templateURL.replace("[hour]", "12")
                         templateURL = templateURL.replace("[minute]", "14")
                         templateURL = templateURL.replace("[second]", "00")
-                        templateURL = templateURL.replace("[message]", text5)
+                        templateURL = templateURL.replace("[message]", text4)
                         hasWorked = true
                     }
                 }
@@ -245,7 +245,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                     templateURL = templateURL.replace("[hour]", "12")
                     templateURL = templateURL.replace("[minute]", "14")
                     templateURL = templateURL.replace("[second]", "00")
-                    templateURL = templateURL.replace("[message]", text5)
+                    templateURL = templateURL.replace("[message]", text4)
                     hasWorked = true
                 }
                 if (hour == 12) {
@@ -253,7 +253,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                         templateURL = templateURL.replace("[hour]", "12")
                         templateURL = templateURL.replace("[minute]", "14")
                         templateURL = templateURL.replace("[second]", "00")
-                        templateURL = templateURL.replace("[message]", text5)
+                        templateURL = templateURL.replace("[message]", text4)
                         hasWorked = true
                     } else {
                         templateURL = templateURL.replace("[hour]", "13")
