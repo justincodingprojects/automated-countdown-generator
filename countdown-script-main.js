@@ -14,7 +14,7 @@ if (urlParams.indexOf("?month=") != -1 &&
     urlParams.indexOf("&second=") != -1 &&
     urlParams.indexOf("&message=") != -1) {
     /* Fixing Year Long Bug (Synchronization) */
-    import { getServerDate } from "./serverDate.js";
+    /*import { getServerDate } from "./serverDate.js";*/
     const { date, offset, uncertainty } = await getServerDate();
     var countDownDate = new Date(urlParams.substring(urlParams.indexOf('month=') + 6).split(`&day=`)[0] +
         " " + urlParams.substring(urlParams.indexOf('day=') + 4).split(`&year=`)[0] +
@@ -22,7 +22,7 @@ if (urlParams.indexOf("?month=") != -1 &&
         " " + urlParams.substring(urlParams.indexOf('hour=') + 5).split(`&minute=`)[0] +
         ":" + urlParams.substring(urlParams.indexOf('minute=') + 7).split(`&second=`)[0] +
         ":" + urlParams.substring(urlParams.indexOf('second=') + 7).split(`&millisecond=`)[0] +
-        "." + urlParams.substring(urlParams.indexOf('millisecond=') + 12).split(`&message=`)[0]).getTime() + offset
+        "." + urlParams.substring(urlParams.indexOf('millisecond=') + 12).split(`&message=`)[0]).getTime()// + offset
     if ("wakeLock" in navigator) {
         let wakeLock = null;
         async function start() {
@@ -41,7 +41,7 @@ if (urlParams.indexOf("?month=") != -1 &&
 
     var x = setInterval(function () {
 
-        var now = new Date(Date().getTime() + offset).getTime();
+        var now = /*new Date(Date().getTime() + offset).getTime();*/ new Date().getTime();
 
         var distance = countDownDate - now;
         if (decodeURIComponent(urlParams.substring(urlParams.indexOf('message=') + 8)) !== "") {
