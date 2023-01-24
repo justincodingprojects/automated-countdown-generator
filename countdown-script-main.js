@@ -23,7 +23,7 @@ if (urlParams.indexOf("?month=") != -1 &&
         ":" + urlParams.substring(urlParams.indexOf('minute=') + 7).split(`&second=`)[0] +
         ":" + urlParams.substring(urlParams.indexOf('second=') + 7).split(`&millisecond=`)[0] +
         "." + urlParams.substring(urlParams.indexOf('millisecond=') + 12).split(`&message=`)[0]).getTime();
-    countDownDate = new Date(countDownDate + offset)
+    countDownDate = new Date(countDownDate.getTime() + offset)
     if ("wakeLock" in navigator) {
         let wakeLock = null;
         async function start() {
