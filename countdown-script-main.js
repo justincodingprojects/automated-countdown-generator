@@ -1,9 +1,9 @@
 var urlParams = window.location.href
-Date.prototype.today = function () {
+Date.prototype.today = function() {
     return (((this.getMonth() + 1) < 10) ? "0" : "") + (this.getMonth() + 1) + "/" + ((this.getDate() < 10) ? "0" : "") + this.getDate() + "/" + this.getFullYear();
 }
 
-Date.prototype.timeNow = function () {
+Date.prototype.timeNow = function() {
     return ((this.getHours() < 10) ? "0" : "") + this.getHours() + ":" + ((this.getMinutes() < 10) ? "0" : "") + this.getMinutes() + ":" + ((this.getSeconds() < 10) ? "0" : "") + this.getSeconds();
 }
 if (urlParams.indexOf("?month=") != -1 &&
@@ -13,35 +13,31 @@ if (urlParams.indexOf("?month=") != -1 &&
     urlParams.indexOf("&minute=") != -1 &&
     urlParams.indexOf("&second=") != -1 &&
     urlParams.indexOf("&message=") != -1) {
-    /* Fixing Year Long Bug (Synchronization) */
-    /*import { getServerDate } from "./serverDate.js";*/
-    const { date, offset, uncertainty } = await getServerDate();
     var countDownDate = new Date(urlParams.substring(urlParams.indexOf('month=') + 6).split(`&day=`)[0] +
         " " + urlParams.substring(urlParams.indexOf('day=') + 4).split(`&year=`)[0] +
         " " + urlParams.substring(urlParams.indexOf('year=') + 5).split(`&hour=`)[0] +
         " " + urlParams.substring(urlParams.indexOf('hour=') + 5).split(`&minute=`)[0] +
         ":" + urlParams.substring(urlParams.indexOf('minute=') + 7).split(`&second=`)[0] +
         ":" + urlParams.substring(urlParams.indexOf('second=') + 7).split(`&millisecond=`)[0] +
-        "." + urlParams.substring(urlParams.indexOf('millisecond=') + 12).split(`&message=`)[0]).getTime()// + offset
+        "." + urlParams.substring(urlParams.indexOf('millisecond=') + 12).split(`&message=`)[0]).getTime();
     if ("wakeLock" in navigator) {
         let wakeLock = null;
         async function start() {
             wakeLock = await navigator.wakeLock.request('screen');
         }
-        document.addEventListener('visibilitychange', async () => {
+        document.addEventListener('visibilitychange', async() => {
             if (wakeLock !== null && document.visibilityState === 'visible') {
                 wakeLock = await navigator.wakeLock.request('screen');
             }
         });
         start();
     }
-    var egg = new Egg("esc", function () {
+    var egg = new Egg("esc", function() {
         window.top.document.body.removeChild(window.parent.document.getElementById("iframeModal"))
     }).listen();
+    var x = setInterval(function() {
 
-    var x = setInterval(function () {
-
-        var now = /*new Date(Date().getTime() + offset).getTime();*/ new Date().getTime();
+        var now = new Date().getTime();
 
         var distance = countDownDate - now;
         if (decodeURIComponent(urlParams.substring(urlParams.indexOf('message=') + 8)) !== "") {
@@ -53,18 +49,18 @@ if (urlParams.indexOf("?month=") != -1 &&
             document.title = decodeURIComponent(urlParams.substring(urlParams.indexOf('message=') + 8)) + " - Auto. Countdown Generator | Justin Coding Projects"
         }
         document.getElementById("footera").innerHTML = "Timer until " + new Date(urlParams.substring(urlParams.indexOf('month=') + 6).split(`&day=`)[0] +
-            " " + urlParams.substring(urlParams.indexOf('day=') + 4).split(`&year=`)[0] +
-            " " + urlParams.substring(urlParams.indexOf('year=') + 5).split(`&hour=`)[0]).toLocaleDateString("default", {
+                " " + urlParams.substring(urlParams.indexOf('day=') + 4).split(`&year=`)[0] +
+                " " + urlParams.substring(urlParams.indexOf('year=') + 5).split(`&hour=`)[0]).toLocaleDateString("default", {
                 weekday: 'long'
             }) + ", " + new Date(urlParams.substring(urlParams.indexOf('month=') + 6).split(`&day=`)[0] +
                 " " + urlParams.substring(urlParams.indexOf('day=') + 4).split(`&year=`)[0] +
                 " " + urlParams.substring(urlParams.indexOf('year=') + 5).split(`&hour=`)[0]).toLocaleDateString("default", {
-                    month: 'long'
-                }) + " " + new Date(urlParams.substring(urlParams.indexOf('month=') + 6).split(`&day=`)[0] +
-                    " " + urlParams.substring(urlParams.indexOf('day=') + 4).split(`&year=`)[0] +
-                    " " + urlParams.substring(urlParams.indexOf('year=') + 5).split(`&hour=`)[0]).getDate() + ", " + new Date(urlParams.substring(urlParams.indexOf('month=') + 6).split(`&day=`)[0] +
-                        " " + urlParams.substring(urlParams.indexOf('day=') + 4).split(`&year=`)[0] +
-                        " " + urlParams.substring(urlParams.indexOf('year=') + 5).split(`&hour=`)[0]).getFullYear() + " at " + ((parseInt(urlParams.substring(urlParams.indexOf('hour=') + 5).split(`&minute=`)[0]) + 11) % 12 + 1) +
+                month: 'long'
+            }) + " " + new Date(urlParams.substring(urlParams.indexOf('month=') + 6).split(`&day=`)[0] +
+                " " + urlParams.substring(urlParams.indexOf('day=') + 4).split(`&year=`)[0] +
+                " " + urlParams.substring(urlParams.indexOf('year=') + 5).split(`&hour=`)[0]).getDate() + ", " + new Date(urlParams.substring(urlParams.indexOf('month=') + 6).split(`&day=`)[0] +
+                " " + urlParams.substring(urlParams.indexOf('day=') + 4).split(`&year=`)[0] +
+                " " + urlParams.substring(urlParams.indexOf('year=') + 5).split(`&hour=`)[0]).getFullYear() + " at " + ((parseInt(urlParams.substring(urlParams.indexOf('hour=') + 5).split(`&minute=`)[0]) + 11) % 12 + 1) +
             ":" + urlParams.substring(urlParams.indexOf('minute=') + 7).split(`&second=`)[0] + " " + ((parseInt(urlParams.substring(urlParams.indexOf('hour=') + 5).split(`&minute=`)[0]) >= 12) ? "PM" : "AM");
         var days = Math.floor(distance / (1000 * 60 * 60 * 24));
         var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -96,7 +92,7 @@ if (urlParams.indexOf("?month=") != -1 &&
         }
         if (distance < 0) {
             clearInterval(x);
-            setTimeout(function () {
+            setTimeout(function() {
                 document.getElementById("demo").innerHTML = "Countdown Ended"
                 wakeLock.release()
                     .then(() => {
