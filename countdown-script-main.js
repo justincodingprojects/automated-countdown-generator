@@ -93,7 +93,7 @@ if (urlParams.indexOf("?month=") != -1 &&
         lastOffsetTime = await getServerDate();
     };
     synchronize();
-    setInterval(synchronize, 60 * 1000);
+    setInterval(synchronize, 1000);
     var x = setInterval(function () {
         const { date, offset, uncertainty } = lastOffsetTime;
         var now = new Date(Date.now() + offset).getTime()
