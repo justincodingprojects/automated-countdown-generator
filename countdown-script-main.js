@@ -1,3 +1,39 @@
+console.defaultLog = console.log.bind(console);
+console.logs = [];
+console.log = function(){
+    // default &  console.log()
+    console.defaultLog.apply(console, arguments);
+    // new & array data
+    alert("Log: " + Array.from(arguments))
+    console.logs.push(Array.from(arguments));
+}
+console.defaultError = console.error.bind(console);
+console.errors = [];
+console.error = function(){
+    // default &  console.error()
+    console.defaultError.apply(console, arguments);
+    // new & array data
+    alert("Error: " + Array.from.arguments)
+    console.errors.push(Array.from(arguments));
+}
+console.defaultWarn = console.warn.bind(console);
+console.warns = [];
+console.warn = function(){
+    // default &  console.warn()
+    console.defaultWarn.apply(console, arguments);
+    // new & array data
+    alert("Warning: " + Array.from.arguments)
+    console.warns.push(Array.from(arguments));
+}
+console.defaultDebug = console.debug.bind(console);
+console.debugs = [];
+console.debug = function(){
+    // default &  console.debug()
+    console.defaultDebug.apply(console, arguments);
+    // new & array data
+    alert("Debug: " + Array.from.arguments)
+    console.debugs.push(Array.from(arguments));
+}
 import { getServerDate } from "./serverDate.js";
 var urlParams = window.location.href
 Date.prototype.today = function() {
