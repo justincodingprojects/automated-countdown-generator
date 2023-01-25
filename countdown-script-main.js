@@ -139,7 +139,7 @@ const fetchSampleImplementation = async () => {
     };
   };
   
-  export const getServerDate = async (
+  const getServerDate = async (
     { fetchSample } = { fetchSample: fetchSampleImplementation }
   ) => {
     let best = { uncertainty: Number.MAX_VALUE };
