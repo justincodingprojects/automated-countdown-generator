@@ -1,4 +1,3 @@
-import { getServerDate } from "./serverDate.js";
 var urlParams = window.location.href
 Date.prototype.today = function() {
     return (((this.getMonth() + 1) < 10) ? "0" : "") + (this.getMonth() + 1) + "/" + ((this.getDate() < 10) ? "0" : "") + this.getDate() + "/" + this.getFullYear();
@@ -117,3 +116,57 @@ if (urlParams.indexOf("?month=") != -1 &&
 } else {
     alert("Incorrect parameters.")
 }
+
+/* Server-Date Communication */
+const fetchSampleImplementation = async () => {
+    const requestDate = new Date();
+  
+    var xmlHttp = new XMLHttpRequest()
+    xmlHttp.open('HEAD',window.location.href.toString(),false);
+    xmlHttp.setRequestHeader("Content-Type", "text/html");
+    xmlHttp.send('');
+    var statusText = xmlHttp.status
+    var ok = (statusText == 200) ? true : false
+  
+    if (!ok) {
+      throw new Error(`Bad date sample from server: ${statusText}`);
+    }
+  
+    return {
+      requestDate,
+      responseDate: new Date(),
+      serverDate: new Date(xmlHttp.getResponseHeader("Date")),
+    };
+  };
+  
+  export const getServerDate = async (
+    { fetchSample } = { fetchSample: fetchSampleImplementation }
+  ) => {
+    let best = { uncertainty: Number.MAX_VALUE };
+  
+    // Fetch 10 samples to increase the chance of getting one with low
+    // uncertainty.
+    for (let index = 0; index < 10; index++) {
+      try {
+        const { requestDate, responseDate, serverDate } = await fetchSample();
+  
+        // We don't get milliseconds back from the Date header so there's
+        // uncertainty of at least half a second in either direction.
+        const uncertainty = (responseDate - requestDate) / 2 + 500;
+  
+        if (uncertainty < best.uncertainty) {
+          const date = new Date(serverDate.getTime() + 500);
+  
+          best = {
+            date,
+            offset: date - responseDate,
+            uncertainty,
+          };
+        }
+      } catch (exception) {
+        console.warn(exception);
+      }
+    }
+  
+    return best;
+  };
