@@ -1,1 +1,1 @@
-I want to put this out there, but the "Chicken Virus" thing on the intro screen can freeze your device. You have been warned.
+Should've changed this a long time ago, but I'm currently working to fix synchronization problems on my countdown.
