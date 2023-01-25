@@ -44,7 +44,7 @@ if (urlParams.indexOf("?month=") != -1 &&
       synchronize();
       setInterval(synchronize, 60 * 1000);
     var x = setInterval(function() {
-        const { offset } = lastOffsetTime;
+        const {date, offset, uncertainty } = lastOffsetTime;
         var now = new Date(Date.now() + offset).getTime()
 
         var distance = countDownDate - now;
