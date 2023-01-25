@@ -1,3 +1,4 @@
+import { getServerDate } from "./serverDate.js";
 var urlParams = window.location.href
 Date.prototype.today = function() {
     return (((this.getMonth() + 1) < 10) ? "0" : "") + (this.getMonth() + 1) + "/" + ((this.getDate() < 10) ? "0" : "") + this.getDate() + "/" + this.getFullYear();
@@ -35,13 +36,20 @@ if (urlParams.indexOf("?month=") != -1 &&
     var egg = new Egg("esc", function() {
         window.top.document.body.removeChild(window.parent.document.getElementById("iframeModal"))
     }).listen();
-    var x = setInterval(function() {
+    let lastOffsetTime = {};
 
-        var now = new Date().getTime();
+      const synchronize = async () => {
+        lastOffsetTime = await getServerDate();
+      };
+      synchronize();
+      setInterval(synchronize, 60 * 1000);
+    var x = setInterval(function() {
+        const { offset } = lastOffsetTime;
+        var now = new Date(Date.now() + offset).getTime()
 
         var distance = countDownDate - now;
-        if (decodeURIComponent(urlParams.substring(urlParams.indexOf('message=') + 8)) !== "") {
-            if(decodeURIComponent(urlParams.substring(urlParams.indexOf('message=') + 8)) !== document.getElementById("title").innerHTML) {
+        if (decodeURIComponent(urlParams.substring(urlParams.indexOf('message=') + 8)) !== document.getElementById("title").innerHTML) {
+            if(decodeURIComponent(urlParams.substring(urlParams.indexOf('message=') + 8)) !== document.title.innerHTML) {
             document.getElementById("title").innerHTML = decodeURIComponent(urlParams.substring(urlParams.indexOf('message=') + 8))
             }
         } else {
