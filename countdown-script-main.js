@@ -13,7 +13,7 @@ console.error = function(){
     // default &  console.error()
     console.defaultError.apply(console, arguments);
     // new & array data
-    alert("Error: " + Array.from.arguments)
+    alert("Error: " + Array.from(arguments))
     console.errors.push(Array.from(arguments));
 }
 console.defaultWarn = console.warn.bind(console);
@@ -22,7 +22,7 @@ console.warn = function(){
     // default &  console.warn()
     console.defaultWarn.apply(console, arguments);
     // new & array data
-    alert("Warning: " + Array.from.arguments)
+    alert("Warning: " + Array.from(arguments))
     console.warns.push(Array.from(arguments));
 }
 console.defaultDebug = console.debug.bind(console);
@@ -31,7 +31,7 @@ console.debug = function(){
     // default &  console.debug()
     console.defaultDebug.apply(console, arguments);
     // new & array data
-    alert("Debug: " + Array.from.arguments)
+    alert("Debug: " + Array.from(arguments))
     console.debugs.push(Array.from(arguments));
 }
 import { getServerDate } from "./serverDate.js";
