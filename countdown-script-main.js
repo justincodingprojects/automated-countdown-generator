@@ -1,3 +1,13 @@
+function docReady(fn) {
+    // see if DOM is already available
+    if (document.readyState === "complete" || document.readyState === "interactive") {
+        // call on next available tick
+        setTimeout(fn, 1);
+    } else {
+        document.addEventListener("DOMContentLoaded", fn);
+    }
+}    
+docReady(function() {
 var urlParams = window.location.href
 Date.prototype.today = function () {
     return (((this.getMonth() + 1) < 10) ? "0" : "") + (this.getMonth() + 1) + "/" + ((this.getDate() < 10) ? "0" : "") + this.getDate() + "/" + this.getFullYear();
@@ -168,3 +178,4 @@ if (urlParams.indexOf("?month=") != -1 &&
 } else {
     alert("Incorrect parameters.")
 }
+});
