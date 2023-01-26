@@ -72,8 +72,8 @@ if (urlParams.indexOf("?month=") != -1 &&
 
         return best;
     };
+    let wakeLock = null;
     if ("wakeLock" in navigator) {
-        let wakeLock = null;
         async function start() {
             wakeLock = await navigator.wakeLock.request('screen');
         }
@@ -95,8 +95,7 @@ if (urlParams.indexOf("?month=") != -1 &&
     synchronize();
     setInterval(synchronize, 1000);
     var x = setInterval(function () {
-        const { date, offset, uncertainty } = lastOffsetTime;
-        var now = new Date(Date.now() + offset).getTime()
+        var now = new Date(Date.now() + lastOffsetTime.offset).getTime()
 
         var distance = countDownDate - now;
         if (decodeURIComponent(urlParams.substring(urlParams.indexOf('message=') + 8)) !== "") {
@@ -157,10 +156,12 @@ if (urlParams.indexOf("?month=") != -1 &&
             clearInterval(x);
             setTimeout(function () {
                 document.getElementById("demo").innerHTML = "Countdown Ended"
+                if("wakeLock" in navigator) {
                 wakeLock.release()
                     .then(() => {
                         wakeLock = null;
                     });
+                }
 
             }, 250)
         }
