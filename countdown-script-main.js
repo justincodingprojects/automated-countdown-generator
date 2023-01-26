@@ -99,11 +99,11 @@ if (urlParams.indexOf("?month=") != -1 &&
             document.head.removeChild(document.getElementById("ServerDate"))
             setTimeout(function () {
                 document.getElementById("demo").innerHTML = "Countdown Ended"
-                if("wakeLock" in navigator) {
-                wakeLock.release()
-                    .then(() => {
-                        wakeLock = null;
-                    });
+                if ("wakeLock" in navigator) {
+                    wakeLock.release()
+                        .then(() => {
+                            wakeLock = null;
+                        });
                 }
 
             }, 250)

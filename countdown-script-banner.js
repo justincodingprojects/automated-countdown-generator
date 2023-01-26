@@ -1,7 +1,7 @@
 var count = 0
 onMaintenance = {
     aInternal: 10,
-    aListener: function(val) {},
+    aListener: function (val) { },
     set isOn(val) {
         this.aInternal = val;
         this.aListener(val);
@@ -9,19 +9,19 @@ onMaintenance = {
     get isOn() {
         return this.aInternal;
     },
-    registerListener: function(listener) {
+    registerListener: function (listener) {
         this.aListener = listener;
     }
 }
 
-onMaintenance.registerListener(function(val) {
+onMaintenance.registerListener(function (val) {
     setMaintenanceBanner(onMaintenance.isOn)
 });
 
 function setMaintenanceBanner(bool) {
     if (bool == true) {
         if (document.getElementsByClassName("topnav")[0] == undefined) {
-            setTimeout(function() {
+            setTimeout(function () {
                 var div = document.createElement("div")
                 div.setAttribute("class", "topnav")
                 document.body.appendChild(div)
@@ -29,7 +29,7 @@ function setMaintenanceBanner(bool) {
                 a.setAttribute("id", "mainbanner")
                 a.setAttribute("class", "active")
                 document.getElementsByClassName("topnav")[0].appendChild(a)
-                fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/acgconfig/Maintenance-Banner-Text/maintenancebannertext.txt?t=" + Math.random(), {cache: "no-store"}).then((r) => r.text().then((t) => document.getElementById("mainbanner").innerHTML = t));
+                fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/acgconfig/Maintenance-Banner-Text/maintenancebannertext.txt?t=" + Math.random(), { cache: "no-store" }).then((r) => r.text().then((t) => document.getElementById("mainbanner").innerHTML = t));
             }, 50)
         }
     } else if (bool == false) {

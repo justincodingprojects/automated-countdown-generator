@@ -1,4 +1,4 @@
-setTimeout(function() {
+setTimeout(function () {
     onMaintenance.isOn = true;
     var redirect = false;
     var redirectPlusPassword = false;

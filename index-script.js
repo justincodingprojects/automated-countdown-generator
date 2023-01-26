@@ -17,7 +17,7 @@ if (!isRobot) {
         alert(e.message)
     }
 } else {
-    setTimeout(function() {
+    setTimeout(function () {
         document.getElementById("svg1").style.display = "block"
     }, 500)
 }
@@ -37,7 +37,7 @@ if (urlParams.indexOf("?month=") != -1 &&
     function init() {
         function waitForElement1() {
             if (typeof gapi !== "undefined") {
-                gapi.load('auth2', function() {
+                gapi.load('auth2', function () {
                     auth2 = gapi.auth2.init({
                         client_id: '904159946422-3ljs0jlej7i7ir8ed2uli868ibg8cur7.apps.googleusercontent.com',
                     });
@@ -55,7 +55,7 @@ if (urlParams.indexOf("?month=") != -1 &&
             if (typeof auth2 !== "undefined") {
                 auth2.grantOfflineAccess({
                     scope: 'profile email',
-                }).then(signInCallback, function(resp) {
+                }).then(signInCallback, function (resp) {
                     if (resp.error == "popup_closed_by_user") {
                         alert("You need to log in with your Google Account to access this. (It's a one-time thing)")
                         if (confirm("Do you want to try again?")) {
@@ -136,10 +136,10 @@ if (urlParams.indexOf("?month=") != -1 &&
                     fetch("https://raw.githubusercontent.com/justincodingprojects/automated-countdown-generator/main/introvideo.txt").then((r) => r.text().then((t) => {
                         document.getElementById("video1").src = t
                         document.getElementById("video1").style.display = "block"
-                        document.getElementById("video1").play().then(function() {
-                            document.getElementById("video1").onended = function() {
-                                setTimeout(function() {
-                                    var egg = new Egg("esc", function() {
+                        document.getElementById("video1").play().then(function () {
+                            document.getElementById("video1").onended = function () {
+                                setTimeout(function () {
+                                    var egg = new Egg("esc", function () {
                                         document.body.removeChild(document.getElementById("iframeModal"))
                                     }).listen()
                                     document.getElementById("video1").style.display = "none"
@@ -155,8 +155,8 @@ if (urlParams.indexOf("?month=") != -1 &&
             startVideo()
         } else {
             document.getElementById("svg1").style.display = "block"
-            setTimeout(function() {
-                var egg = new Egg("esc", function() {
+            setTimeout(function () {
+                var egg = new Egg("esc", function () {
                     document.body.removeChild(document.getElementById("iframeModal"))
                 }).listen()
             }, 500)
@@ -313,7 +313,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                 }
             }
         }
-        document.getElementById("svg2").onclick = function() {
+        document.getElementById("svg2").onclick = function () {
             if (parseInt(new Array("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31")[new Date().getDate()]) == 13) {
                 timefortest()
             } else {
@@ -477,7 +477,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                 }
             }
         }
-        document.getElementById("svg3").onclick = function() {
+        document.getElementById("svg3").onclick = function () {
             if (parseInt(new Array("00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31")[new Date().getDate()]) == 13) {
                 timefortest()
             } else {
@@ -641,7 +641,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                 }
             }
         }
-        document.getElementById("svg4").onclick = function() {
+        document.getElementById("svg4").onclick = function () {
             var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
             const currentMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
                 currentDays = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
@@ -701,7 +701,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                 }
             }
         }
-        document.getElementById("svg5").onclick = function() {
+        document.getElementById("svg5").onclick = function () {
             var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
             const currentMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
                 currentDays = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
@@ -760,7 +760,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                 }
             }
         }
-        document.getElementById("svg6").onclick = function() {
+        document.getElementById("svg6").onclick = function () {
             var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
             const currentMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
                 currentDays = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
@@ -819,7 +819,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                 }
             }
         }
-        document.getElementById("svg7").onclick = function() {
+        document.getElementById("svg7").onclick = function () {
             var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
             const currentMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
                 currentDays = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
@@ -878,7 +878,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                 }
             }
         }
-        document.getElementById("svg8").onclick = function() {
+        document.getElementById("svg8").onclick = function () {
             var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
             const currentMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
                 currentDays = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
@@ -937,7 +937,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                 }
             }
         }
-        document.getElementById("svg9").onclick = function() {
+        document.getElementById("svg9").onclick = function () {
             var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
             const currentMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
                 currentDays = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
@@ -996,7 +996,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                 }
             }
         }
-        document.getElementById("svg10").onclick = function() {
+        document.getElementById("svg10").onclick = function () {
             var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
             const currentMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
                 currentDays = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
@@ -1055,7 +1055,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                 }
             }
         }
-        document.getElementById("svg11").onclick = function() {
+        document.getElementById("svg11").onclick = function () {
             var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
             const currentMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
                 currentDays = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
@@ -1114,7 +1114,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                 }
             }
         }
-        document.getElementById("svg12").onclick = function() {
+        document.getElementById("svg12").onclick = function () {
             var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
             const currentMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
                 currentDays = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
@@ -1173,7 +1173,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                 }
             }
         }
-        document.getElementById("svg13").onclick = function() {
+        document.getElementById("svg13").onclick = function () {
             var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
             const currentMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
                 currentDays = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
@@ -1232,7 +1232,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                 }
             }
         }
-        document.getElementById("svg14").onclick = function() {
+        document.getElementById("svg14").onclick = function () {
             var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
             const currentMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
                 currentDays = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
@@ -1291,7 +1291,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                 }
             }
         }
-        document.getElementById("svg15").onclick = function() {
+        document.getElementById("svg15").onclick = function () {
             var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
             const currentMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
                 currentDays = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
@@ -1350,7 +1350,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                 }
             }
         }
-        document.getElementById("svg16").onclick = function() {
+        document.getElementById("svg16").onclick = function () {
             var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
             const currentMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
                 currentDays = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
@@ -1409,7 +1409,7 @@ if (urlParams.indexOf("?month=") != -1 &&
                 }
             }
         }
-        document.getElementById("svg17").onclick = function() {
+        document.getElementById("svg17").onclick = function () {
             var TEMPLATEURL = window.location.href + "?month=[month]&day=[day]&year=[year]&hour=[hour]&minute=[minute]&second=[second]&millisecond=00&message=[message]"
             const currentMonths = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"],
                 currentDays = ["00", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31"],
@@ -1468,21 +1468,21 @@ if (urlParams.indexOf("?month=") != -1 &&
                 }
             }
         }
-        document.getElementById("svg18").onclick = function() {
+        document.getElementById("svg18").onclick = function () {
             document.getElementById("myModal").style.display = "block"
         }
-        document.getElementById("svg19").onclick = function() {
+        document.getElementById("svg19").onclick = function () {
             document.getElementById("myModal").style.display = "block"
         }
-        document.getElementsByClassName("close")[0].onclick = function() {
+        document.getElementsByClassName("close")[0].onclick = function () {
             document.querySelector(".modal-content").style.animationName = "animatebottom"
             document.querySelector(".modal-content").style.animationPlayState = "playing"
-            setTimeout(function() {
+            setTimeout(function () {
                 document.getElementById("myModal").style.display = "none";
                 document.querySelector(".modal-content").style.animationName = "animatetop"
             }, 350)
         }
-        document.getElementById("countdowncheckerbutton").onclick = function() {
+        document.getElementById("countdowncheckerbutton").onclick = function () {
             if (document.getElementById("countdownchecker").value !== "") {
                 alert("URL generated!")
                 var datetimeValue = document.getElementById("countdownchecker").value + "M" + encodeURIComponent(document.getElementById("countdowncheckertext").value)
@@ -1522,16 +1522,16 @@ if (urlParams.indexOf("?month=") != -1 &&
             }
             document.querySelector(".modal-content").style.animationName = "animatebottom"
             document.querySelector(".modal-content").style.animationPlayState = "playing"
-            setTimeout(function() {
+            setTimeout(function () {
                 document.getElementById("myModal").style.display = "none";
                 document.querySelector(".modal-content").style.animationName = "animatetop"
             }, 350)
         }
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             if (event.target == document.getElementById("myModal")) {
                 document.querySelector(".modal-content").style.animationName = "animatebottom"
                 document.querySelector(".modal-content").style.animationPlayState = "playing"
-                setTimeout(function() {
+                setTimeout(function () {
                     document.getElementById("myModal").style.display = "none";
                     document.querySelector(".modal-content").style.animationName = "animatetop"
                 }, 350)
