@@ -96,6 +96,7 @@ if (urlParams.indexOf("?month=") != -1 &&
         }
         if (distance < 0) {
             clearInterval(x);
+            document.head.removeChild(document.getElementById("ServerDate"))
             setTimeout(function () {
                 document.getElementById("demo").innerHTML = "Countdown Ended"
                 if("wakeLock" in navigator) {
