@@ -293,7 +293,6 @@ if (urlParams.indexOf("?month=") != -1 &&
                         if (!!document.getElementById("iframeModal")) {
                             document.getElementById("iframeModal").src = newURL
                             document.getElementById("iframeModal").style.display = "block"
-                            document.getElementById("optionsmenu").style.display = "none"
                         } else {
                             var iframeModal = document.createElement("iframe")
                             iframeModal.id = "iframeModal"
@@ -305,7 +304,6 @@ if (urlParams.indexOf("?month=") != -1 &&
                             document.body.appendChild(iframeModal)
                             document.getElementById("iframeModal").src = newURL
                             document.getElementById("iframeModal").style.display = "block"
-                            document.getElementById("optionsmenu").style.display = "none"
                         }
                     }
                 } else if (dayofweek == "Sunday" || dayofweek == "Saturday") {
@@ -1502,7 +1500,6 @@ if (urlParams.indexOf("?month=") != -1 &&
                     if (!!document.getElementById("iframeModal")) {
                         document.getElementById("iframeModal").src = newURL
                         document.getElementById("iframeModal").style.display = "block"
-                        document.getElementById("optionsmenu").style.display = "none"
                     } else {
                         var iframeModal = document.createElement("iframe")
                         iframeModal.id = "iframeModal"
@@ -1514,7 +1511,6 @@ if (urlParams.indexOf("?month=") != -1 &&
                         document.body.appendChild(iframeModal)
                         document.getElementById("iframeModal").src = newURL
                         document.getElementById("iframeModal").style.display = "block"
-                        document.getElementById("optionsmenu").style.display = "none"
                         document.getElementById("countdownchecker").value = ""
                         document.getElementById("countdowncheckertext").value = ""
                         document.getElementById("countdowncheckertext1").value = ""
