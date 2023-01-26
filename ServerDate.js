@@ -237,7 +237,7 @@ function synchronize() {
 
     // Take 10 samples so we get a good chance of at least one sample with
     // low latency.
-    if (iteration < 100) {
+    if (iteration < 10) {
       iteration++;
       requestSample();
     }
