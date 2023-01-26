@@ -122,7 +122,7 @@ Object.defineProperty(ServerDate, "synchronizationIntervalDelay", {
 
 // After the initial synchronization the two clocks may drift so we
 // automatically synchronize again every synchronizationIntervalDelay.
-ServerDate.synchronizationIntervalDelay = 60 * 1000; // ms, 1 minutes
+ServerDate.synchronizationIntervalDelay = 5 * 60 * 1000; // ms, 5 minutes
 
 /// PRIVATE
 
