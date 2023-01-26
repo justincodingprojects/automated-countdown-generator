@@ -99,8 +99,8 @@ if (urlParams.indexOf("?month=") != -1 &&
         var now = new Date(Date.now() + offset).getTime()
 
         var distance = countDownDate - now;
-        if (decodeURIComponent(urlParams.substring(urlParams.indexOf('message=') + 8)) !== document.getElementById("title").innerHTML) {
-            if (decodeURIComponent(urlParams.substring(urlParams.indexOf('message=') + 8)) !== document.title.innerHTML) {
+        if (decodeURIComponent(urlParams.substring(urlParams.indexOf('message=') + 8)) !== "") {
+            if (decodeURIComponent(urlParams.substring(urlParams.indexOf('message=') + 8)) !== document.getElementById("title").innerHTML) {
                 document.getElementById("title").innerHTML = decodeURIComponent(urlParams.substring(urlParams.indexOf('message=') + 8))
             }
         } else {
