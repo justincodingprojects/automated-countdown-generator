@@ -122,7 +122,7 @@ Object.defineProperty(ServerDate, "synchronizationIntervalDelay", {
 
 // After the initial synchronization the two clocks may drift so we
 // automatically synchronize again every synchronizationIntervalDelay.
-ServerDate.synchronizationIntervalDelay = 60 * 1000; // ms, 10 minutes
+ServerDate.synchronizationIntervalDelay = 60 * 1000; // ms, 1 minutes
 
 /// PRIVATE
 
@@ -237,7 +237,7 @@ function synchronize() {
 
     // Take 10 samples so we get a good chance of at least one sample with
     // low latency.
-    if (iteration < 10) {
+    if (iteration < 100) {
       iteration++;
       requestSample();
     }
