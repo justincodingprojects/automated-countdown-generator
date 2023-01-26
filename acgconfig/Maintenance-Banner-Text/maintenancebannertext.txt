@@ -1,1 +1,1 @@
-Should've changed this a long time ago, but I'm currently working to fix synchronization problems on my countdown.
+Finally, after over a year, I have defeated the year long problem of synchronization. You're welcome!
