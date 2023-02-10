@@ -1,1 +1,1 @@
-Finally, after over a year, I have defeated the year long problem of synchronization. You're welcome!
+I have a new maximize feature on my countdown! To use it, press the "m" key on your keyboard.
