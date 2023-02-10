@@ -35,7 +35,30 @@ if (urlParams.indexOf("?month=") != -1 &&
     var egg = new Egg("esc", function () {
         window.top.document.body.removeChild(window.parent.document.getElementById("iframeModal"))
     }).listen();
-
+    var zoomed = false
+    var locked = false
+    var egg2 = new Egg("m", function () {
+        if (!zoomed) {
+            if (!locked) {
+                locked = true
+                zoomed = true
+                $(".topnav").animate({ top: "-10%" })
+                $(".footer").animate({ top: "110%" })
+                $("#title").animate({ fontSize: "750%", top: "40%" })
+                $("#demo").animate({ fontSize: "750%", top: "65%" }, "", () => locked = false)
+            }
+        } else {
+            if (!locked) {
+                locked = true
+                zoomed = false
+                $(".topnav").animate({ top: "1.3%" })
+                $(".footer").animate({ top: "93.3%" })
+                $("#title").animate({ fontSize: "375%", top: "45%" })
+                $("#demo").animate({ fontSize: "375%", top: "58%" }, "", () => locked = false)
+            }
+        }
+    }).listen()
+    
     var x = setInterval(function () {
         var now = ServerDate.now()
 
