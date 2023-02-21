@@ -99,7 +99,7 @@ var ServerDate = (function (serverNow) {
   // After a synchronization there may be a significant difference between our
   // clock and the server's clock.  Rather than make the change abruptly, we
   // change our clock by adjusting it once per second by the amortizationRate.
-  ServerDate.amortizationRate = 25; // ms
+  ServerDate.amortizationRate = 100; // ms
 
   // The exception to the above is if the difference between the clock and
   // server's clock is too great (threshold set below).  If that's the case then
