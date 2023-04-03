@@ -170,13 +170,13 @@
 /* Option Menu */
 
 .optionsmenu {
-    display: none;
+    display: block;
     background-color: #262626;
     position: fixed;
-    top: 1.5%;
-    left: 95.5%;
-    right: 0.5%;
-    height: 175px;
+    top: 10px;
+    left: 70em;
+    right: 10px;
+    height: 100px;
     overflow: hidden;
 }
 
@@ -186,7 +186,6 @@
     font-size: 20px;
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
-    transform: rotate(-90deg);
     position: fixed;
     top: 20%;
     left: 97.5%;
